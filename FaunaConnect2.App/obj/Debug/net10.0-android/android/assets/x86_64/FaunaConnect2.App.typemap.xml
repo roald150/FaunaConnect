@@ -1,0 +1,10 @@
+<api type="debug" assembly-name="FaunaConnect2.App" mvid="b5a2919d88e7402f9eaca4492c54d049">
+  <java-to-managed>
+    <entry java-name="crc64b20259e7c4abf996/MainActivity" managed-name="FaunaConnect2.App.MainActivity, FaunaConnect2.App" managed-type-token-id="33554444" />
+    <entry java-name="crc64b20259e7c4abf996/MainApplication" managed-name="FaunaConnect2.App.MainApplication, FaunaConnect2.App" managed-type-token-id="33554445" />
+  </java-to-managed>
+  <managed-to-java>
+    <entry java-name="crc64b20259e7c4abf996/MainActivity" managed-name="FaunaConnect2.App.MainActivity, FaunaConnect2.App" managed-type-token-id="33554444" />
+    <entry java-name="crc64b20259e7c4abf996/MainApplication" managed-name="FaunaConnect2.App.MainApplication, FaunaConnect2.App" managed-type-token-id="33554445" />
+  </managed-to-java>
+</api>

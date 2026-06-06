@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaunaConnect2.App.RegisterPage"
+             Title="Registreren">
+
+    <VerticalStackLayout Padding="30" Spacing="15" VerticalOptions="Center">
+        <Label Text="Maak een account aan" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+        <Entry x:Name="NameEntry" Placeholder="Volledige naam" />
+        <Entry x:Name="EmailEntry" Placeholder="E-mailadres" Keyboard="Email" />
+        <Entry x:Name="PasswordEntry" Placeholder="Wachtwoord" IsPassword="True" />
+        
+        <Label Text="Ik ben een:" FontSize="14" TextColor="Gray"/>
+        <Picker x:Name="RolePicker">
+            <Picker.Items>
+                <x:String>Jager</x:String>
+                <x:String>Boer</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button Text="Registreren" Clicked="OnRegisterClicked" Margin="0,10,0,0"/>
+    </VerticalStackLayout>
+</ContentPage>
