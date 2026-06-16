@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="OnContextAvailableListenerImplementor" package="mono.androidx.activity.contextaware" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Activity.ContextAware.IOnContextAvailableListenerImplementor, Xamarin.AndroidX.Activity">
+    <type name="OnContextAvailableListenerImplementor" package="mono.androidx.activity.contextaware" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Activity.ContextAware.IOnContextAvailableListenerImplementor, Xamarin.AndroidX.Activity">
       <implemented_interfaces>
         <interface name="androidx.activity.contextaware.OnContextAvailableListener" />
       </implemented_interfaces>

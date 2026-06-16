@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="BaseOnChangeListenerImplementor" package="mono.com.google.android.material.slider" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Slider.IBaseOnChangeListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="BaseOnChangeListenerImplementor" package="mono.com.google.android.material.slider" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Slider.IBaseOnChangeListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.slider.BaseOnChangeListener" />
       </implemented_interfaces>
@@ -11,7 +11,7 @@
         <method name="onValueChange" method="n_onValueChange:(Ljava/lang/Object;FZ)V:GetOnValueChange_Ljava_lang_Object_FZHandler:Google.Android.Material.Slider.IBaseOnChangeListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Ljava/lang/Object;FZ)V" params="java.lang.Object p0, float p1, boolean p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="BaseOnSliderTouchListenerImplementor" package="mono.com.google.android.material.slider" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Slider.IBaseOnSliderTouchListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="BaseOnSliderTouchListenerImplementor" package="mono.com.google.android.material.slider" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Slider.IBaseOnSliderTouchListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.slider.BaseOnSliderTouchListener" />
       </implemented_interfaces>
@@ -23,7 +23,7 @@
         <method name="onStopTrackingTouch" method="n_onStopTrackingTouch:(Ljava/lang/Object;)V:GetOnStopTrackingTouch_Ljava_lang_Object_Handler:Google.Android.Material.Slider.IBaseOnSliderTouchListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Ljava/lang/Object;)V" params="java.lang.Object p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ShapeAppearancePathProvider_PathListenerImplementor" package="mono.com.google.android.material.shape" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Shape.ShapeAppearancePathProvider+IPathListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="ShapeAppearancePathProvider_PathListenerImplementor" package="mono.com.google.android.material.shape" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Shape.ShapeAppearancePathProvider+IPathListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.shape.ShapeAppearancePathProvider.PathListener" />
       </implemented_interfaces>
@@ -35,7 +35,7 @@
         <method name="onEdgePathCreated" method="n_onEdgePathCreated:(Lcom/google/android/material/shape/ShapePath;Landroid/graphics/Matrix;I)V:GetOnEdgePathCreated_Lcom_google_android_material_shape_ShapePath_Landroid_graphics_Matrix_IHandler:Google.Android.Material.Shape.ShapeAppearancePathProvider+IPathListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/shape/ShapePath;Landroid/graphics/Matrix;I)V" params="com.google.android.material.shape.ShapePath p0, android.graphics.Matrix p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="SearchView_TransitionListenerImplementor" package="mono.com.google.android.material.search" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Search.SearchView+ITransitionListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="SearchView_TransitionListenerImplementor" package="mono.com.google.android.material.search" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Search.SearchView+ITransitionListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.search.SearchView.TransitionListener" />
       </implemented_interfaces>
@@ -46,7 +46,7 @@
         <method name="onStateChanged" method="n_onStateChanged:(Lcom/google/android/material/search/SearchView;Lcom/google/android/material/search/SearchView$TransitionState;Lcom/google/android/material/search/SearchView$TransitionState;)V:GetOnStateChanged_Lcom_google_android_material_search_SearchView_Lcom_google_android_material_search_SearchView_TransitionState_Lcom_google_android_material_search_SearchView_TransitionState_Handler:Google.Android.Material.Search.SearchView+ITransitionListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/search/SearchView;Lcom/google/android/material/search/SearchView$TransitionState;Lcom/google/android/material/search/SearchView$TransitionState;)V" params="com.google.android.material.search.SearchView p0, com.google.android.material.search.SearchView.TransitionState p1, com.google.android.material.search.SearchView.TransitionState p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="MaterialPickerOnPositiveButtonClickListenerImplementor" package="mono.com.google.android.material.datepicker" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.DatePicker.IMaterialPickerOnPositiveButtonClickListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="MaterialPickerOnPositiveButtonClickListenerImplementor" package="mono.com.google.android.material.datepicker" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.DatePicker.IMaterialPickerOnPositiveButtonClickListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener" />
       </implemented_interfaces>
@@ -57,7 +57,7 @@
         <method name="onPositiveButtonClick" method="n_onPositiveButtonClick:(Ljava/lang/Object;)V:GetOnPositiveButtonClick_Ljava_lang_Object_Handler:Google.Android.Material.DatePicker.IMaterialPickerOnPositiveButtonClickListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Ljava/lang/Object;)V" params="java.lang.Object p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ChipGroup_OnCheckedChangeListenerImplementor" package="mono.com.google.android.material.chip" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Chip.ChipGroup+IOnCheckedChangeListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="ChipGroup_OnCheckedChangeListenerImplementor" package="mono.com.google.android.material.chip" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Chip.ChipGroup+IOnCheckedChangeListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.chip.ChipGroup.OnCheckedChangeListener" />
       </implemented_interfaces>
@@ -68,7 +68,7 @@
         <method name="onCheckedChanged" method="n_onCheckedChanged:(Lcom/google/android/material/chip/ChipGroup;I)V:GetOnCheckedChanged_Lcom_google_android_material_chip_ChipGroup_IHandler:Google.Android.Material.Chip.ChipGroup+IOnCheckedChangeListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/chip/ChipGroup;I)V" params="com.google.android.material.chip.ChipGroup p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ChipGroup_OnCheckedStateChangeListenerImplementor" package="mono.com.google.android.material.chip" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Chip.ChipGroup+IOnCheckedStateChangeListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="ChipGroup_OnCheckedStateChangeListenerImplementor" package="mono.com.google.android.material.chip" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Chip.ChipGroup+IOnCheckedStateChangeListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.chip.ChipGroup.OnCheckedStateChangeListener" />
       </implemented_interfaces>
@@ -79,7 +79,7 @@
         <method name="onCheckedChanged" method="n_onCheckedChanged:(Lcom/google/android/material/chip/ChipGroup;Ljava/util/List;)V:GetOnCheckedChanged_Lcom_google_android_material_chip_ChipGroup_Ljava_util_List_Handler:Google.Android.Material.Chip.ChipGroup+IOnCheckedStateChangeListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/chip/ChipGroup;Ljava/util/List;)V" params="com.google.android.material.chip.ChipGroup p0, java.util.List p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="MaterialCheckBox_OnCheckedStateChangedListenerImplementor" package="mono.com.google.android.material.checkbox" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.CheckBox.MaterialCheckBox+IOnCheckedStateChangedListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="MaterialCheckBox_OnCheckedStateChangedListenerImplementor" package="mono.com.google.android.material.checkbox" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.CheckBox.MaterialCheckBox+IOnCheckedStateChangedListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.checkbox.MaterialCheckBox.OnCheckedStateChangedListener" />
       </implemented_interfaces>
@@ -90,7 +90,7 @@
         <method name="onCheckedStateChangedListener" method="n_onCheckedStateChangedListener:(Lcom/google/android/material/checkbox/MaterialCheckBox;I)V:GetOnCheckedStateChangedListener_Lcom_google_android_material_checkbox_MaterialCheckBox_IHandler:Google.Android.Material.CheckBox.MaterialCheckBox+IOnCheckedStateChangedListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/checkbox/MaterialCheckBox;I)V" params="com.google.android.material.checkbox.MaterialCheckBox p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="MaterialCheckBox_OnErrorChangedListenerImplementor" package="mono.com.google.android.material.checkbox" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.CheckBox.MaterialCheckBox+IOnErrorChangedListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="MaterialCheckBox_OnErrorChangedListenerImplementor" package="mono.com.google.android.material.checkbox" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.CheckBox.MaterialCheckBox+IOnErrorChangedListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.checkbox.MaterialCheckBox.OnErrorChangedListener" />
       </implemented_interfaces>
@@ -101,7 +101,7 @@
         <method name="onErrorChanged" method="n_onErrorChanged:(Lcom/google/android/material/checkbox/MaterialCheckBox;Z)V:GetOnErrorChanged_Lcom_google_android_material_checkbox_MaterialCheckBox_ZHandler:Google.Android.Material.CheckBox.MaterialCheckBox+IOnErrorChangedListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/checkbox/MaterialCheckBox;Z)V" params="com.google.android.material.checkbox.MaterialCheckBox p0, boolean p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="OnMaskChangedListenerImplementor" package="mono.com.google.android.material.carousel" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Carousel.IOnMaskChangedListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="OnMaskChangedListenerImplementor" package="mono.com.google.android.material.carousel" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Carousel.IOnMaskChangedListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.carousel.OnMaskChangedListener" />
       </implemented_interfaces>
@@ -112,7 +112,7 @@
         <method name="onMaskChanged" method="n_onMaskChanged:(Landroid/graphics/RectF;)V:GetOnMaskChanged_Landroid_graphics_RectF_Handler:Google.Android.Material.Carousel.IOnMaskChangedListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Landroid/graphics/RectF;)V" params="android.graphics.RectF p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="MaterialCardView_OnCheckedChangeListenerImplementor" package="mono.com.google.android.material.card" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Card.MaterialCardView+IOnCheckedChangeListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="MaterialCardView_OnCheckedChangeListenerImplementor" package="mono.com.google.android.material.card" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Card.MaterialCardView+IOnCheckedChangeListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.card.MaterialCardView.OnCheckedChangeListener" />
       </implemented_interfaces>
@@ -123,7 +123,7 @@
         <method name="onCheckedChanged" method="n_onCheckedChanged:(Lcom/google/android/material/card/MaterialCardView;Z)V:GetOnCheckedChanged_Lcom_google_android_material_card_MaterialCardView_ZHandler:Google.Android.Material.Card.MaterialCardView+IOnCheckedChangeListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/card/MaterialCardView;Z)V" params="com.google.android.material.card.MaterialCardView p0, boolean p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="MaterialButton_OnCheckedChangeListenerImplementor" package="mono.com.google.android.material.button" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Button.MaterialButton+IOnCheckedChangeListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="MaterialButton_OnCheckedChangeListenerImplementor" package="mono.com.google.android.material.button" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Button.MaterialButton+IOnCheckedChangeListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.button.MaterialButton.OnCheckedChangeListener" />
       </implemented_interfaces>
@@ -134,7 +134,7 @@
         <method name="onCheckedChanged" method="n_onCheckedChanged:(Lcom/google/android/material/button/MaterialButton;Z)V:GetOnCheckedChanged_Lcom_google_android_material_button_MaterialButton_ZHandler:Google.Android.Material.Button.MaterialButton+IOnCheckedChangeListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/button/MaterialButton;Z)V" params="com.google.android.material.button.MaterialButton p0, boolean p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="MaterialButtonToggleGroup_OnButtonCheckedListenerImplementor" package="mono.com.google.android.material.button" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Button.MaterialButtonToggleGroup+IOnButtonCheckedListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="MaterialButtonToggleGroup_OnButtonCheckedListenerImplementor" package="mono.com.google.android.material.button" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Button.MaterialButtonToggleGroup+IOnButtonCheckedListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.button.MaterialButtonToggleGroup.OnButtonCheckedListener" />
       </implemented_interfaces>
@@ -145,7 +145,7 @@
         <method name="onButtonChecked" method="n_onButtonChecked:(Lcom/google/android/material/button/MaterialButtonToggleGroup;IZ)V:GetOnButtonChecked_Lcom_google_android_material_button_MaterialButtonToggleGroup_IZHandler:Google.Android.Material.Button.MaterialButtonToggleGroup+IOnButtonCheckedListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/button/MaterialButtonToggleGroup;IZ)V" params="com.google.android.material.button.MaterialButtonToggleGroup p0, int p1, boolean p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="HideBottomViewOnScrollBehavior_OnScrollStateChangedListenerImplementor" package="mono.com.google.android.material.behavior" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Behavior.HideBottomViewOnScrollBehavior+IOnScrollStateChangedListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="HideBottomViewOnScrollBehavior_OnScrollStateChangedListenerImplementor" package="mono.com.google.android.material.behavior" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Behavior.HideBottomViewOnScrollBehavior+IOnScrollStateChangedListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.behavior.HideBottomViewOnScrollBehavior.OnScrollStateChangedListener" />
       </implemented_interfaces>
@@ -156,7 +156,7 @@
         <method name="onStateChanged" method="n_onStateChanged:(Landroid/view/View;I)V:GetOnStateChanged_Landroid_view_View_IHandler:Google.Android.Material.Behavior.HideBottomViewOnScrollBehavior+IOnScrollStateChangedListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Landroid/view/View;I)V" params="android.view.View p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="SwipeDismissBehavior_OnDismissListenerImplementor" package="mono.com.google.android.material.behavior" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Behavior.SwipeDismissBehavior+IOnDismissListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="SwipeDismissBehavior_OnDismissListenerImplementor" package="mono.com.google.android.material.behavior" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Behavior.SwipeDismissBehavior+IOnDismissListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.behavior.SwipeDismissBehavior.OnDismissListener" />
       </implemented_interfaces>
@@ -168,7 +168,7 @@
         <method name="onDragStateChanged" method="n_onDragStateChanged:(I)V:GetOnDragStateChanged_IHandler:Google.Android.Material.Behavior.SwipeDismissBehavior+IOnDismissListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(I)V" params="int p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="NavigationBarView_OnItemReselectedListenerImplementor" package="mono.com.google.android.material.navigation" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Navigation.NavigationBarView+IOnItemReselectedListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="NavigationBarView_OnItemReselectedListenerImplementor" package="mono.com.google.android.material.navigation" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Navigation.NavigationBarView+IOnItemReselectedListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.navigation.NavigationBarView.OnItemReselectedListener" />
       </implemented_interfaces>
@@ -179,7 +179,7 @@
         <method name="onNavigationItemReselected" method="n_onNavigationItemReselected:(Landroid/view/MenuItem;)V:GetOnNavigationItemReselected_Landroid_view_MenuItem_Handler:Google.Android.Material.Navigation.NavigationBarView+IOnItemReselectedListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Landroid/view/MenuItem;)V" params="android.view.MenuItem p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="NavigationBarView_OnItemSelectedListenerImplementor" package="mono.com.google.android.material.navigation" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Navigation.NavigationBarView+IOnItemSelectedListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="NavigationBarView_OnItemSelectedListenerImplementor" package="mono.com.google.android.material.navigation" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Navigation.NavigationBarView+IOnItemSelectedListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.navigation.NavigationBarView.OnItemSelectedListener" />
       </implemented_interfaces>
@@ -190,7 +190,7 @@
         <method name="onNavigationItemSelected" method="n_onNavigationItemSelected:(Landroid/view/MenuItem;)Z:GetOnNavigationItemSelected_Landroid_view_MenuItem_Handler:Google.Android.Material.Navigation.NavigationBarView+IOnItemSelectedListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Landroid/view/MenuItem;)Z" params="android.view.MenuItem p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="NavigationView_OnNavigationItemSelectedListenerImplementor" package="mono.com.google.android.material.navigation" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Navigation.NavigationView+IOnNavigationItemSelectedListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="NavigationView_OnNavigationItemSelectedListenerImplementor" package="mono.com.google.android.material.navigation" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Navigation.NavigationView+IOnNavigationItemSelectedListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener" />
       </implemented_interfaces>
@@ -201,7 +201,7 @@
         <method name="onNavigationItemSelected" method="n_onNavigationItemSelected:(Landroid/view/MenuItem;)Z:GetOnNavigationItemSelected_Landroid_view_MenuItem_Handler:Google.Android.Material.Navigation.NavigationView+IOnNavigationItemSelectedListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Landroid/view/MenuItem;)Z" params="android.view.MenuItem p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="TextInputLayout_OnEditTextAttachedListenerImplementor" package="mono.com.google.android.material.textfield" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.TextField.TextInputLayout+IOnEditTextAttachedListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="TextInputLayout_OnEditTextAttachedListenerImplementor" package="mono.com.google.android.material.textfield" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.TextField.TextInputLayout+IOnEditTextAttachedListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.textfield.TextInputLayout.OnEditTextAttachedListener" />
       </implemented_interfaces>
@@ -212,7 +212,7 @@
         <method name="onEditTextAttached" method="n_onEditTextAttached:(Lcom/google/android/material/textfield/TextInputLayout;)V:GetOnEditTextAttached_Lcom_google_android_material_textfield_TextInputLayout_Handler:Google.Android.Material.TextField.TextInputLayout+IOnEditTextAttachedListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/textfield/TextInputLayout;)V" params="com.google.android.material.textfield.TextInputLayout p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="TextInputLayout_OnEndIconChangedListenerImplementor" package="mono.com.google.android.material.textfield" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.TextField.TextInputLayout+IOnEndIconChangedListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="TextInputLayout_OnEndIconChangedListenerImplementor" package="mono.com.google.android.material.textfield" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.TextField.TextInputLayout+IOnEndIconChangedListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.textfield.TextInputLayout.OnEndIconChangedListener" />
       </implemented_interfaces>
@@ -223,7 +223,7 @@
         <method name="onEndIconChanged" method="n_onEndIconChanged:(Lcom/google/android/material/textfield/TextInputLayout;I)V:GetOnEndIconChanged_Lcom_google_android_material_textfield_TextInputLayout_IHandler:Google.Android.Material.TextField.TextInputLayout+IOnEndIconChangedListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/textfield/TextInputLayout;I)V" params="com.google.android.material.textfield.TextInputLayout p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="TabLayout_BaseOnTabSelectedListenerImplementor" package="mono.com.google.android.material.tabs" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Tabs.TabLayout+IOnTabSelectedListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="TabLayout_BaseOnTabSelectedListenerImplementor" package="mono.com.google.android.material.tabs" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Tabs.TabLayout+IOnTabSelectedListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener" />
       </implemented_interfaces>
@@ -236,7 +236,7 @@
         <method name="onTabUnselected" method="n_onTabUnselected:(Lcom/google/android/material/tabs/TabLayout$Tab;)V:GetOnTabUnselected_Lcom_google_android_material_tabs_TabLayout_Tab_Handler:Google.Android.Material.Tabs.TabLayout+IOnTabSelectedListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/tabs/TabLayout$Tab;)V" params="com.google.android.material.tabs.TabLayout.Tab p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="Snackbar_SnackbarActionClickImplementor" package="com.google.android.material.snackbar" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Snackbar.Snackbar+SnackbarActionClickImplementor, Xamarin.Google.Android.Material">
+    <type name="Snackbar_SnackbarActionClickImplementor" package="com.google.android.material.snackbar" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Snackbar.Snackbar+SnackbarActionClickImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="android.view.View.OnClickListener" />
       </implemented_interfaces>
@@ -247,7 +247,7 @@
         <method name="onClick" method="n_onClick:(Landroid/view/View;)V:GetOnClick_Landroid_view_View_Handler:Android.Views.View+IOnClickListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/view/View;)V" params="android.view.View p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="CheckableGroup_OnCheckedStateChangeListenerImplementor" package="mono.com.google.android.material.internal" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Internal.CheckableGroup+IOnCheckedStateChangeListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="CheckableGroup_OnCheckedStateChangeListenerImplementor" package="mono.com.google.android.material.internal" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Internal.CheckableGroup+IOnCheckedStateChangeListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.internal.CheckableGroup.OnCheckedStateChangeListener" />
       </implemented_interfaces>
@@ -258,7 +258,7 @@
         <method name="onCheckedStateChanged" method="n_onCheckedStateChanged:(Ljava/util/Set;)V:GetOnCheckedStateChanged_Ljava_util_Set_Handler:Google.Android.Material.Internal.CheckableGroup+IOnCheckedStateChangeListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Ljava/util/Set;)V" params="java.util.Set p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="MaterialCheckable_OnCheckedChangeListenerImplementor" package="mono.com.google.android.material.internal" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Internal.IMaterialCheckableOnCheckedChangeListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="MaterialCheckable_OnCheckedChangeListenerImplementor" package="mono.com.google.android.material.internal" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Internal.IMaterialCheckableOnCheckedChangeListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.internal.MaterialCheckable.OnCheckedChangeListener" />
       </implemented_interfaces>
@@ -269,7 +269,7 @@
         <method name="onCheckedChanged" method="n_onCheckedChanged:(Ljava/lang/Object;Z)V:GetOnCheckedChanged_Ljava_lang_Object_ZHandler:Google.Android.Material.Internal.IMaterialCheckableOnCheckedChangeListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Ljava/lang/Object;Z)V" params="java.lang.Object p0, boolean p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ViewUtils_OnApplyWindowInsetsListenerImplementor" package="mono.com.google.android.material.internal" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Internal.ViewUtils+IOnApplyWindowInsetsListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="ViewUtils_OnApplyWindowInsetsListenerImplementor" package="mono.com.google.android.material.internal" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Internal.ViewUtils+IOnApplyWindowInsetsListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.internal.ViewUtils.OnApplyWindowInsetsListener" />
       </implemented_interfaces>
@@ -280,7 +280,7 @@
         <method name="onApplyWindowInsets" method="n_onApplyWindowInsets:(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Landroidx/core/view/WindowInsetsCompat;:GetOnApplyWindowInsets_Landroid_view_View_Landroidx_core_view_WindowInsetsCompat_Lcom_google_android_material_internal_ViewUtils_RelativePadding_Handler:Google.Android.Material.Internal.ViewUtils+IOnApplyWindowInsetsListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Landroidx/core/view/WindowInsetsCompat;" params="android.view.View p0, androidx.core.view.WindowInsetsCompat p1, com.google.android.material.internal.ViewUtils.RelativePadding p2" retval="androidx.core.view.WindowInsetsCompat" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="AppBarLayout_LiftOnScrollListenerImplementor" package="mono.com.google.android.material.appbar" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.AppBar.AppBarLayout+ILiftOnScrollListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="AppBarLayout_LiftOnScrollListenerImplementor" package="mono.com.google.android.material.appbar" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.AppBar.AppBarLayout+ILiftOnScrollListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.appbar.AppBarLayout.LiftOnScrollListener" />
       </implemented_interfaces>
@@ -291,7 +291,7 @@
         <method name="onUpdate" method="n_onUpdate:(FI)V:GetOnUpdate_FIHandler:Google.Android.Material.AppBar.AppBarLayout+ILiftOnScrollListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(FI)V" params="float p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="AppBarLayout_OnOffsetChangedListenerImplementor" package="mono.com.google.android.material.appbar" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.AppBar.AppBarLayout+IOnOffsetChangedListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="AppBarLayout_OnOffsetChangedListenerImplementor" package="mono.com.google.android.material.appbar" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.AppBar.AppBarLayout+IOnOffsetChangedListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener" />
       </implemented_interfaces>
@@ -302,7 +302,7 @@
         <method name="onOffsetChanged" method="n_onOffsetChanged:(Lcom/google/android/material/appbar/AppBarLayout;I)V:GetOnOffsetChanged_Lcom_google_android_material_appbar_AppBarLayout_IHandler:Google.Android.Material.AppBar.AppBarLayout+IOnOffsetChangedListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/appbar/AppBarLayout;I)V" params="com.google.android.material.appbar.AppBarLayout p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="AnimatableView_ListenerImplementor" package="mono.com.google.android.material.animation" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Animation.IAnimatableViewListenerImplementor, Xamarin.Google.Android.Material">
+    <type name="AnimatableView_ListenerImplementor" package="mono.com.google.android.material.animation" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Google.Android.Material.Animation.IAnimatableViewListenerImplementor, Xamarin.Google.Android.Material">
       <implemented_interfaces>
         <interface name="com.google.android.material.animation.AnimatableView.Listener" />
       </implemented_interfaces>

@@ -14,10 +14,12 @@ C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-i
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-ios\iossimulator-x64\Microsoft.Extensions.Options.dll
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-ios\iossimulator-x64\Microsoft.Extensions.Primitives.dll
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-ios\iossimulator-x64\Microsoft.Maui.Controls.dll
+C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-ios\iossimulator-x64\Microsoft.Maui.Controls.Maps.dll
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-ios\iossimulator-x64\Microsoft.Maui.Controls.Xaml.dll
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-ios\iossimulator-x64\Microsoft.Maui.dll
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-ios\iossimulator-x64\Microsoft.Maui.Essentials.dll
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-ios\iossimulator-x64\Microsoft.Maui.Graphics.dll
+C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-ios\iossimulator-x64\Microsoft.Maui.Maps.dll
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-ios\iossimulator-x64\ar\Microsoft.Maui.Controls.resources.dll
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-ios\iossimulator-x64\ca\Microsoft.Maui.Controls.resources.dll
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-ios\iossimulator-x64\cs\Microsoft.Maui.Controls.resources.dll
@@ -310,6 +312,7 @@ C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\obj\Debug\net10.0-i
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\obj\Debug\net10.0-ios\iossimulator-x64\FaunaConnect2.App.AssemblyInfoInputs.cache
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\obj\Debug\net10.0-ios\iossimulator-x64\FaunaConnect2.App.AssemblyInfo.cs
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\obj\Debug\net10.0-ios\iossimulator-x64\FaunaConnect2.App.csproj.CoreCompileInputs.cache
+C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\obj\Debug\net10.0-ios\iossimulator-x64\FaunaConnect2.App.sourcelink.json
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\obj\Debug\net10.0-ios\iossimulator-x64\XamlC.stamp
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\obj\Debug\net10.0-ios\iossimulator-x64\FaunaCon.5BD1CE09.Up2Date
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\obj\Debug\net10.0-ios\iossimulator-x64\FaunaConnect2.App.dll

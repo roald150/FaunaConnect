@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="FragmentManager_OnBackStackChangedListenerImplementor" package="mono.androidx.fragment.app" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Fragment.App.FragmentManager+IOnBackStackChangedListenerImplementor, Xamarin.AndroidX.Fragment">
+    <type name="FragmentManager_OnBackStackChangedListenerImplementor" package="mono.androidx.fragment.app" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Fragment.App.FragmentManager+IOnBackStackChangedListenerImplementor, Xamarin.AndroidX.Fragment">
       <implemented_interfaces>
         <interface name="androidx.fragment.app.FragmentManager.OnBackStackChangedListener" />
       </implemented_interfaces>
@@ -15,7 +15,7 @@
         <method name="onBackStackChangeStarted" method="n_onBackStackChangeStarted:(Landroidx/fragment/app/Fragment;Z)V:GetOnBackStackChangeStarted_Landroidx_fragment_app_Fragment_ZHandler:AndroidX.Fragment.App.FragmentManager+IOnBackStackChangedListener, Xamarin.AndroidX.Fragment" jni_signature="(Landroidx/fragment/app/Fragment;Z)V" params="androidx.fragment.app.Fragment p0, boolean p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="FragmentOnAttachListenerImplementor" package="mono.androidx.fragment.app" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Fragment.App.IFragmentOnAttachListenerImplementor, Xamarin.AndroidX.Fragment">
+    <type name="FragmentOnAttachListenerImplementor" package="mono.androidx.fragment.app" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Fragment.App.IFragmentOnAttachListenerImplementor, Xamarin.AndroidX.Fragment">
       <implemented_interfaces>
         <interface name="androidx.fragment.app.FragmentOnAttachListener" />
       </implemented_interfaces>
@@ -26,7 +26,7 @@
         <method name="onAttachFragment" method="n_onAttachFragment:(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V:GetOnAttachFragment_Landroidx_fragment_app_FragmentManager_Landroidx_fragment_app_Fragment_Handler:AndroidX.Fragment.App.IFragmentOnAttachListenerInvoker, Xamarin.AndroidX.Fragment" jni_signature="(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V" params="androidx.fragment.app.FragmentManager p0, androidx.fragment.app.Fragment p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="FragmentResultListenerImplementor" package="mono.androidx.fragment.app" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Fragment.App.IFragmentResultListenerImplementor, Xamarin.AndroidX.Fragment">
+    <type name="FragmentResultListenerImplementor" package="mono.androidx.fragment.app" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Fragment.App.IFragmentResultListenerImplementor, Xamarin.AndroidX.Fragment">
       <implemented_interfaces>
         <interface name="androidx.fragment.app.FragmentResultListener" />
       </implemented_interfaces>
@@ -37,7 +37,7 @@
         <method name="onFragmentResult" method="n_onFragmentResult:(Ljava/lang/String;Landroid/os/Bundle;)V:GetOnFragmentResult_Ljava_lang_String_Landroid_os_Bundle_Handler:AndroidX.Fragment.App.IFragmentResultListenerInvoker, Xamarin.AndroidX.Fragment" jni_signature="(Ljava/lang/String;Landroid/os/Bundle;)V" params="java.lang.String p0, android.os.Bundle p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="FragmentStrictMode_OnViolationListenerImplementor" package="mono.androidx.fragment.app.strictmode" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Fragment.App.StrictMode.FragmentStrictMode+IOnViolationListenerImplementor, Xamarin.AndroidX.Fragment">
+    <type name="FragmentStrictMode_OnViolationListenerImplementor" package="mono.androidx.fragment.app.strictmode" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Fragment.App.StrictMode.FragmentStrictMode+IOnViolationListenerImplementor, Xamarin.AndroidX.Fragment">
       <implemented_interfaces>
         <interface name="androidx.fragment.app.strictmode.FragmentStrictMode.OnViolationListener" />
       </implemented_interfaces>

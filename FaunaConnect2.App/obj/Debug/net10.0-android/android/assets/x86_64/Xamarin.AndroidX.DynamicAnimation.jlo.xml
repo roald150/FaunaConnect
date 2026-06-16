@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="AnimationHandler_DurationScaleChangeListenerImplementor" package="mono.androidx.dynamicanimation.animation" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.DynamicAnimation.AnimationHandler+IDurationScaleChangeListenerImplementor, Xamarin.AndroidX.DynamicAnimation">
+    <type name="AnimationHandler_DurationScaleChangeListenerImplementor" package="mono.androidx.dynamicanimation.animation" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.DynamicAnimation.AnimationHandler+IDurationScaleChangeListenerImplementor, Xamarin.AndroidX.DynamicAnimation">
       <implemented_interfaces>
         <interface name="androidx.dynamicanimation.animation.AnimationHandler.DurationScaleChangeListener" />
       </implemented_interfaces>
@@ -12,7 +12,7 @@
         <method name="unregister" method="n_unregister:()Z:GetUnregisterHandler:AndroidX.DynamicAnimation.AnimationHandler+IDurationScaleChangeListenerInvoker, Xamarin.AndroidX.DynamicAnimation" jni_signature="()Z" retval="boolean" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="DynamicAnimation_OnAnimationEndListenerImplementor" package="mono.androidx.dynamicanimation.animation" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.DynamicAnimation.DynamicAnimation+IOnAnimationEndListenerImplementor, Xamarin.AndroidX.DynamicAnimation">
+    <type name="DynamicAnimation_OnAnimationEndListenerImplementor" package="mono.androidx.dynamicanimation.animation" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.DynamicAnimation.DynamicAnimation+IOnAnimationEndListenerImplementor, Xamarin.AndroidX.DynamicAnimation">
       <implemented_interfaces>
         <interface name="androidx.dynamicanimation.animation.DynamicAnimation.OnAnimationEndListener" />
       </implemented_interfaces>
@@ -23,7 +23,7 @@
         <method name="onAnimationEnd" method="n_onAnimationEnd:(Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V:GetOnAnimationEnd_Landroidx_dynamicanimation_animation_DynamicAnimation_ZFFHandler:AndroidX.DynamicAnimation.DynamicAnimation+IOnAnimationEndListenerInvoker, Xamarin.AndroidX.DynamicAnimation" jni_signature="(Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V" params="androidx.dynamicanimation.animation.DynamicAnimation p0, boolean p1, float p2, float p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
       </methods>
     </type>
-    <type name="DynamicAnimation_OnAnimationUpdateListenerImplementor" package="mono.androidx.dynamicanimation.animation" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.DynamicAnimation.DynamicAnimation+IOnAnimationUpdateListenerImplementor, Xamarin.AndroidX.DynamicAnimation">
+    <type name="DynamicAnimation_OnAnimationUpdateListenerImplementor" package="mono.androidx.dynamicanimation.animation" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.DynamicAnimation.DynamicAnimation+IOnAnimationUpdateListenerImplementor, Xamarin.AndroidX.DynamicAnimation">
       <implemented_interfaces>
         <interface name="androidx.dynamicanimation.animation.DynamicAnimation.OnAnimationUpdateListener" />
       </implemented_interfaces>

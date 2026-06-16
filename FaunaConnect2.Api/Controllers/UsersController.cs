@@ -41,7 +41,6 @@ namespace FaunaConnect2.Api.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
-            // Zoek de gebruiker in SQL Server
             var user = await _context.Users
                 .FirstOrDefaultAsync(u => u.Email == request.Email && u.PasswordHash == request.Password);
 
@@ -52,6 +51,54 @@ namespace FaunaConnect2.Api.Controllers
 
             // Geef de gebruiker (inclusief zijn Rol!) terug naar de MAUI app
             return Ok(user);
+        }
+
+        // 3. GET: api/users (Alle gebruikers ophalen voor admin)
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        {
+            return await _context.Users.ToListAsync();
+        }
+
+        // 4. GET: api/users/{id}
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> GetUser(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user == null) return NotFound();
+            return user;
+        }
+
+        // 5. PUT: api/users/{id} (Gebruiker bewerken)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateUser(int id, User updatedUser)
+        {
+            if (id != updatedUser.Id) return BadRequest();
+
+            var user = await _context.Users.FindAsync(id);
+            if (user == null) return NotFound();
+
+            user.Name = updatedUser.Name;
+            user.Email = updatedUser.Email;
+            user.Role = updatedUser.Role;
+            user.LinkedJagerId = updatedUser.LinkedJagerId;
+
+            // We raken het wachtwoord niet aan zoals gevraagd
+            
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+
+        // 6. DELETE: api/users/{id} (Gebruiker verwijderen)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user == null) return NotFound();
+
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+            return NoContent();
         }
     }
 }

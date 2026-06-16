@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="DrawerLayout_DrawerListenerImplementor" package="mono.androidx.drawerlayout.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.DrawerLayout.Widget.DrawerLayout+IDrawerListenerImplementor, Xamarin.AndroidX.DrawerLayout">
+    <type name="DrawerLayout_DrawerListenerImplementor" package="mono.androidx.drawerlayout.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.DrawerLayout.Widget.DrawerLayout+IDrawerListenerImplementor, Xamarin.AndroidX.DrawerLayout">
       <implemented_interfaces>
         <interface name="androidx.drawerlayout.widget.DrawerLayout.DrawerListener" />
       </implemented_interfaces>

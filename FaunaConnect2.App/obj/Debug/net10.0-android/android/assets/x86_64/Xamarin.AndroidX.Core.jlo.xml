@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="CancellationSignal_OnCancelListenerImplementor" package="mono.androidx.core.os" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.OS.CancellationSignal+IOnCancelListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="CancellationSignal_OnCancelListenerImplementor" package="mono.androidx.core.os" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.OS.CancellationSignal+IOnCancelListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.os.CancellationSignal.OnCancelListener" />
       </implemented_interfaces>
@@ -11,7 +11,7 @@
         <method name="onCancel" method="n_onCancel:()V:GetOnCancelHandler:AndroidX.Core.OS.CancellationSignal+IOnCancelListenerInvoker, Xamarin.AndroidX.Core" jni_signature="()V" retval="void" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="SharedElementCallback_OnSharedElementsReadyListenerImplementor" package="mono.androidx.core.app" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.App.SharedElementCallback+IOnSharedElementsReadyListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="SharedElementCallback_OnSharedElementsReadyListenerImplementor" package="mono.androidx.core.app" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.App.SharedElementCallback+IOnSharedElementsReadyListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.app.SharedElementCallback.OnSharedElementsReadyListener" />
       </implemented_interfaces>
@@ -22,7 +22,7 @@
         <method name="onSharedElementsReady" method="n_onSharedElementsReady:()V:GetOnSharedElementsReadyHandler:AndroidX.Core.App.SharedElementCallback+IOnSharedElementsReadyListenerInvoker, Xamarin.AndroidX.Core" jni_signature="()V" retval="void" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="NestedScrollView_OnScrollChangeListenerImplementor" package="mono.androidx.core.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.Widget.NestedScrollView+IOnScrollChangeListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="NestedScrollView_OnScrollChangeListenerImplementor" package="mono.androidx.core.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.Widget.NestedScrollView+IOnScrollChangeListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.widget.NestedScrollView.OnScrollChangeListener" />
       </implemented_interfaces>
@@ -33,7 +33,7 @@
         <method name="onScrollChange" method="n_onScrollChange:(Landroidx/core/widget/NestedScrollView;IIII)V:GetOnScrollChange_Landroidx_core_widget_NestedScrollView_IIIIHandler:AndroidX.Core.Widget.NestedScrollView+IOnScrollChangeListenerInvoker, Xamarin.AndroidX.Core" jni_signature="(Landroidx/core/widget/NestedScrollView;IIII)V" params="androidx.core.widget.NestedScrollView p0, int p1, int p2, int p3, int p4" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3, p4" activate_call="p0, p1, p2, p3, p4" />
       </methods>
     </type>
-    <type name="ActionProvider_SubUiVisibilityListenerImplementor" package="mono.androidx.core.view" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.ActionProvider+ISubUiVisibilityListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="ActionProvider_SubUiVisibilityListenerImplementor" package="mono.androidx.core.view" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.ActionProvider+ISubUiVisibilityListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.view.ActionProvider.SubUiVisibilityListener" />
       </implemented_interfaces>
@@ -44,7 +44,7 @@
         <method name="onSubUiVisibilityChanged" method="n_onSubUiVisibilityChanged:(Z)V:GetOnSubUiVisibilityChanged_ZHandler:AndroidX.Core.View.ActionProvider+ISubUiVisibilityListenerInvoker, Xamarin.AndroidX.Core" jni_signature="(Z)V" params="boolean p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ActionProvider_VisibilityListenerImplementor" package="mono.androidx.core.view" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.ActionProvider+IVisibilityListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="ActionProvider_VisibilityListenerImplementor" package="mono.androidx.core.view" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.ActionProvider+IVisibilityListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.view.ActionProvider.VisibilityListener" />
       </implemented_interfaces>
@@ -55,7 +55,7 @@
         <method name="onActionProviderVisibilityChanged" method="n_onActionProviderVisibilityChanged:(Z)V:GetOnActionProviderVisibilityChanged_ZHandler:AndroidX.Core.View.ActionProvider+IVisibilityListenerInvoker, Xamarin.AndroidX.Core" jni_signature="(Z)V" params="boolean p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="DragStartHelper_OnDragStartListenerImplementor" package="mono.androidx.core.view" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.DragStartHelper+IOnDragStartListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="DragStartHelper_OnDragStartListenerImplementor" package="mono.androidx.core.view" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.DragStartHelper+IOnDragStartListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.view.DragStartHelper.OnDragStartListener" />
       </implemented_interfaces>
@@ -66,7 +66,7 @@
         <method name="onDragStart" method="n_onDragStart:(Landroid/view/View;Landroidx/core/view/DragStartHelper;)Z:GetOnDragStart_Landroid_view_View_Landroidx_core_view_DragStartHelper_Handler:AndroidX.Core.View.DragStartHelper+IOnDragStartListenerInvoker, Xamarin.AndroidX.Core" jni_signature="(Landroid/view/View;Landroidx/core/view/DragStartHelper;)Z" params="android.view.View p0, androidx.core.view.DragStartHelper p1" retval="boolean" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="OnApplyWindowInsetsListenerImplementor" package="mono.androidx.core.view" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.IOnApplyWindowInsetsListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="OnApplyWindowInsetsListenerImplementor" package="mono.androidx.core.view" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.IOnApplyWindowInsetsListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.view.OnApplyWindowInsetsListener" />
       </implemented_interfaces>
@@ -77,7 +77,7 @@
         <method name="onApplyWindowInsets" method="n_onApplyWindowInsets:(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;:GetOnApplyWindowInsets_Landroid_view_View_Landroidx_core_view_WindowInsetsCompat_Handler:AndroidX.Core.View.IOnApplyWindowInsetsListenerInvoker, Xamarin.AndroidX.Core" jni_signature="(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;" params="android.view.View p0, androidx.core.view.WindowInsetsCompat p1" retval="androidx.core.view.WindowInsetsCompat" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="OnReceiveContentListenerImplementor" package="mono.androidx.core.view" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.IOnReceiveContentListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="OnReceiveContentListenerImplementor" package="mono.androidx.core.view" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.IOnReceiveContentListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.view.OnReceiveContentListener" />
       </implemented_interfaces>
@@ -88,7 +88,7 @@
         <method name="onReceiveContent" method="n_onReceiveContent:(Landroid/view/View;Landroidx/core/view/ContentInfoCompat;)Landroidx/core/view/ContentInfoCompat;:GetOnReceiveContent_Landroid_view_View_Landroidx_core_view_ContentInfoCompat_Handler:AndroidX.Core.View.IOnReceiveContentListenerInvoker, Xamarin.AndroidX.Core" jni_signature="(Landroid/view/View;Landroidx/core/view/ContentInfoCompat;)Landroidx/core/view/ContentInfoCompat;" params="android.view.View p0, androidx.core.view.ContentInfoCompat p1" retval="androidx.core.view.ContentInfoCompat" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ViewPropertyAnimatorListenerImplementor" package="mono.androidx.core.view" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.IViewPropertyAnimatorListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="ViewPropertyAnimatorListenerImplementor" package="mono.androidx.core.view" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.IViewPropertyAnimatorListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.view.ViewPropertyAnimatorListener" />
       </implemented_interfaces>
@@ -101,7 +101,7 @@
         <method name="onAnimationStart" method="n_onAnimationStart:(Landroid/view/View;)V:GetOnAnimationStart_Landroid_view_View_Handler:AndroidX.Core.View.IViewPropertyAnimatorListenerInvoker, Xamarin.AndroidX.Core" jni_signature="(Landroid/view/View;)V" params="android.view.View p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ViewPropertyAnimatorUpdateListenerImplementor" package="mono.androidx.core.view" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.IViewPropertyAnimatorUpdateListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="ViewPropertyAnimatorUpdateListenerImplementor" package="mono.androidx.core.view" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.IViewPropertyAnimatorUpdateListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.view.ViewPropertyAnimatorUpdateListener" />
       </implemented_interfaces>
@@ -112,7 +112,7 @@
         <method name="onAnimationUpdate" method="n_onAnimationUpdate:(Landroid/view/View;)V:GetOnAnimationUpdate_Landroid_view_View_Handler:AndroidX.Core.View.IViewPropertyAnimatorUpdateListenerInvoker, Xamarin.AndroidX.Core" jni_signature="(Landroid/view/View;)V" params="android.view.View p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="MenuItemCompat_OnActionExpandListenerImplementor" package="mono.androidx.core.view" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.MenuItemCompat+IOnActionExpandListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="MenuItemCompat_OnActionExpandListenerImplementor" package="mono.androidx.core.view" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.MenuItemCompat+IOnActionExpandListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.view.MenuItemCompat.OnActionExpandListener" />
       </implemented_interfaces>
@@ -124,7 +124,7 @@
         <method name="onMenuItemActionExpand" method="n_onMenuItemActionExpand:(Landroid/view/MenuItem;)Z:GetOnMenuItemActionExpand_Landroid_view_MenuItem_Handler:AndroidX.Core.View.MenuItemCompat+IOnActionExpandListenerInvoker, Xamarin.AndroidX.Core" jni_signature="(Landroid/view/MenuItem;)Z" params="android.view.MenuItem p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="WindowInsetsControllerCompat_OnControllableInsetsChangedListenerImplementor" package="mono.androidx.core.view" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.WindowInsetsControllerCompat+IOnControllableInsetsChangedListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="WindowInsetsControllerCompat_OnControllableInsetsChangedListenerImplementor" package="mono.androidx.core.view" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.WindowInsetsControllerCompat+IOnControllableInsetsChangedListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.view.WindowInsetsControllerCompat.OnControllableInsetsChangedListener" />
       </implemented_interfaces>
@@ -135,7 +135,7 @@
         <method name="onControllableInsetsChanged" method="n_onControllableInsetsChanged:(Landroidx/core/view/WindowInsetsControllerCompat;I)V:GetOnControllableInsetsChanged_Landroidx_core_view_WindowInsetsControllerCompat_IHandler:AndroidX.Core.View.WindowInsetsControllerCompat+IOnControllableInsetsChangedListenerInvoker, Xamarin.AndroidX.Core" jni_signature="(Landroidx/core/view/WindowInsetsControllerCompat;I)V" params="androidx.core.view.WindowInsetsControllerCompat p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="InputConnectionCompat_OnCommitContentListenerImplementor" package="mono.androidx.core.view.inputmethod" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.InputMethod.InputConnectionCompat+IOnCommitContentListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="InputConnectionCompat_OnCommitContentListenerImplementor" package="mono.androidx.core.view.inputmethod" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.InputMethod.InputConnectionCompat+IOnCommitContentListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.view.inputmethod.InputConnectionCompat.OnCommitContentListener" />
       </implemented_interfaces>
@@ -146,7 +146,7 @@
         <method name="onCommitContent" method="n_onCommitContent:(Landroidx/core/view/inputmethod/InputContentInfoCompat;ILandroid/os/Bundle;)Z:GetOnCommitContent_Landroidx_core_view_inputmethod_InputContentInfoCompat_ILandroid_os_Bundle_Handler:AndroidX.Core.View.InputMethod.InputConnectionCompat+IOnCommitContentListenerInvoker, Xamarin.AndroidX.Core" jni_signature="(Landroidx/core/view/inputmethod/InputContentInfoCompat;ILandroid/os/Bundle;)Z" params="androidx.core.view.inputmethod.InputContentInfoCompat p0, int p1, android.os.Bundle p2" retval="boolean" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="AccessibilityManagerCompat_AccessibilityStateChangeListenerImplementor" package="mono.androidx.core.view.accessibility" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.Accessibility.AccessibilityManagerCompat+IAccessibilityStateChangeListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="AccessibilityManagerCompat_AccessibilityStateChangeListenerImplementor" package="mono.androidx.core.view.accessibility" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.Accessibility.AccessibilityManagerCompat+IAccessibilityStateChangeListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.view.accessibility.AccessibilityManagerCompat.AccessibilityStateChangeListener" />
       </implemented_interfaces>
@@ -157,7 +157,7 @@
         <method name="onAccessibilityStateChanged" method="n_onAccessibilityStateChanged:(Z)V:GetOnAccessibilityStateChanged_ZHandler:AndroidX.Core.View.Accessibility.AccessibilityManagerCompat+IAccessibilityStateChangeListenerInvoker, Xamarin.AndroidX.Core" jni_signature="(Z)V" params="boolean p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="AccessibilityManagerCompat_TouchExplorationStateChangeListenerImplementor" package="mono.androidx.core.view.accessibility" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.Accessibility.AccessibilityManagerCompat+ITouchExplorationStateChangeListenerImplementor, Xamarin.AndroidX.Core">
+    <type name="AccessibilityManagerCompat_TouchExplorationStateChangeListenerImplementor" package="mono.androidx.core.view.accessibility" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Core.View.Accessibility.AccessibilityManagerCompat+ITouchExplorationStateChangeListenerImplementor, Xamarin.AndroidX.Core">
       <implemented_interfaces>
         <interface name="androidx.core.view.accessibility.AccessibilityManagerCompat.TouchExplorationStateChangeListener" />
       </implemented_interfaces>

@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="TapWindowTracker_GestureListener" package="crc64f728827fec74e9c3" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.TapWindowTracker+GestureListener, Microsoft.Maui.Controls">
+    <type name="TapWindowTracker_GestureListener" package="crc64f728827fec74e9c3" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.TapWindowTracker+GestureListener, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.view.GestureDetector.OnGestureListener" />
       </implemented_interfaces>
@@ -17,7 +17,7 @@
         <method name="onSingleTapUp" method="n_onSingleTapUp:(Landroid/view/MotionEvent;)Z:GetOnSingleTapUp_Landroid_view_MotionEvent_Handler:Android.Views.GestureDetector+IOnGestureListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/view/MotionEvent;)Z" params="android.view.MotionEvent p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="Toolbar_Container" package="crc64f728827fec74e9c3" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ViewGroup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Toolbar+Container, Microsoft.Maui.Controls">
+    <type name="Toolbar_Container" package="crc64f728827fec74e9c3" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ViewGroup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Toolbar+Container, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="Toolbar_Container" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="Toolbar_Container" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -29,7 +29,7 @@
         <method name="onMeasure" method="n_onMeasure:(II)V:GetOnMeasure_IIHandler" jni_signature="(II)V" params="int p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ColorChangeRevealDrawable" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.graphics.drawable.AnimationDrawable" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.ColorChangeRevealDrawable, Microsoft.Maui.Controls">
+    <type name="ColorChangeRevealDrawable" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.graphics.drawable.AnimationDrawable" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.ColorChangeRevealDrawable, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ColorChangeRevealDrawable" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -37,7 +37,7 @@
         <method name="draw" method="n_draw:(Landroid/graphics/Canvas;)V:GetDraw_Landroid_graphics_Canvas_Handler" jni_signature="(Landroid/graphics/Canvas;)V" params="android.graphics.Canvas p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ControlsAccessibilityDelegate" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc6452ffdc5b34af3a0f.AccessibilityDelegateCompatWrapper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.ControlsAccessibilityDelegate, Microsoft.Maui.Controls">
+    <type name="ControlsAccessibilityDelegate" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc6452ffdc5b34af3a0f.AccessibilityDelegateCompatWrapper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.ControlsAccessibilityDelegate, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ControlsAccessibilityDelegate" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
         <constructor name="ControlsAccessibilityDelegate" method="n_.ctor:(Landroid/view/View$AccessibilityDelegate;)V:" jni_signature="(Landroid/view/View$AccessibilityDelegate;)V" managed_parameters="Android.Views.View+AccessibilityDelegate, Mono.Android" params="android.view.View.AccessibilityDelegate p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
@@ -47,7 +47,7 @@
         <method name="onInitializeAccessibilityNodeInfo" method="n_onInitializeAccessibilityNodeInfo:(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V:GetOnInitializeAccessibilityNodeInfo_Landroid_view_View_Landroidx_core_view_accessibility_AccessibilityNodeInfoCompat_Handler" jni_signature="(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V" params="android.view.View p0, androidx.core.view.accessibility.AccessibilityNodeInfoCompat p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="DragAndDropGestureHandler" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.DragAndDropGestureHandler, Microsoft.Maui.Controls">
+    <type name="DragAndDropGestureHandler" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.DragAndDropGestureHandler, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.view.View.OnDragListener" />
       </implemented_interfaces>
@@ -58,19 +58,19 @@
         <method name="onDrag" method="n_onDrag:(Landroid/view/View;Landroid/view/DragEvent;)Z:GetOnDrag_Landroid_view_View_Landroid_view_DragEvent_Handler:Android.Views.View+IOnDragListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/view/View;Landroid/view/DragEvent;)Z" params="android.view.View p0, android.view.DragEvent p1" retval="boolean" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="DragAndDropGestureHandler_CustomLocalStateData" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.DragAndDropGestureHandler+CustomLocalStateData, Microsoft.Maui.Controls">
+    <type name="DragAndDropGestureHandler_CustomLocalStateData" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.DragAndDropGestureHandler+CustomLocalStateData, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="DragAndDropGestureHandler_CustomLocalStateData" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
     </type>
-    <type name="ToolbarExtensions_ToolbarTitleIconImageView" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.appcompat.widget.AppCompatImageView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.ToolbarExtensions+ToolbarTitleIconImageView, Microsoft.Maui.Controls">
+    <type name="ToolbarExtensions_ToolbarTitleIconImageView" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.appcompat.widget.AppCompatImageView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.ToolbarExtensions+ToolbarTitleIconImageView, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ToolbarExtensions_ToolbarTitleIconImageView" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
         <constructor name="ToolbarExtensions_ToolbarTitleIconImageView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android" params="android.content.Context p0, android.util.AttributeSet p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
         <constructor name="ToolbarExtensions_ToolbarTitleIconImageView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </constructors>
     </type>
-    <type name="ToolbarExtensions_AccessibilityDelegateCompatImpl" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.core.view.AccessibilityDelegateCompat" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.ToolbarExtensions+AccessibilityDelegateCompatImpl, Microsoft.Maui.Controls">
+    <type name="ToolbarExtensions_AccessibilityDelegateCompatImpl" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.core.view.AccessibilityDelegateCompat" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.ToolbarExtensions+AccessibilityDelegateCompatImpl, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ToolbarExtensions_AccessibilityDelegateCompatImpl" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
         <constructor name="ToolbarExtensions_AccessibilityDelegateCompatImpl" method="n_.ctor:(Landroid/view/View$AccessibilityDelegate;)V:" jni_signature="(Landroid/view/View$AccessibilityDelegate;)V" managed_parameters="Android.Views.View+AccessibilityDelegate, Mono.Android" params="android.view.View.AccessibilityDelegate p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
@@ -80,7 +80,7 @@
         <method name="onInitializeAccessibilityNodeInfo" method="n_onInitializeAccessibilityNodeInfo:(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V:GetOnInitializeAccessibilityNodeInfo_Landroid_view_View_Landroidx_core_view_accessibility_AccessibilityNodeInfoCompat_Handler" jni_signature="(Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V" params="android.view.View p0, androidx.core.view.accessibility.AccessibilityNodeInfoCompat p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="FragmentContainer" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.fragment.app.Fragment" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.FragmentContainer, Microsoft.Maui.Controls">
+    <type name="FragmentContainer" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.fragment.app.Fragment" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.FragmentContainer, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="FragmentContainer" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
         <constructor name="FragmentContainer" method="n_.ctor:(I)V:" jni_signature="(I)V" managed_parameters="System.Int32, System.Private.CoreLib" params="int p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
@@ -91,7 +91,7 @@
         <method name="onResume" method="n_onResume:()V:GetOnResumeHandler" jni_signature="()V" retval="void" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="GenericAnimatorListener" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.animation.AnimatorListenerAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.GenericAnimatorListener, Microsoft.Maui.Controls">
+    <type name="GenericAnimatorListener" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.animation.AnimatorListenerAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.GenericAnimatorListener, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="GenericAnimatorListener" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -102,7 +102,7 @@
         <method name="finalize" method="n_finalize:()V:GetJavaFinalizeHandler" jni_signature="()V" retval="void" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="GenericGlobalLayoutListener" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.GenericGlobalLayoutListener, Microsoft.Maui.Controls">
+    <type name="GenericGlobalLayoutListener" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.GenericGlobalLayoutListener, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.view.ViewTreeObserver.OnGlobalLayoutListener" />
       </implemented_interfaces>
@@ -113,7 +113,7 @@
         <method name="onGlobalLayout" method="n_onGlobalLayout:()V:GetOnGlobalLayoutHandler:Android.Views.ViewTreeObserver+IOnGlobalLayoutListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="()V" retval="void" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="GenericMenuClickListener" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.GenericMenuClickListener, Microsoft.Maui.Controls">
+    <type name="GenericMenuClickListener" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.GenericMenuClickListener, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.view.MenuItem.OnMenuItemClickListener" />
       </implemented_interfaces>
@@ -124,7 +124,7 @@
         <method name="onMenuItemClick" method="n_onMenuItemClick:(Landroid/view/MenuItem;)Z:GetOnMenuItemClick_Landroid_view_MenuItem_Handler:Android.Views.IMenuItemOnMenuItemClickListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/view/MenuItem;)Z" params="android.view.MenuItem p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="GradientStrokeDrawable" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.graphics.drawable.PaintDrawable" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.GradientStrokeDrawable, Microsoft.Maui.Controls">
+    <type name="GradientStrokeDrawable" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.graphics.drawable.PaintDrawable" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.GradientStrokeDrawable, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="GradientStrokeDrawable" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
         <constructor name="GradientStrokeDrawable" method="n_.ctor:(I)V:" jni_signature="(I)V" managed_parameters="Android.Graphics.Color, Mono.Android" params="int p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
@@ -133,7 +133,7 @@
         <method name="onDraw" method="n_onDraw:(Landroid/graphics/drawable/shapes/Shape;Landroid/graphics/Canvas;Landroid/graphics/Paint;)V:GetOnDraw_Landroid_graphics_drawable_shapes_Shape_Landroid_graphics_Canvas_Landroid_graphics_Paint_Handler" jni_signature="(Landroid/graphics/drawable/shapes/Shape;Landroid/graphics/Canvas;Landroid/graphics/Paint;)V" params="android.graphics.drawable.shapes.Shape p0, android.graphics.Canvas p1, android.graphics.Paint p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="InnerGestureListener" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.InnerGestureListener, Microsoft.Maui.Controls">
+    <type name="InnerGestureListener" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.InnerGestureListener, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.view.GestureDetector.OnGestureListener" />
         <interface name="android.view.GestureDetector.OnDoubleTapListener" />
@@ -153,7 +153,7 @@
         <method name="onSingleTapConfirmed" method="n_onSingleTapConfirmed:(Landroid/view/MotionEvent;)Z:GetOnSingleTapConfirmed_Landroid_view_MotionEvent_Handler:Android.Views.GestureDetector+IOnDoubleTapListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/view/MotionEvent;)Z" params="android.view.MotionEvent p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="InnerScaleListener" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ScaleGestureDetector.SimpleOnScaleGestureListener" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.InnerScaleListener, Microsoft.Maui.Controls">
+    <type name="InnerScaleListener" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ScaleGestureDetector.SimpleOnScaleGestureListener" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.InnerScaleListener, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="InnerScaleListener" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -163,7 +163,7 @@
         <method name="onScaleEnd" method="n_onScaleEnd:(Landroid/view/ScaleGestureDetector;)V:GetOnScaleEnd_Landroid_view_ScaleGestureDetector_Handler" jni_signature="(Landroid/view/ScaleGestureDetector;)V" params="android.view.ScaleGestureDetector p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="MauiViewPager" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.viewpager.widget.ViewPager" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.MauiViewPager, Microsoft.Maui.Controls">
+    <type name="MauiViewPager" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.viewpager.widget.ViewPager" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.MauiViewPager, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="MauiViewPager" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
         <constructor name="MauiViewPager" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android" params="android.content.Context p0, android.util.AttributeSet p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
@@ -173,7 +173,7 @@
         <method name="onTouchEvent" method="n_onTouchEvent:(Landroid/view/MotionEvent;)Z:GetOnTouchEvent_Landroid_view_MotionEvent_Handler" jni_signature="(Landroid/view/MotionEvent;)Z" params="android.view.MotionEvent p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="MultiPageFragmentStateAdapter_1" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.viewpager2.adapter.FragmentStateAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.MultiPageFragmentStateAdapter`1, Microsoft.Maui.Controls">
+    <type name="MultiPageFragmentStateAdapter_1" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.viewpager2.adapter.FragmentStateAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.MultiPageFragmentStateAdapter`1, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="MultiPageFragmentStateAdapter_1" method="n_.ctor:(Landroidx/fragment/app/Fragment;)V:" jni_signature="(Landroidx/fragment/app/Fragment;)V" managed_parameters="AndroidX.Fragment.App.Fragment, Xamarin.AndroidX.Fragment" params="androidx.fragment.app.Fragment p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
         <constructor name="MultiPageFragmentStateAdapter_1" method="n_.ctor:(Landroidx/fragment/app/FragmentActivity;)V:" jni_signature="(Landroidx/fragment/app/FragmentActivity;)V" managed_parameters="AndroidX.Fragment.App.FragmentActivity, Xamarin.AndroidX.Fragment" params="androidx.fragment.app.FragmentActivity p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
@@ -186,7 +186,7 @@
         <method name="containsItem" method="n_containsItem:(J)Z:GetContainsItem_JHandler" jni_signature="(J)Z" params="long p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="PointerGestureHandler" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.PointerGestureHandler, Microsoft.Maui.Controls">
+    <type name="PointerGestureHandler" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.PointerGestureHandler, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.view.View.OnHoverListener" />
       </implemented_interfaces>
@@ -197,7 +197,7 @@
         <method name="onHover" method="n_onHover:(Landroid/view/View;Landroid/view/MotionEvent;)Z:GetOnHover_Landroid_view_View_Landroid_view_MotionEvent_Handler:Android.Views.View+IOnHoverListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/view/View;Landroid/view/MotionEvent;)Z" params="android.view.View p0, android.view.MotionEvent p1" retval="boolean" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="TapAndPanGestureDetector" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.GestureDetector" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.TapAndPanGestureDetector, Microsoft.Maui.Controls">
+    <type name="TapAndPanGestureDetector" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.GestureDetector" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.TapAndPanGestureDetector, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="TapAndPanGestureDetector" method="n_.ctor:(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroid/os/Handler;Z)V:" jni_signature="(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroid/os/Handler;Z)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Views.GestureDetector+IOnGestureListener, Mono.Android:Android.OS.Handler, Mono.Android:System.Boolean, System.Private.CoreLib" params="android.content.Context p0, android.view.GestureDetector.OnGestureListener p1, android.os.Handler p2, boolean p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="TapAndPanGestureDetector" method="n_.ctor:(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroid/os/Handler;)V:" jni_signature="(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroid/os/Handler;)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Views.GestureDetector+IOnGestureListener, Mono.Android:Android.OS.Handler, Mono.Android" params="android.content.Context p0, android.view.GestureDetector.OnGestureListener p1, android.os.Handler p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -209,7 +209,7 @@
         <method name="onTouchEvent" method="n_onTouchEvent:(Landroid/view/MotionEvent;)Z:GetOnTouchEvent_Landroid_view_MotionEvent_Handler" jni_signature="(Landroid/view/MotionEvent;)Z" params="android.view.MotionEvent p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ModalNavigationManager_ModalFragment" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.fragment.app.DialogFragment" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.ModalNavigationManager+ModalFragment, Microsoft.Maui.Controls">
+    <type name="ModalNavigationManager_ModalFragment" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.fragment.app.DialogFragment" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.ModalNavigationManager+ModalFragment, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ModalNavigationManager_ModalFragment" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
         <constructor name="ModalNavigationManager_ModalFragment" method="n_.ctor:(I)V:" jni_signature="(I)V" managed_parameters="System.Int32, System.Private.CoreLib" params="int p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
@@ -224,7 +224,7 @@
         <method name="onDestroy" method="n_onDestroy:()V:GetOnDestroyHandler" jni_signature="()V" retval="void" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="ModalNavigationManager_ModalFragment_CustomComponentDialog" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.activity.ComponentDialog" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.ModalNavigationManager+ModalFragment+CustomComponentDialog, Microsoft.Maui.Controls">
+    <type name="ModalNavigationManager_ModalFragment_CustomComponentDialog" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.activity.ComponentDialog" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.ModalNavigationManager+ModalFragment+CustomComponentDialog, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ModalNavigationManager_ModalFragment_CustomComponentDialog" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
         <constructor name="ModalNavigationManager_ModalFragment_CustomComponentDialog" method="n_.ctor:(Landroid/content/Context;I)V:" jni_signature="(Landroid/content/Context;I)V" managed_parameters="Android.Content.Context, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
@@ -237,7 +237,7 @@
         <method name="onKeyUp" method="n_onKeyUp:(ILandroid/view/KeyEvent;)Z:GetOnKeyUp_ILandroid_view_KeyEvent_Handler" jni_signature="(ILandroid/view/KeyEvent;)Z" params="int p0, android.view.KeyEvent p1" retval="boolean" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ModalNavigationManager_ModalFragment_CustomComponentDialog_CallBack" package="crc64338477404e88479c" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.activity.OnBackPressedCallback" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.ModalNavigationManager+ModalFragment+CustomComponentDialog+CallBack, Microsoft.Maui.Controls">
+    <type name="ModalNavigationManager_ModalFragment_CustomComponentDialog_CallBack" package="crc64338477404e88479c" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.activity.OnBackPressedCallback" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.ModalNavigationManager+ModalFragment+CustomComponentDialog+CallBack, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ModalNavigationManager_ModalFragment_CustomComponentDialog_CallBack" method="n_.ctor:(Z)V:" jni_signature="(Z)V" managed_parameters="System.Boolean, System.Private.CoreLib" params="boolean p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
@@ -245,7 +245,7 @@
         <method name="handleOnBackPressed" method="n_handleOnBackPressed:()V:GetHandleOnBackPressedHandler" jni_signature="()V" retval="void" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="ContainerView" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ViewGroup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ContainerView, Microsoft.Maui.Controls">
+    <type name="ContainerView" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ViewGroup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ContainerView, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ContainerView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="ContainerView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -257,7 +257,7 @@
         <method name="onMeasure" method="n_onMeasure:(II)V:GetOnMeasure_IIHandler" jni_signature="(II)V" params="int p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="CustomFrameLayout" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.FrameLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.CustomFrameLayout, Microsoft.Maui.Controls">
+    <type name="CustomFrameLayout" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.FrameLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.CustomFrameLayout, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="CustomFrameLayout" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="CustomFrameLayout" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -268,7 +268,7 @@
         <method name="onApplyWindowInsets" method="n_onApplyWindowInsets:(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;:GetOnApplyWindowInsets_Landroid_view_WindowInsets_Handler" jni_signature="(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;" params="android.view.WindowInsets p0" retval="android.view.WindowInsets" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ShellContentFragment" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.fragment.app.Fragment" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellContentFragment, Microsoft.Maui.Controls">
+    <type name="ShellContentFragment" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.fragment.app.Fragment" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellContentFragment, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.view.animation.Animation.AnimationListener" />
       </implemented_interfaces>
@@ -286,7 +286,7 @@
         <method name="onAnimationStart" method="n_onAnimationStart:(Landroid/view/animation/Animation;)V:GetOnAnimationStart_Landroid_view_animation_Animation_Handler:Android.Views.Animations.Animation+IAnimationListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/view/animation/Animation;)V" params="android.view.animation.Animation p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ShellFlyoutLayout" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.coordinatorlayout.widget.CoordinatorLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutLayout, Microsoft.Maui.Controls">
+    <type name="ShellFlyoutLayout" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.coordinatorlayout.widget.CoordinatorLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutLayout, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellFlyoutLayout" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
         <constructor name="ShellFlyoutLayout" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android" params="android.content.Context p0, android.util.AttributeSet p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
@@ -296,7 +296,7 @@
         <method name="onLayout" method="n_onLayout:(ZIIII)V:GetOnLayout_ZIIIIHandler" jni_signature="(ZIIII)V" params="boolean p0, int p1, int p2, int p3, int p4" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3, p4" activate_call="p0, p1, p2, p3, p4" />
       </methods>
     </type>
-    <type name="ShellFlyoutRecyclerAdapter" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.Adapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutRecyclerAdapter, Microsoft.Maui.Controls">
+    <type name="ShellFlyoutRecyclerAdapter" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.Adapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutRecyclerAdapter, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellFlyoutRecyclerAdapter" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -308,7 +308,7 @@
         <method name="onCreateViewHolder" method="n_onCreateViewHolder:(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;:GetOnCreateViewHolder_Landroid_view_ViewGroup_IHandler" jni_signature="(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;" params="android.view.ViewGroup p0, int p1" retval="androidx.recyclerview.widget.RecyclerView.ViewHolder" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ShellFlyoutRecyclerAdapter_ShellLinearLayout" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.LinearLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutRecyclerAdapter+ShellLinearLayout, Microsoft.Maui.Controls">
+    <type name="ShellFlyoutRecyclerAdapter_ShellLinearLayout" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.LinearLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutRecyclerAdapter+ShellLinearLayout, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellFlyoutRecyclerAdapter_ShellLinearLayout" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="ShellFlyoutRecyclerAdapter_ShellLinearLayout" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -316,12 +316,12 @@
         <constructor name="ShellFlyoutRecyclerAdapter_ShellLinearLayout" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
     </type>
-    <type name="ShellFlyoutRecyclerAdapter_ElementViewHolder" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.ViewHolder" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutRecyclerAdapter+ElementViewHolder, Microsoft.Maui.Controls">
+    <type name="ShellFlyoutRecyclerAdapter_ElementViewHolder" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.ViewHolder" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutRecyclerAdapter+ElementViewHolder, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellFlyoutRecyclerAdapter_ElementViewHolder" method="n_.ctor:(Landroid/view/View;)V:" jni_signature="(Landroid/view/View;)V" managed_parameters="Android.Views.View, Mono.Android" params="android.view.View p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
     </type>
-    <type name="ShellFlyoutRenderer" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.drawerlayout.widget.DrawerLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutRenderer, Microsoft.Maui.Controls">
+    <type name="ShellFlyoutRenderer" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.drawerlayout.widget.DrawerLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutRenderer, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellFlyoutRenderer" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
         <constructor name="ShellFlyoutRenderer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android" params="android.content.Context p0, android.util.AttributeSet p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
@@ -332,7 +332,7 @@
         <method name="drawChild" method="n_drawChild:(Landroid/graphics/Canvas;Landroid/view/View;J)Z:GetDrawChild_Landroid_graphics_Canvas_Landroid_view_View_JHandler" jni_signature="(Landroid/graphics/Canvas;Landroid/view/View;J)Z" params="android.graphics.Canvas p0, android.view.View p1, long p2" retval="boolean" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="ShellFlyoutTemplatedContentRenderer" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutTemplatedContentRenderer, Microsoft.Maui.Controls">
+    <type name="ShellFlyoutTemplatedContentRenderer" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutTemplatedContentRenderer, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener" />
       </implemented_interfaces>
@@ -343,12 +343,12 @@
         <method name="onOffsetChanged" method="n_onOffsetChanged:(Lcom/google/android/material/appbar/AppBarLayout;I)V:GetOnOffsetChanged_Lcom_google_android_material_appbar_AppBarLayout_IHandler:Google.Android.Material.AppBar.AppBarLayout+IOnOffsetChangedListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/appbar/AppBarLayout;I)V" params="com.google.android.material.appbar.AppBarLayout p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ShellFlyoutTemplatedContentRenderer_ShellFlyoutWindowInsetListener" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc6452ffdc5b34af3a0f.MauiWindowInsetListener" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutTemplatedContentRenderer+ShellFlyoutWindowInsetListener, Microsoft.Maui.Controls">
+    <type name="ShellFlyoutTemplatedContentRenderer_ShellFlyoutWindowInsetListener" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc6452ffdc5b34af3a0f.MauiWindowInsetListener" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutTemplatedContentRenderer+ShellFlyoutWindowInsetListener, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellFlyoutTemplatedContentRenderer_ShellFlyoutWindowInsetListener" method="n_.ctor:(I)V:" jni_signature="(I)V" managed_parameters="System.Int32, System.Private.CoreLib" params="int p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
     </type>
-    <type name="ShellFlyoutTemplatedContentRenderer_HeaderContainer" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc640ec207abc449b2ca.ContainerView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutTemplatedContentRenderer+HeaderContainer, Microsoft.Maui.Controls">
+    <type name="ShellFlyoutTemplatedContentRenderer_HeaderContainer" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc640ec207abc449b2ca.ContainerView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFlyoutTemplatedContentRenderer+HeaderContainer, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellFlyoutTemplatedContentRenderer_HeaderContainer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="ShellFlyoutTemplatedContentRenderer_HeaderContainer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -360,14 +360,14 @@
         <method name="onLayout" method="n_onLayout:(ZIIII)V:GetOnLayout_ZIIIIHandler" jni_signature="(ZIIII)V" params="boolean p0, int p1, int p2, int p3, int p4" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3, p4" activate_call="p0, p1, p2, p3, p4" />
       </methods>
     </type>
-    <type name="RecyclerViewContainer" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.RecyclerViewContainer, Microsoft.Maui.Controls">
+    <type name="RecyclerViewContainer" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.RecyclerViewContainer, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="RecyclerViewContainer" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
         <constructor name="RecyclerViewContainer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android" params="android.content.Context p0, android.util.AttributeSet p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
         <constructor name="RecyclerViewContainer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </constructors>
     </type>
-    <type name="ScrollLayoutManager" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.LinearLayoutManager" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ScrollLayoutManager, Microsoft.Maui.Controls">
+    <type name="ScrollLayoutManager" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.LinearLayoutManager" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ScrollLayoutManager, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ScrollLayoutManager" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
         <constructor name="ScrollLayoutManager" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
@@ -377,7 +377,7 @@
         <method name="canScrollVertically" method="n_canScrollVertically:()Z:GetCanScrollVerticallyHandler" jni_signature="()Z" retval="boolean" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="ShellFragmentContainer" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.fragment.app.Fragment" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFragmentContainer, Microsoft.Maui.Controls">
+    <type name="ShellFragmentContainer" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.fragment.app.Fragment" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFragmentContainer, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellFragmentContainer" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
         <constructor name="ShellFragmentContainer" method="n_.ctor:(I)V:" jni_signature="(I)V" managed_parameters="System.Int32, System.Private.CoreLib" params="int p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
@@ -387,7 +387,7 @@
         <method name="onDestroyView" method="n_onDestroyView:()V:GetOnDestroyViewHandler" jni_signature="()V" retval="void" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="ShellFragmentStateAdapter" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.viewpager2.adapter.FragmentStateAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFragmentStateAdapter, Microsoft.Maui.Controls">
+    <type name="ShellFragmentStateAdapter" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.viewpager2.adapter.FragmentStateAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellFragmentStateAdapter, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellFragmentStateAdapter" method="n_.ctor:(Landroidx/fragment/app/Fragment;)V:" jni_signature="(Landroidx/fragment/app/Fragment;)V" managed_parameters="AndroidX.Fragment.App.Fragment, Xamarin.AndroidX.Fragment" params="androidx.fragment.app.Fragment p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
         <constructor name="ShellFragmentStateAdapter" method="n_.ctor:(Landroidx/fragment/app/FragmentActivity;)V:" jni_signature="(Landroidx/fragment/app/FragmentActivity;)V" managed_parameters="AndroidX.Fragment.App.FragmentActivity, Xamarin.AndroidX.Fragment" params="androidx.fragment.app.FragmentActivity p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
@@ -400,7 +400,7 @@
         <method name="containsItem" method="n_containsItem:(J)Z:GetContainsItem_JHandler" jni_signature="(J)Z" params="long p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ShellItemRenderer" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc640ec207abc449b2ca.ShellItemRendererBase" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellItemRenderer, Microsoft.Maui.Controls">
+    <type name="ShellItemRenderer" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc640ec207abc449b2ca.ShellItemRendererBase" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellItemRenderer, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="com.google.android.material.navigation.NavigationBarView.OnItemSelectedListener" />
       </implemented_interfaces>
@@ -414,7 +414,7 @@
         <method name="onNavigationItemSelected" method="n_onNavigationItemSelected:(Landroid/view/MenuItem;)Z:GetOnNavigationItemSelected_Landroid_view_MenuItem_Handler:Google.Android.Material.Navigation.NavigationBarView+IOnItemSelectedListenerInvoker, Xamarin.Google.Android.Material" jni_signature="(Landroid/view/MenuItem;)Z" params="android.view.MenuItem p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ShellItemRendererBase" package="crc640ec207abc449b2ca" is_abstract="True" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.fragment.app.Fragment" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellItemRendererBase, Microsoft.Maui.Controls">
+    <type name="ShellItemRendererBase" package="crc640ec207abc449b2ca" is_abstract="True" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.fragment.app.Fragment" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellItemRendererBase, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellItemRendererBase" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
         <constructor name="ShellItemRendererBase" method="n_.ctor:(I)V:" jni_signature="(I)V" managed_parameters="System.Int32, System.Private.CoreLib" params="int p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
@@ -423,7 +423,7 @@
         <method name="onDestroy" method="n_onDestroy:()V:GetOnDestroyHandler" jni_signature="()V" retval="void" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="ShellPageContainer" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ViewGroup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellPageContainer, Microsoft.Maui.Controls">
+    <type name="ShellPageContainer" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ViewGroup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellPageContainer, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellPageContainer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="ShellPageContainer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -435,7 +435,7 @@
         <method name="onMeasure" method="n_onMeasure:(II)V:GetOnMeasure_IIHandler" jni_signature="(II)V" params="int p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ShellSearchView" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.FrameLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellSearchView, Microsoft.Maui.Controls">
+    <type name="ShellSearchView" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.FrameLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellSearchView, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.widget.TextView.OnEditorActionListener" />
         <interface name="android.text.TextWatcher" />
@@ -457,7 +457,7 @@
         <method name="onTextChanged" method="n_onTextChanged:(Ljava/lang/CharSequence;III)V:GetOnTextChanged_Ljava_lang_CharSequence_IIIHandler:Android.Text.ITextWatcherInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Ljava/lang/CharSequence;III)V" params="java.lang.CharSequence p0, int p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
       </methods>
     </type>
-    <type name="ShellSearchView_ClipDrawableWrapper" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.appcompat.graphics.drawable.DrawableWrapperCompat" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellSearchView+ClipDrawableWrapper, Microsoft.Maui.Controls">
+    <type name="ShellSearchView_ClipDrawableWrapper" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.appcompat.graphics.drawable.DrawableWrapperCompat" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellSearchView+ClipDrawableWrapper, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellSearchView_ClipDrawableWrapper" method="n_.ctor:(Landroid/graphics/drawable/Drawable;)V:" jni_signature="(Landroid/graphics/drawable/Drawable;)V" managed_parameters="Android.Graphics.Drawables.Drawable, Mono.Android" params="android.graphics.drawable.Drawable p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
@@ -465,7 +465,7 @@
         <method name="draw" method="n_draw:(Landroid/graphics/Canvas;)V:GetDraw_Landroid_graphics_Canvas_Handler" jni_signature="(Landroid/graphics/Canvas;)V" params="android.graphics.Canvas p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ShellSearchViewAdapter" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.BaseAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellSearchViewAdapter, Microsoft.Maui.Controls">
+    <type name="ShellSearchViewAdapter" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.BaseAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellSearchViewAdapter, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.widget.Filterable" />
       </implemented_interfaces>
@@ -480,7 +480,7 @@
         <method name="getFilter" method="n_getFilter:()Landroid/widget/Filter;:GetGetFilterHandler:Android.Widget.IFilterableInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="()Landroid/widget/Filter;" retval="android.widget.Filter" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="ShellSearchViewAdapter_CustomFilter" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.Filter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellSearchViewAdapter+CustomFilter, Microsoft.Maui.Controls">
+    <type name="ShellSearchViewAdapter_CustomFilter" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.Filter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellSearchViewAdapter+CustomFilter, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellSearchViewAdapter_CustomFilter" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
         <constructor name="ShellSearchViewAdapter_CustomFilter" method="n_.ctor:(Landroid/widget/BaseAdapter;)V:" jni_signature="(Landroid/widget/BaseAdapter;)V" managed_parameters="Android.Widget.BaseAdapter, Mono.Android" params="android.widget.BaseAdapter p0" retval="void" is_dynamically_registered="True" super_call="" activate_call="p0" />
@@ -490,7 +490,7 @@
         <method name="publishResults" method="n_publishResults:(Ljava/lang/CharSequence;Landroid/widget/Filter$FilterResults;)V:GetPublishResults_Ljava_lang_CharSequence_Landroid_widget_Filter_FilterResults_Handler" jni_signature="(Ljava/lang/CharSequence;Landroid/widget/Filter$FilterResults;)V" params="java.lang.CharSequence p0, android.widget.Filter.FilterResults p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ShellSearchViewAdapter_ObjectWrapper" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellSearchViewAdapter+ObjectWrapper, Microsoft.Maui.Controls">
+    <type name="ShellSearchViewAdapter_ObjectWrapper" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellSearchViewAdapter+ObjectWrapper, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellSearchViewAdapter_ObjectWrapper" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -498,7 +498,7 @@
         <method name="toString" method="n_toString:()Ljava/lang/String;:GetToStringHandler" jni_signature="()Ljava/lang/String;" retval="java.lang.String" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="ShellSectionRenderer" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.fragment.app.Fragment" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellSectionRenderer, Microsoft.Maui.Controls">
+    <type name="ShellSectionRenderer" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.fragment.app.Fragment" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellSectionRenderer, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.view.View.OnClickListener" />
         <interface name="com.google.android.material.tabs.TabLayoutMediator.TabConfigurationStrategy" />
@@ -515,7 +515,7 @@
         <method name="onConfigureTab" method="n_onConfigureTab:(Lcom/google/android/material/tabs/TabLayout$Tab;I)V:GetOnConfigureTab_Lcom_google_android_material_tabs_TabLayout_Tab_IHandler:Google.Android.Material.Tabs.TabLayoutMediator+ITabConfigurationStrategyInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/tabs/TabLayout$Tab;I)V" params="com.google.android.material.tabs.TabLayout.Tab p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ShellSectionRenderer_ViewPagerPageChanged" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellSectionRenderer+ViewPagerPageChanged, Microsoft.Maui.Controls">
+    <type name="ShellSectionRenderer_ViewPagerPageChanged" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellSectionRenderer+ViewPagerPageChanged, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellSectionRenderer_ViewPagerPageChanged" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
         <constructor name="ShellSectionRenderer_ViewPagerPageChanged" method="n_.ctor:(Lcrc640ec207abc449b2ca/ShellSectionRenderer;)V:" jni_signature="(Lcrc640ec207abc449b2ca/ShellSectionRenderer;)V" managed_parameters="Microsoft.Maui.Controls.Platform.Compatibility.ShellSectionRenderer, Microsoft.Maui.Controls" params="crc640ec207abc449b2ca.ShellSectionRenderer p0" retval="void" is_dynamically_registered="True" super_call="" activate_call="p0" />
@@ -524,7 +524,7 @@
         <method name="onPageSelected" method="n_onPageSelected:(I)V:GetOnPageSelected_IHandler" jni_signature="(I)V" params="int p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ShellToolbarTracker" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellToolbarTracker, Microsoft.Maui.Controls">
+    <type name="ShellToolbarTracker" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellToolbarTracker, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.view.View.OnClickListener" />
       </implemented_interfaces>
@@ -535,7 +535,7 @@
         <method name="onClick" method="n_onClick:(Landroid/view/View;)V:GetOnClick_Landroid_view_View_Handler:Android.Views.View+IOnClickListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/view/View;)V" params="android.view.View p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ShellToolbarTracker_FlyoutIconDrawerDrawable" package="crc640ec207abc449b2ca" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.appcompat.graphics.drawable.DrawerArrowDrawable" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellToolbarTracker+FlyoutIconDrawerDrawable, Microsoft.Maui.Controls">
+    <type name="ShellToolbarTracker_FlyoutIconDrawerDrawable" package="crc640ec207abc449b2ca" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.appcompat.graphics.drawable.DrawerArrowDrawable" partial_assembly_qualified_name="Microsoft.Maui.Controls.Platform.Compatibility.ShellToolbarTracker+FlyoutIconDrawerDrawable, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ShellToolbarTracker_FlyoutIconDrawerDrawable" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
@@ -543,7 +543,7 @@
         <method name="draw" method="n_draw:(Landroid/graphics/Canvas;)V:GetDraw_Landroid_graphics_Canvas_Handler" jni_signature="(Landroid/graphics/Canvas;)V" params="android.graphics.Canvas p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="TabbedPageManager_TempView" package="crc649ff77a65592e7d55" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.View" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.TabbedPageManager+TempView, Microsoft.Maui.Controls">
+    <type name="TabbedPageManager_TempView" package="crc649ff77a65592e7d55" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.View" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.TabbedPageManager+TempView, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="TabbedPageManager_TempView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="TabbedPageManager_TempView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -551,7 +551,7 @@
         <constructor name="TabbedPageManager_TempView" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
     </type>
-    <type name="TabbedPageManager_Listeners" package="crc649ff77a65592e7d55" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.TabbedPageManager+Listeners, Microsoft.Maui.Controls">
+    <type name="TabbedPageManager_Listeners" package="crc649ff77a65592e7d55" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.TabbedPageManager+Listeners, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener" />
         <interface name="com.google.android.material.navigation.NavigationBarView.OnItemSelectedListener" />
@@ -569,7 +569,7 @@
         <method name="onConfigureTab" method="n_onConfigureTab:(Lcom/google/android/material/tabs/TabLayout$Tab;I)V:GetOnConfigureTab_Lcom_google_android_material_tabs_TabLayout_Tab_IHandler:Google.Android.Material.Tabs.TabLayoutMediator+ITabConfigurationStrategyInvoker, Xamarin.Google.Android.Material" jni_signature="(Lcom/google/android/material/tabs/TabLayout$Tab;I)V" params="com.google.android.material.tabs.TabLayout.Tab p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="CarouselViewAdapter_2" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.ItemsViewAdapter_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.CarouselViewAdapter`2, Microsoft.Maui.Controls">
+    <type name="CarouselViewAdapter_2" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.ItemsViewAdapter_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.CarouselViewAdapter`2, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="CarouselViewAdapter_2" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -579,7 +579,7 @@
         <method name="onBindViewHolder" method="n_onBindViewHolder:(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V:GetOnBindViewHolder_Landroidx_recyclerview_widget_RecyclerView_ViewHolder_IHandler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V" params="androidx.recyclerview.widget.RecyclerView.ViewHolder p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="EmptyViewAdapter" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.Adapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.EmptyViewAdapter, Microsoft.Maui.Controls">
+    <type name="EmptyViewAdapter" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.Adapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.EmptyViewAdapter, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="EmptyViewAdapter" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -591,7 +591,7 @@
         <method name="getItemViewType" method="n_getItemViewType:(I)I:GetGetItemViewType_IHandler" jni_signature="(I)I" params="int p0" retval="int" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="GroupableItemsViewAdapter_2" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.SelectableItemsViewAdapter_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.GroupableItemsViewAdapter`2, Microsoft.Maui.Controls">
+    <type name="GroupableItemsViewAdapter_2" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.SelectableItemsViewAdapter_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.GroupableItemsViewAdapter`2, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="GroupableItemsViewAdapter_2" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -601,7 +601,7 @@
         <method name="onBindViewHolder" method="n_onBindViewHolder:(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V:GetOnBindViewHolder_Landroidx_recyclerview_widget_RecyclerView_ViewHolder_IHandler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V" params="androidx.recyclerview.widget.RecyclerView.ViewHolder p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ItemsViewAdapter_2" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.Adapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.ItemsViewAdapter`2, Microsoft.Maui.Controls">
+    <type name="ItemsViewAdapter_2" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.Adapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.ItemsViewAdapter`2, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ItemsViewAdapter_2" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -614,12 +614,12 @@
         <method name="getItemId" method="n_getItemId:(I)J:GetGetItemId_IHandler" jni_signature="(I)J" params="int p0" retval="long" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ReorderableItemsViewAdapter_2" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.GroupableItemsViewAdapter_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.ReorderableItemsViewAdapter`2, Microsoft.Maui.Controls">
+    <type name="ReorderableItemsViewAdapter_2" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.GroupableItemsViewAdapter_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.ReorderableItemsViewAdapter`2, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ReorderableItemsViewAdapter_2" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
     </type>
-    <type name="SelectableItemsViewAdapter_2" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.StructuredItemsViewAdapter_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.SelectableItemsViewAdapter`2, Microsoft.Maui.Controls">
+    <type name="SelectableItemsViewAdapter_2" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.StructuredItemsViewAdapter_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.SelectableItemsViewAdapter`2, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="SelectableItemsViewAdapter_2" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -628,7 +628,7 @@
         <method name="onViewRecycled" method="n_onViewRecycled:(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V:GetOnViewRecycled_Landroidx_recyclerview_widget_RecyclerView_ViewHolder_Handler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V" params="androidx.recyclerview.widget.RecyclerView.ViewHolder p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="StructuredItemsViewAdapter_2" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.ItemsViewAdapter_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.StructuredItemsViewAdapter`2, Microsoft.Maui.Controls">
+    <type name="StructuredItemsViewAdapter_2" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.ItemsViewAdapter_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.StructuredItemsViewAdapter`2, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="StructuredItemsViewAdapter_2" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -638,7 +638,7 @@
         <method name="onBindViewHolder" method="n_onBindViewHolder:(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V:GetOnBindViewHolder_Landroidx_recyclerview_widget_RecyclerView_ViewHolder_IHandler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V" params="androidx.recyclerview.widget.RecyclerView.ViewHolder p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="CarouselSpacingItemDecoration" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.ItemDecoration" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.CarouselSpacingItemDecoration, Microsoft.Maui.Controls">
+    <type name="CarouselSpacingItemDecoration" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.ItemDecoration" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.CarouselSpacingItemDecoration, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="CarouselSpacingItemDecoration" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -646,7 +646,7 @@
         <method name="getItemOffsets" method="n_getItemOffsets:(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V:GetGetItemOffsets_Landroid_graphics_Rect_Landroid_view_View_Landroidx_recyclerview_widget_RecyclerView_Landroidx_recyclerview_widget_RecyclerView_State_Handler" jni_signature="(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V" params="android.graphics.Rect p0, android.view.View p1, androidx.recyclerview.widget.RecyclerView p2, androidx.recyclerview.widget.RecyclerView.State p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
       </methods>
     </type>
-    <type name="CarouselViewOnScrollListener" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.RecyclerViewScrollListener_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.CarouselViewOnScrollListener, Microsoft.Maui.Controls">
+    <type name="CarouselViewOnScrollListener" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.RecyclerViewScrollListener_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.CarouselViewOnScrollListener, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="CarouselViewOnScrollListener" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -655,7 +655,7 @@
         <method name="onScrolled" method="n_onScrolled:(Landroidx/recyclerview/widget/RecyclerView;II)V:GetOnScrolled_Landroidx_recyclerview_widget_RecyclerView_IIHandler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView;II)V" params="androidx.recyclerview.widget.RecyclerView p0, int p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="DataChangeObserver" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.AdapterDataObserver" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.DataChangeObserver, Microsoft.Maui.Controls">
+    <type name="DataChangeObserver" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.AdapterDataObserver" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.DataChangeObserver, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="DataChangeObserver" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -668,7 +668,7 @@
         <method name="onItemRangeMoved" method="n_onItemRangeMoved:(III)V:GetOnItemRangeMoved_IIIHandler" jni_signature="(III)V" params="int p0, int p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="GridLayoutSpanSizeLookup" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.GridLayoutManager.SpanSizeLookup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.GridLayoutSpanSizeLookup, Microsoft.Maui.Controls">
+    <type name="GridLayoutSpanSizeLookup" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.GridLayoutManager.SpanSizeLookup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.GridLayoutSpanSizeLookup, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="GridLayoutSpanSizeLookup" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -676,7 +676,7 @@
         <method name="getSpanSize" method="n_getSpanSize:(I)I:GetGetSpanSize_IHandler" jni_signature="(I)I" params="int p0" retval="int" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ItemContentView" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ViewGroup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.ItemContentView, Microsoft.Maui.Controls">
+    <type name="ItemContentView" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ViewGroup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.ItemContentView, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ItemContentView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="ItemContentView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -688,7 +688,7 @@
         <method name="onMeasure" method="n_onMeasure:(II)V:GetOnMeasure_IIHandler" jni_signature="(II)V" params="int p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="MauiCarouselRecyclerView" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.MauiRecyclerView_3" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.MauiCarouselRecyclerView, Microsoft.Maui.Controls">
+    <type name="MauiCarouselRecyclerView" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.MauiRecyclerView_3" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.MauiCarouselRecyclerView, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="MauiCarouselRecyclerView" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
         <constructor name="MauiCarouselRecyclerView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android" params="android.content.Context p0, android.util.AttributeSet p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
@@ -702,7 +702,7 @@
         <method name="onMeasure" method="n_onMeasure:(II)V:GetOnMeasure_IIHandler" jni_signature="(II)V" params="int p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="MauiCarouselRecyclerView_CarouselViewOnGlobalLayoutListener" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.MauiCarouselRecyclerView+CarouselViewOnGlobalLayoutListener, Microsoft.Maui.Controls">
+    <type name="MauiCarouselRecyclerView_CarouselViewOnGlobalLayoutListener" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.MauiCarouselRecyclerView+CarouselViewOnGlobalLayoutListener, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.view.ViewTreeObserver.OnGlobalLayoutListener" />
       </implemented_interfaces>
@@ -714,7 +714,7 @@
         <method name="onGlobalLayout" method="n_onGlobalLayout:()V:GetOnGlobalLayoutHandler:Android.Views.ViewTreeObserver+IOnGlobalLayoutListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="()V" retval="void" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="MauiRecyclerView_3" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.MauiRecyclerView`3, Microsoft.Maui.Controls">
+    <type name="MauiRecyclerView_3" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.MauiRecyclerView`3, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="MauiRecyclerView_3" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
         <constructor name="MauiRecyclerView_3" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android" params="android.content.Context p0, android.util.AttributeSet p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
@@ -726,7 +726,7 @@
         <method name="onLayout" method="n_onLayout:(ZIIII)V:GetOnLayout_ZIIIIHandler" jni_signature="(ZIIII)V" params="boolean p0, int p1, int p2, int p3, int p4" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3, p4" activate_call="p0, p1, p2, p3, p4" />
       </methods>
     </type>
-    <type name="PositionalSmoothScroller" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.LinearSmoothScroller" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.PositionalSmoothScroller, Microsoft.Maui.Controls">
+    <type name="PositionalSmoothScroller" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.LinearSmoothScroller" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.PositionalSmoothScroller, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="PositionalSmoothScroller" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
@@ -736,7 +736,7 @@
         <method name="calculateDtToFit" method="n_calculateDtToFit:(IIIII)I:GetCalculateDtToFit_IIIIIHandler" jni_signature="(IIIII)I" params="int p0, int p1, int p2, int p3, int p4" retval="int" is_dynamically_registered="True" super_call="p0, p1, p2, p3, p4" activate_call="p0, p1, p2, p3, p4" />
       </methods>
     </type>
-    <type name="RecyclerViewScrollListener_2" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.OnScrollListener" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.RecyclerViewScrollListener`2, Microsoft.Maui.Controls">
+    <type name="RecyclerViewScrollListener_2" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.OnScrollListener" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.RecyclerViewScrollListener`2, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="RecyclerViewScrollListener_2" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -745,7 +745,7 @@
         <method name="onScrollStateChanged" method="n_onScrollStateChanged:(Landroidx/recyclerview/widget/RecyclerView;I)V:GetOnScrollStateChanged_Landroidx_recyclerview_widget_RecyclerView_IHandler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView;I)V" params="androidx.recyclerview.widget.RecyclerView p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ScrollHelper" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.OnScrollListener" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.ScrollHelper, Microsoft.Maui.Controls">
+    <type name="ScrollHelper" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.OnScrollListener" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.ScrollHelper, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ScrollHelper" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
         <constructor name="ScrollHelper" method="n_.ctor:(Landroidx/recyclerview/widget/RecyclerView;)V:" jni_signature="(Landroidx/recyclerview/widget/RecyclerView;)V" managed_parameters="AndroidX.RecyclerView.Widget.RecyclerView, Xamarin.AndroidX.RecyclerView" params="androidx.recyclerview.widget.RecyclerView p0" retval="void" is_dynamically_registered="True" super_call="" activate_call="p0" />
@@ -754,7 +754,7 @@
         <method name="onScrolled" method="n_onScrolled:(Landroidx/recyclerview/widget/RecyclerView;II)V:GetOnScrolled_Landroidx_recyclerview_widget_RecyclerView_IIHandler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView;II)V" params="androidx.recyclerview.widget.RecyclerView p0, int p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="SelectableViewHolder" package="crc645d80431ce5f73f11" is_abstract="True" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.ViewHolder" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.SelectableViewHolder, Microsoft.Maui.Controls">
+    <type name="SelectableViewHolder" package="crc645d80431ce5f73f11" is_abstract="True" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.ViewHolder" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.SelectableViewHolder, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.view.View.OnClickListener" />
       </implemented_interfaces>
@@ -765,7 +765,7 @@
         <method name="onClick" method="n_onClick:(Landroid/view/View;)V:GetOnClick_Landroid_view_View_Handler:Android.Views.View+IOnClickListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/view/View;)V" params="android.view.View p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="SimpleItemTouchHelperCallback" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.ItemTouchHelper.Callback" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.SimpleItemTouchHelperCallback, Microsoft.Maui.Controls">
+    <type name="SimpleItemTouchHelperCallback" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.ItemTouchHelper.Callback" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.SimpleItemTouchHelperCallback, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="SimpleItemTouchHelperCallback" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -776,12 +776,12 @@
         <method name="onSwiped" method="n_onSwiped:(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V:GetOnSwiped_Landroidx_recyclerview_widget_RecyclerView_ViewHolder_IHandler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V" params="androidx.recyclerview.widget.RecyclerView.ViewHolder p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="SimpleViewHolder" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.ViewHolder" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.SimpleViewHolder, Microsoft.Maui.Controls">
+    <type name="SimpleViewHolder" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.ViewHolder" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.SimpleViewHolder, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="SimpleViewHolder" method="n_.ctor:(Landroid/view/View;)V:" jni_signature="(Landroid/view/View;)V" managed_parameters="Android.Views.View, Mono.Android" params="android.view.View p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
     </type>
-    <type name="SizedItemContentView" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.ItemContentView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.SizedItemContentView, Microsoft.Maui.Controls">
+    <type name="SizedItemContentView" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.ItemContentView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.SizedItemContentView, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="SizedItemContentView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="SizedItemContentView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -792,7 +792,7 @@
         <method name="onMeasure" method="n_onMeasure:(II)V:GetOnMeasure_IIHandler" jni_signature="(II)V" params="int p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="CenterSnapHelper" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.NongreedySnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.CenterSnapHelper, Microsoft.Maui.Controls">
+    <type name="CenterSnapHelper" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.NongreedySnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.CenterSnapHelper, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="CenterSnapHelper" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -800,12 +800,12 @@
         <method name="findSnapView" method="n_findSnapView:(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)Landroid/view/View;:GetFindSnapView_Landroidx_recyclerview_widget_RecyclerView_LayoutManager_Handler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)Landroid/view/View;" params="androidx.recyclerview.widget.RecyclerView.LayoutManager p0" retval="android.view.View" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="EdgeSnapHelper" package="crc645d80431ce5f73f11" is_abstract="True" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.NongreedySnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.EdgeSnapHelper, Microsoft.Maui.Controls">
+    <type name="EdgeSnapHelper" package="crc645d80431ce5f73f11" is_abstract="True" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.NongreedySnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.EdgeSnapHelper, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="EdgeSnapHelper" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
     </type>
-    <type name="EndSingleSnapHelper" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.SingleSnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.EndSingleSnapHelper, Microsoft.Maui.Controls">
+    <type name="EndSingleSnapHelper" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.SingleSnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.EndSingleSnapHelper, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="EndSingleSnapHelper" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -813,7 +813,7 @@
         <method name="calculateDistanceToFinalSnap" method="n_calculateDistanceToFinalSnap:(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I:GetCalculateDistanceToFinalSnap_Landroidx_recyclerview_widget_RecyclerView_LayoutManager_Landroid_view_View_Handler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I" params="androidx.recyclerview.widget.RecyclerView.LayoutManager p0, android.view.View p1" retval="int[]" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="EndSnapHelper" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.EdgeSnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.EndSnapHelper, Microsoft.Maui.Controls">
+    <type name="EndSnapHelper" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.EdgeSnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.EndSnapHelper, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="EndSnapHelper" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -822,7 +822,7 @@
         <method name="findSnapView" method="n_findSnapView:(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)Landroid/view/View;:GetFindSnapView_Landroidx_recyclerview_widget_RecyclerView_LayoutManager_Handler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)Landroid/view/View;" params="androidx.recyclerview.widget.RecyclerView.LayoutManager p0" retval="android.view.View" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="NongreedySnapHelper" package="crc645d80431ce5f73f11" is_abstract="True" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.LinearSnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.NongreedySnapHelper, Microsoft.Maui.Controls">
+    <type name="NongreedySnapHelper" package="crc645d80431ce5f73f11" is_abstract="True" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.LinearSnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.NongreedySnapHelper, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="NongreedySnapHelper" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -830,7 +830,7 @@
         <method name="attachToRecyclerView" method="n_attachToRecyclerView:(Landroidx/recyclerview/widget/RecyclerView;)V:GetAttachToRecyclerView_Landroidx_recyclerview_widget_RecyclerView_Handler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView;)V" params="androidx.recyclerview.widget.RecyclerView p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="NongreedySnapHelper_InitialScrollListener" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.OnScrollListener" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.NongreedySnapHelper+InitialScrollListener, Microsoft.Maui.Controls">
+    <type name="NongreedySnapHelper_InitialScrollListener" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.OnScrollListener" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.NongreedySnapHelper+InitialScrollListener, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="NongreedySnapHelper_InitialScrollListener" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
         <constructor name="NongreedySnapHelper_InitialScrollListener" method="n_.ctor:(Lcrc645d80431ce5f73f11/NongreedySnapHelper;)V:" jni_signature="(Lcrc645d80431ce5f73f11/NongreedySnapHelper;)V" managed_parameters="Microsoft.Maui.Controls.Handlers.Items.NongreedySnapHelper, Microsoft.Maui.Controls" params="crc645d80431ce5f73f11.NongreedySnapHelper p0" retval="void" is_dynamically_registered="True" super_call="" activate_call="p0" />
@@ -839,7 +839,7 @@
         <method name="onScrolled" method="n_onScrolled:(Landroidx/recyclerview/widget/RecyclerView;II)V:GetOnScrolled_Landroidx_recyclerview_widget_RecyclerView_IIHandler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView;II)V" params="androidx.recyclerview.widget.RecyclerView p0, int p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="SingleSnapHelper" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.PagerSnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.SingleSnapHelper, Microsoft.Maui.Controls">
+    <type name="SingleSnapHelper" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.PagerSnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.SingleSnapHelper, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="SingleSnapHelper" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -848,7 +848,7 @@
         <method name="findTargetSnapPosition" method="n_findTargetSnapPosition:(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;II)I:GetFindTargetSnapPosition_Landroidx_recyclerview_widget_RecyclerView_LayoutManager_IIHandler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;II)I" params="androidx.recyclerview.widget.RecyclerView.LayoutManager p0, int p1, int p2" retval="int" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="StartSingleSnapHelper" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.SingleSnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.StartSingleSnapHelper, Microsoft.Maui.Controls">
+    <type name="StartSingleSnapHelper" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.SingleSnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.StartSingleSnapHelper, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="StartSingleSnapHelper" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -856,7 +856,7 @@
         <method name="calculateDistanceToFinalSnap" method="n_calculateDistanceToFinalSnap:(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I:GetCalculateDistanceToFinalSnap_Landroidx_recyclerview_widget_RecyclerView_LayoutManager_Landroid_view_View_Handler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I" params="androidx.recyclerview.widget.RecyclerView.LayoutManager p0, android.view.View p1" retval="int[]" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="StartSnapHelper" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.EdgeSnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.StartSnapHelper, Microsoft.Maui.Controls">
+    <type name="StartSnapHelper" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.EdgeSnapHelper" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.StartSnapHelper, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="StartSnapHelper" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -865,7 +865,7 @@
         <method name="findSnapView" method="n_findSnapView:(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)Landroid/view/View;:GetFindSnapView_Landroidx_recyclerview_widget_RecyclerView_LayoutManager_Handler" jni_signature="(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)Landroid/view/View;" params="androidx.recyclerview.widget.RecyclerView.LayoutManager p0" retval="android.view.View" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="SpacingItemDecoration" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.ItemDecoration" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.SpacingItemDecoration, Microsoft.Maui.Controls">
+    <type name="SpacingItemDecoration" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.recyclerview.widget.RecyclerView.ItemDecoration" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.SpacingItemDecoration, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="SpacingItemDecoration" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -873,17 +873,17 @@
         <method name="getItemOffsets" method="n_getItemOffsets:(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V:GetGetItemOffsets_Landroid_graphics_Rect_Landroid_view_View_Landroidx_recyclerview_widget_RecyclerView_Landroidx_recyclerview_widget_RecyclerView_State_Handler" jni_signature="(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V" params="android.graphics.Rect p0, android.view.View p1, androidx.recyclerview.widget.RecyclerView p2, androidx.recyclerview.widget.RecyclerView.State p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
       </methods>
     </type>
-    <type name="TemplatedItemViewHolder" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.SelectableViewHolder" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.TemplatedItemViewHolder, Microsoft.Maui.Controls">
+    <type name="TemplatedItemViewHolder" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.SelectableViewHolder" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.TemplatedItemViewHolder, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="TemplatedItemViewHolder" method="n_.ctor:(Landroid/view/View;)V:" jni_signature="(Landroid/view/View;)V" managed_parameters="Android.Views.View, Mono.Android" params="android.view.View p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
     </type>
-    <type name="TextViewHolder" package="crc645d80431ce5f73f11" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.SelectableViewHolder" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.TextViewHolder, Microsoft.Maui.Controls">
+    <type name="TextViewHolder" package="crc645d80431ce5f73f11" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc645d80431ce5f73f11.SelectableViewHolder" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Items.TextViewHolder, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="TextViewHolder" method="n_.ctor:(Landroid/view/View;)V:" jni_signature="(Landroid/view/View;)V" managed_parameters="Android.Views.View, Mono.Android" params="android.view.View p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
     </type>
-    <type name="FrameRenderer" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.cardview.widget.CardView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.FrameRenderer, Microsoft.Maui.Controls">
+    <type name="FrameRenderer" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.cardview.widget.CardView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.FrameRenderer, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="FrameRenderer" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
         <constructor name="FrameRenderer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android" params="android.content.Context p0, android.util.AttributeSet p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
@@ -897,7 +897,7 @@
         <method name="onSizeChanged" method="n_onSizeChanged:(IIII)V:GetOnSizeChanged_IIIIHandler" jni_signature="(IIII)V" params="int p0, int p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
       </methods>
     </type>
-    <type name="ViewRenderer" package="crc64e1fb321c08285b90" is_abstract="True" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.ViewRenderer_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ViewRenderer, Microsoft.Maui.Controls">
+    <type name="ViewRenderer" package="crc64e1fb321c08285b90" is_abstract="True" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.ViewRenderer_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ViewRenderer, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ViewRenderer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="ViewRenderer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -905,7 +905,7 @@
         <constructor name="ViewRenderer" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
     </type>
-    <type name="ViewRenderer_2" package="crc64e1fb321c08285b90" is_abstract="True" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.VisualElementRenderer_1" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ViewRenderer`2, Microsoft.Maui.Controls">
+    <type name="ViewRenderer_2" package="crc64e1fb321c08285b90" is_abstract="True" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.VisualElementRenderer_1" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ViewRenderer`2, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ViewRenderer_2" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="ViewRenderer_2" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -913,7 +913,7 @@
         <constructor name="ViewRenderer_2" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
     </type>
-    <type name="VisualElementRenderer_1" package="crc64e1fb321c08285b90" is_abstract="True" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ViewGroup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.VisualElementRenderer`1, Microsoft.Maui.Controls">
+    <type name="VisualElementRenderer_1" package="crc64e1fb321c08285b90" is_abstract="True" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ViewGroup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.VisualElementRenderer`1, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="VisualElementRenderer_1" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="VisualElementRenderer_1" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -925,7 +925,7 @@
         <method name="onMeasure" method="n_onMeasure:(II)V:GetOnMeasure_IIHandler" jni_signature="(II)V" params="int p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="BaseCellView" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.LinearLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.BaseCellView, Microsoft.Maui.Controls">
+    <type name="BaseCellView" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.LinearLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.BaseCellView, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="BaseCellView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="BaseCellView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -933,7 +933,7 @@
         <constructor name="BaseCellView" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
     </type>
-    <type name="CellAdapter" package="crc64e1fb321c08285b90" is_abstract="True" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.BaseAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.CellAdapter, Microsoft.Maui.Controls">
+    <type name="CellAdapter" package="crc64e1fb321c08285b90" is_abstract="True" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.BaseAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.CellAdapter, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.widget.AdapterView.OnItemLongClickListener" />
         <interface name="android.view.ActionMode.Callback" />
@@ -957,12 +957,12 @@
         <method name="onPrepareActionMode" method="n_onPrepareActionMode:(Landroidx/appcompat/view/ActionMode;Landroid/view/Menu;)Z:GetOnPrepareActionMode_Landroidx_appcompat_view_ActionMode_Landroid_view_Menu_Handler:AndroidX.AppCompat.View.ActionMode+ICallbackInvoker, Xamarin.AndroidX.AppCompat" jni_signature="(Landroidx/appcompat/view/ActionMode;Landroid/view/Menu;)Z" params="androidx.appcompat.view.ActionMode p0, android.view.Menu p1" retval="boolean" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="CellRenderer_RendererHolder" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.CellRenderer+RendererHolder, Microsoft.Maui.Controls">
+    <type name="CellRenderer_RendererHolder" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.CellRenderer+RendererHolder, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="CellRenderer_RendererHolder" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
     </type>
-    <type name="ConditionalFocusLayout" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.LinearLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ConditionalFocusLayout, Microsoft.Maui.Controls">
+    <type name="ConditionalFocusLayout" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.LinearLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ConditionalFocusLayout, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.view.View.OnTouchListener" />
       </implemented_interfaces>
@@ -976,7 +976,7 @@
         <method name="onTouch" method="n_onTouch:(Landroid/view/View;Landroid/view/MotionEvent;)Z:GetOnTouch_Landroid_view_View_Landroid_view_MotionEvent_Handler:Android.Views.View+IOnTouchListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/view/View;Landroid/view/MotionEvent;)Z" params="android.view.View p0, android.view.MotionEvent p1" retval="boolean" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="EntryCellEditText" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.appcompat.widget.AppCompatEditText" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.EntryCellEditText, Microsoft.Maui.Controls">
+    <type name="EntryCellEditText" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.appcompat.widget.AppCompatEditText" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.EntryCellEditText, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="EntryCellEditText" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
         <constructor name="EntryCellEditText" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android" params="android.content.Context p0, android.util.AttributeSet p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
@@ -987,7 +987,7 @@
         <method name="onFocusChanged" method="n_onFocusChanged:(ZILandroid/graphics/Rect;)V:GetOnFocusChanged_ZILandroid_graphics_Rect_Handler" jni_signature="(ZILandroid/graphics/Rect;)V" params="boolean p0, int p1, android.graphics.Rect p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="EntryCellView" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.LinearLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.EntryCellView, Microsoft.Maui.Controls">
+    <type name="EntryCellView" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.widget.LinearLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.EntryCellView, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.text.TextWatcher" />
         <interface name="android.text.NoCopySpan" />
@@ -1008,7 +1008,7 @@
         <method name="onEditorAction" method="n_onEditorAction:(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z:GetOnEditorAction_Landroid_widget_TextView_ILandroid_view_KeyEvent_Handler:Android.Widget.TextView+IOnEditorActionListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z" params="android.widget.TextView p0, int p1, android.view.KeyEvent p2" retval="boolean" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="GroupedListViewAdapter" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.ListViewAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.GroupedListViewAdapter, Microsoft.Maui.Controls">
+    <type name="GroupedListViewAdapter" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.ListViewAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.GroupedListViewAdapter, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.widget.SectionIndexer" />
       </implemented_interfaces>
@@ -1022,7 +1022,7 @@
         <method name="getSections" method="n_getSections:()[Ljava/lang/Object;:GetGetSectionsHandler:Android.Widget.ISectionIndexerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="()[Ljava/lang/Object;" retval="java.lang.Object[]" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="ListViewAdapter" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.CellAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ListViewAdapter, Microsoft.Maui.Controls">
+    <type name="ListViewAdapter" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.CellAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ListViewAdapter, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ListViewAdapter" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
         <constructor name="ListViewAdapter" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="" activate_call="p0" />
@@ -1039,7 +1039,7 @@
         <method name="isEnabled" method="n_isEnabled:(I)Z:GetIsEnabled_IHandler" jni_signature="(I)Z" params="int p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ListViewRenderer" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.ViewRenderer_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ListViewRenderer, Microsoft.Maui.Controls">
+    <type name="ListViewRenderer" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.ViewRenderer_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ListViewRenderer, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ListViewRenderer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="ListViewRenderer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -1052,7 +1052,7 @@
         <method name="onLayout" method="n_onLayout:(ZIIII)V:GetOnLayout_ZIIIIHandler" jni_signature="(ZIIII)V" params="boolean p0, int p1, int p2, int p3, int p4" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3, p4" activate_call="p0, p1, p2, p3, p4" />
       </methods>
     </type>
-    <type name="ListViewRenderer_Container" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ViewGroup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ListViewRenderer+Container, Microsoft.Maui.Controls">
+    <type name="ListViewRenderer_Container" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ViewGroup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ListViewRenderer+Container, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ListViewRenderer_Container" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="ListViewRenderer_Container" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -1064,7 +1064,7 @@
         <method name="onMeasure" method="n_onMeasure:(II)V:GetOnMeasure_IIHandler" jni_signature="(II)V" params="int p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.swiperefreshlayout.widget.SwipeRefreshLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ListViewRenderer+SwipeRefreshLayoutWithFixedNestedScrolling, Microsoft.Maui.Controls">
+    <type name="ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.swiperefreshlayout.widget.SwipeRefreshLayout" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ListViewRenderer+SwipeRefreshLayoutWithFixedNestedScrolling, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
         <constructor name="ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android" params="android.content.Context p0, android.util.AttributeSet p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
@@ -1076,7 +1076,7 @@
         <method name="onNestedScroll" method="n_onNestedScroll:(Landroid/view/View;IIII)V:GetOnNestedScroll_Landroid_view_View_IIIIHandler" jni_signature="(Landroid/view/View;IIII)V" params="android.view.View p0, int p1, int p2, int p3, int p4" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3, p4" activate_call="p0, p1, p2, p3, p4" />
       </methods>
     </type>
-    <type name="ListViewRenderer_ListViewSwipeRefreshLayoutListener" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ListViewRenderer+ListViewSwipeRefreshLayoutListener, Microsoft.Maui.Controls">
+    <type name="ListViewRenderer_ListViewSwipeRefreshLayoutListener" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ListViewRenderer+ListViewSwipeRefreshLayoutListener, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener" />
       </implemented_interfaces>
@@ -1088,7 +1088,7 @@
         <method name="onRefresh" method="n_onRefresh:()V:GetOnRefreshHandler:AndroidX.SwipeRefreshLayout.Widget.SwipeRefreshLayout+IOnRefreshListenerInvoker, Xamarin.AndroidX.SwipeRefreshLayout" jni_signature="()V" retval="void" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="ListViewRenderer_ListViewScrollDetector" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ListViewRenderer+ListViewScrollDetector, Microsoft.Maui.Controls">
+    <type name="ListViewRenderer_ListViewScrollDetector" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ListViewRenderer+ListViewScrollDetector, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.widget.AbsListView.OnScrollListener" />
       </implemented_interfaces>
@@ -1101,7 +1101,7 @@
         <method name="onScrollStateChanged" method="n_onScrollStateChanged:(Landroid/widget/AbsListView;I)V:GetOnScrollStateChanged_Landroid_widget_AbsListView_IHandler:Android.Widget.AbsListView+IOnScrollListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/widget/AbsListView;I)V" params="android.widget.AbsListView p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="SwitchCellView" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.BaseCellView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.SwitchCellView, Microsoft.Maui.Controls">
+    <type name="SwitchCellView" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.BaseCellView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.SwitchCellView, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.widget.CompoundButton.OnCheckedChangeListener" />
       </implemented_interfaces>
@@ -1115,7 +1115,7 @@
         <method name="onCheckedChanged" method="n_onCheckedChanged:(Landroid/widget/CompoundButton;Z)V:GetOnCheckedChanged_Landroid_widget_CompoundButton_ZHandler:Android.Widget.CompoundButton+IOnCheckedChangeListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/widget/CompoundButton;Z)V" params="android.widget.CompoundButton p0, boolean p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="TextCellRenderer_TextCellView" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.BaseCellView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.TextCellRenderer+TextCellView, Microsoft.Maui.Controls">
+    <type name="TextCellRenderer_TextCellView" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.BaseCellView" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.TextCellRenderer+TextCellView, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="TextCellRenderer_TextCellView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="TextCellRenderer_TextCellView" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -1123,7 +1123,7 @@
         <constructor name="TextCellRenderer_TextCellView" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </constructors>
     </type>
-    <type name="ViewCellRenderer_ViewCellContainer" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ViewGroup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ViewCellRenderer+ViewCellContainer, Microsoft.Maui.Controls">
+    <type name="ViewCellRenderer_ViewCellContainer" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.view.ViewGroup" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ViewCellRenderer+ViewCellContainer, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="ViewCellRenderer_ViewCellContainer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="ViewCellRenderer_ViewCellContainer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
@@ -1138,7 +1138,7 @@
         <method name="onMeasure" method="n_onMeasure:(II)V:GetOnMeasure_IIHandler" jni_signature="(II)V" params="int p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ViewCellRenderer_ViewCellContainer_TapGestureListener" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ViewCellRenderer+ViewCellContainer+TapGestureListener, Microsoft.Maui.Controls">
+    <type name="ViewCellRenderer_ViewCellContainer_TapGestureListener" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ViewCellRenderer+ViewCellContainer+TapGestureListener, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.view.GestureDetector.OnGestureListener" />
       </implemented_interfaces>
@@ -1154,7 +1154,7 @@
         <method name="onSingleTapUp" method="n_onSingleTapUp:(Landroid/view/MotionEvent;)Z:GetOnSingleTapUp_Landroid_view_MotionEvent_Handler:Android.Views.GestureDetector+IOnGestureListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/view/MotionEvent;)Z" params="android.view.MotionEvent p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ViewCellRenderer_ViewCellContainer_LongPressGestureListener" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ViewCellRenderer+ViewCellContainer+LongPressGestureListener, Microsoft.Maui.Controls">
+    <type name="ViewCellRenderer_ViewCellContainer_LongPressGestureListener" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.ViewCellRenderer+ViewCellContainer+LongPressGestureListener, Microsoft.Maui.Controls">
       <implemented_interfaces>
         <interface name="android.view.GestureDetector.OnGestureListener" />
       </implemented_interfaces>
@@ -1170,7 +1170,7 @@
         <method name="onSingleTapUp" method="n_onSingleTapUp:(Landroid/view/MotionEvent;)Z:GetOnSingleTapUp_Landroid_view_MotionEvent_Handler:Android.Views.GestureDetector+IOnGestureListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/view/MotionEvent;)Z" params="android.view.MotionEvent p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="TableViewModelRenderer" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.CellAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.TableViewModelRenderer, Microsoft.Maui.Controls">
+    <type name="TableViewModelRenderer" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.CellAdapter" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.TableViewModelRenderer, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="TableViewModelRenderer" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
         <constructor name="TableViewModelRenderer" method="n_.ctor:(Landroid/content/Context;)V:" jni_signature="(Landroid/content/Context;)V" managed_parameters="Android.Content.Context, Mono.Android" params="android.content.Context p0" retval="void" is_dynamically_registered="True" super_call="" activate_call="p0" />
@@ -1186,7 +1186,7 @@
         <method name="isEnabled" method="n_isEnabled:(I)Z:GetIsEnabled_IHandler" jni_signature="(I)Z" params="int p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="TableViewRenderer" package="crc64e1fb321c08285b90" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.ViewRenderer_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.TableViewRenderer, Microsoft.Maui.Controls">
+    <type name="TableViewRenderer" package="crc64e1fb321c08285b90" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc64e1fb321c08285b90.ViewRenderer_2" partial_assembly_qualified_name="Microsoft.Maui.Controls.Handlers.Compatibility.TableViewRenderer, Microsoft.Maui.Controls">
       <constructors>
         <constructor name="TableViewRenderer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;II)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;II)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2, int p3" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2, p3" activate_call="p0, p1, p2, p3" />
         <constructor name="TableViewRenderer" method="n_.ctor:(Landroid/content/Context;Landroid/util/AttributeSet;I)V:" jni_signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" managed_parameters="Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, System.Private.CoreLib" params="android.content.Context p0, android.util.AttributeSet p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />

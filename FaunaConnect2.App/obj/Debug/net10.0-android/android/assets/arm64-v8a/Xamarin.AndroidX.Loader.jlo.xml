@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="Loader_OnLoadCanceledListenerImplementor" package="mono.androidx.loader.content" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Loader.Content.Loader+IOnLoadCanceledListenerImplementor, Xamarin.AndroidX.Loader">
+    <type name="Loader_OnLoadCanceledListenerImplementor" package="mono.androidx.loader.content" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Loader.Content.Loader+IOnLoadCanceledListenerImplementor, Xamarin.AndroidX.Loader">
       <implemented_interfaces>
         <interface name="androidx.loader.content.Loader.OnLoadCanceledListener" />
       </implemented_interfaces>
@@ -11,7 +11,7 @@
         <method name="onLoadCanceled" method="n_onLoadCanceled:(Landroidx/loader/content/Loader;)V:GetOnLoadCanceled_Landroidx_loader_content_Loader_Handler:AndroidX.Loader.Content.Loader+IOnLoadCanceledListenerInvoker, Xamarin.AndroidX.Loader" jni_signature="(Landroidx/loader/content/Loader;)V" params="androidx.loader.content.Loader p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="Loader_OnLoadCompleteListenerImplementor" package="mono.androidx.loader.content" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Loader.Content.Loader+IOnLoadCompleteListenerImplementor, Xamarin.AndroidX.Loader">
+    <type name="Loader_OnLoadCompleteListenerImplementor" package="mono.androidx.loader.content" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Loader.Content.Loader+IOnLoadCompleteListenerImplementor, Xamarin.AndroidX.Loader">
       <implemented_interfaces>
         <interface name="androidx.loader.content.Loader.OnLoadCompleteListener" />
       </implemented_interfaces>

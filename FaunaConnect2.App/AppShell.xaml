@@ -6,9 +6,37 @@
     xmlns:local="clr-namespace:FaunaConnect2.App"
     Title="FaunaConnect2.App">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="Dashboard">
+            <Tab.Icon>
+                <FontImageSource Glyph="🏠" Color="#2B5B2B" Size="24" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab x:Name="MapTab" Title="Kaart">
+            <Tab.Icon>
+                <FontImageSource Glyph="📍" Color="#D32F2F" Size="24" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:MapPage}" />
+        </Tab>
+        <Tab Title="Meldingen">
+            <Tab.Icon>
+                <FontImageSource Glyph="🔔" Color="#B22222" Size="24" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:NotificationsPage}" />
+        </Tab>
+        <Tab Title="Chat">
+            <Tab.Icon>
+                <FontImageSource Glyph="💬" Color="#008080" Size="24" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:ChatPage}" />
+        </Tab>
+        <Tab x:Name="AdminTab" Title="Beheer" IsVisible="False">
+            <Tab.Icon>
+                <FontImageSource Glyph="⚙️" Color="#666666" Size="24" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:AdminPage}" />
+        </Tab>
+    </TabBar>
 
 </Shell>

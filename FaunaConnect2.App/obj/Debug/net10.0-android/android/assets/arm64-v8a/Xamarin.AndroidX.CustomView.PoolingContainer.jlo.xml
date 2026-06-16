@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="PoolingContainerListenerImplementor" package="mono.androidx.customview.poolingcontainer" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.CustomView.PoolingContainer.IPoolingContainerListenerImplementor, Xamarin.AndroidX.CustomView.PoolingContainer">
+    <type name="PoolingContainerListenerImplementor" package="mono.androidx.customview.poolingcontainer" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.CustomView.PoolingContainer.IPoolingContainerListenerImplementor, Xamarin.AndroidX.CustomView.PoolingContainer">
       <implemented_interfaces>
         <interface name="androidx.customview.poolingcontainer.PoolingContainerListener" />
       </implemented_interfaces>

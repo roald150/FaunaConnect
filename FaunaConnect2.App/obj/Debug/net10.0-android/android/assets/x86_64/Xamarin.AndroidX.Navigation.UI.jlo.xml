@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="AppBarConfiguration_OnNavigateUpListenerImplementor" package="mono.androidx.navigation.ui" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Navigation.UI.AppBarConfiguration+IOnNavigateUpListenerImplementor, Xamarin.AndroidX.Navigation.UI">
+    <type name="AppBarConfiguration_OnNavigateUpListenerImplementor" package="mono.androidx.navigation.ui" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Navigation.UI.AppBarConfiguration+IOnNavigateUpListenerImplementor, Xamarin.AndroidX.Navigation.UI">
       <implemented_interfaces>
         <interface name="androidx.navigation.ui.AppBarConfiguration.OnNavigateUpListener" />
       </implemented_interfaces>

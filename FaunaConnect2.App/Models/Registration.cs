@@ -6,6 +6,8 @@
         public string AnimalName { get; set; } = string.Empty;
         public double Latitude { get; set; }
         public double Longitude { get; set; }
-        public DateTime DateTime { get; set; }
+        public DateTime DateTime { get; set; } = DateTime.Now;
+        public string? PhotoUrl { get; set; }
+        public int UserId { get; set; }
     }
 }

@@ -49,7 +49,15 @@
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
         <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+        
+        <!-- Fix for Java.exe exit code 1 (D8/Dex errors) -->
+        <JavaMaxHeapSize>1G</JavaMaxHeapSize>
+        <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
     </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="..\FaunaConnect2.Api\Helpers\WeatherHelper.cs" Link="Helpers\WeatherHelper.cs" />
+    </ItemGroup>
 
     <ItemGroup>
         <!-- App Icon -->

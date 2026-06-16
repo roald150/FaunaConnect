@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="CustomTabsClient_CustomTabsCallbackImpl" package="androidx.browser.customtabs" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.browser.customtabs.CustomTabsCallback" partial_assembly_qualified_name="AndroidX.Browser.CustomTabs.CustomTabsClient+CustomTabsCallbackImpl, Xamarin.AndroidX.Browser">
+    <type name="CustomTabsClient_CustomTabsCallbackImpl" package="androidx.browser.customtabs" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.browser.customtabs.CustomTabsCallback" partial_assembly_qualified_name="AndroidX.Browser.CustomTabs.CustomTabsClient+CustomTabsCallbackImpl, Xamarin.AndroidX.Browser">
       <constructors>
         <constructor name="CustomTabsClient_CustomTabsCallbackImpl" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -9,7 +9,7 @@
         <method name="extraCallback" method="n_extraCallback:(Ljava/lang/String;Landroid/os/Bundle;)V:GetExtraCallback_Ljava_lang_String_Landroid_os_Bundle_Handler" jni_signature="(Ljava/lang/String;Landroid/os/Bundle;)V" params="java.lang.String p0, android.os.Bundle p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="CustomTabsServiceConnectionImpl" package="crc64396a3fe5f8138e3f" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.browser.customtabs.CustomTabsServiceConnection" partial_assembly_qualified_name="AndroidX.Browser.CustomTabs.CustomTabsServiceConnectionImpl, Xamarin.AndroidX.Browser">
+    <type name="CustomTabsServiceConnectionImpl" package="crc64396a3fe5f8138e3f" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="androidx.browser.customtabs.CustomTabsServiceConnection" partial_assembly_qualified_name="AndroidX.Browser.CustomTabs.CustomTabsServiceConnectionImpl, Xamarin.AndroidX.Browser">
       <constructors>
         <constructor name="CustomTabsServiceConnectionImpl" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
@@ -18,7 +18,7 @@
         <method name="onServiceDisconnected" method="n_onServiceDisconnected:(Landroid/content/ComponentName;)V:GetOnServiceDisconnected_Landroid_content_ComponentName_Handler" jni_signature="(Landroid/content/ComponentName;)V" params="android.content.ComponentName p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="KeepAliveService" package="crc64396a3fe5f8138e3f" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.app.Service" partial_assembly_qualified_name="AndroidX.Browser.CustomTabs.KeepAliveService, Xamarin.AndroidX.Browser">
+    <type name="KeepAliveService" package="crc64396a3fe5f8138e3f" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="android.app.Service" partial_assembly_qualified_name="AndroidX.Browser.CustomTabs.KeepAliveService, Xamarin.AndroidX.Browser">
       <constructors>
         <constructor name="KeepAliveService" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>

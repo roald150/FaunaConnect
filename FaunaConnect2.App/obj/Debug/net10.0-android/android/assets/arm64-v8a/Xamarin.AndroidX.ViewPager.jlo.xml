@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="ViewPager_OnAdapterChangeListenerImplementor" package="mono.androidx.viewpager.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.ViewPager.Widget.ViewPager+IOnAdapterChangeListenerImplementor, Xamarin.AndroidX.ViewPager">
+    <type name="ViewPager_OnAdapterChangeListenerImplementor" package="mono.androidx.viewpager.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.ViewPager.Widget.ViewPager+IOnAdapterChangeListenerImplementor, Xamarin.AndroidX.ViewPager">
       <implemented_interfaces>
         <interface name="androidx.viewpager.widget.ViewPager.OnAdapterChangeListener" />
       </implemented_interfaces>
@@ -11,7 +11,7 @@
         <method name="onAdapterChanged" method="n_onAdapterChanged:(Landroidx/viewpager/widget/ViewPager;Landroidx/viewpager/widget/PagerAdapter;Landroidx/viewpager/widget/PagerAdapter;)V:GetOnAdapterChanged_Landroidx_viewpager_widget_ViewPager_Landroidx_viewpager_widget_PagerAdapter_Landroidx_viewpager_widget_PagerAdapter_Handler:AndroidX.ViewPager.Widget.ViewPager+IOnAdapterChangeListenerInvoker, Xamarin.AndroidX.ViewPager" jni_signature="(Landroidx/viewpager/widget/ViewPager;Landroidx/viewpager/widget/PagerAdapter;Landroidx/viewpager/widget/PagerAdapter;)V" params="androidx.viewpager.widget.ViewPager p0, androidx.viewpager.widget.PagerAdapter p1, androidx.viewpager.widget.PagerAdapter p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="ViewPager_OnPageChangeListenerImplementor" package="mono.androidx.viewpager.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.ViewPager.Widget.ViewPager+IOnPageChangeListenerImplementor, Xamarin.AndroidX.ViewPager">
+    <type name="ViewPager_OnPageChangeListenerImplementor" package="mono.androidx.viewpager.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.ViewPager.Widget.ViewPager+IOnPageChangeListenerImplementor, Xamarin.AndroidX.ViewPager">
       <implemented_interfaces>
         <interface name="androidx.viewpager.widget.ViewPager.OnPageChangeListener" />
       </implemented_interfaces>

@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="Toolbar_NavigationOnClickEventDispatcher" package="androidx.appcompat.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.Toolbar+NavigationOnClickEventDispatcher, Xamarin.AndroidX.AppCompat">
+    <type name="Toolbar_NavigationOnClickEventDispatcher" package="androidx.appcompat.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.Toolbar+NavigationOnClickEventDispatcher, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="android.view.View.OnClickListener" />
       </implemented_interfaces>
@@ -12,7 +12,7 @@
         <method name="onClick" method="n_onClick:(Landroid/view/View;)V:GetOnClick_Landroid_view_View_Handler:Android.Views.View+IOnClickListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/view/View;)V" params="android.view.View p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="Toolbar_OnMenuItemClickListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.Toolbar+IOnMenuItemClickListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="Toolbar_OnMenuItemClickListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.Toolbar+IOnMenuItemClickListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.widget.Toolbar.OnMenuItemClickListener" />
       </implemented_interfaces>
@@ -23,7 +23,7 @@
         <method name="onMenuItemClick" method="n_onMenuItemClick:(Landroid/view/MenuItem;)Z:GetOnMenuItemClick_Landroid_view_MenuItem_Handler:AndroidX.AppCompat.Widget.Toolbar+IOnMenuItemClickListenerInvoker, Xamarin.AndroidX.AppCompat" jni_signature="(Landroid/view/MenuItem;)Z" params="android.view.MenuItem p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ActionMenuView_OnMenuItemClickListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.ActionMenuView+IOnMenuItemClickListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="ActionMenuView_OnMenuItemClickListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.ActionMenuView+IOnMenuItemClickListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.widget.ActionMenuView.OnMenuItemClickListener" />
       </implemented_interfaces>
@@ -34,7 +34,7 @@
         <method name="onMenuItemClick" method="n_onMenuItemClick:(Landroid/view/MenuItem;)Z:GetOnMenuItemClick_Landroid_view_MenuItem_Handler:AndroidX.AppCompat.Widget.ActionMenuView+IOnMenuItemClickListenerInvoker, Xamarin.AndroidX.AppCompat" jni_signature="(Landroid/view/MenuItem;)Z" params="android.view.MenuItem p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ContentFrameLayout_OnAttachListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.ContentFrameLayout+IOnAttachListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="ContentFrameLayout_OnAttachListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.ContentFrameLayout+IOnAttachListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.widget.ContentFrameLayout.OnAttachListener" />
       </implemented_interfaces>
@@ -46,7 +46,7 @@
         <method name="onDetachedFromWindow" method="n_onDetachedFromWindow:()V:GetOnDetachedFromWindowHandler:AndroidX.AppCompat.Widget.ContentFrameLayout+IOnAttachListenerInvoker, Xamarin.AndroidX.AppCompat" jni_signature="()V" retval="void" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="FitWindowsViewGroup_OnFitSystemWindowsListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.IFitWindowsViewGroupOnFitSystemWindowsListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="FitWindowsViewGroup_OnFitSystemWindowsListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.IFitWindowsViewGroupOnFitSystemWindowsListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.widget.FitWindowsViewGroup.OnFitSystemWindowsListener" />
       </implemented_interfaces>
@@ -57,7 +57,7 @@
         <method name="onFitSystemWindows" method="n_onFitSystemWindows:(Landroid/graphics/Rect;)V:GetOnFitSystemWindows_Landroid_graphics_Rect_Handler:AndroidX.AppCompat.Widget.IFitWindowsViewGroupOnFitSystemWindowsListenerInvoker, Xamarin.AndroidX.AppCompat" jni_signature="(Landroid/graphics/Rect;)V" params="android.graphics.Rect p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="MenuItemHoverListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.IMenuItemHoverListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="MenuItemHoverListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.IMenuItemHoverListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.widget.MenuItemHoverListener" />
       </implemented_interfaces>
@@ -69,7 +69,7 @@
         <method name="onItemHoverExit" method="n_onItemHoverExit:(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)V:GetOnItemHoverExit_Landroidx_appcompat_view_menu_MenuBuilder_Landroid_view_MenuItem_Handler:AndroidX.AppCompat.Widget.IMenuItemHoverListenerInvoker, Xamarin.AndroidX.AppCompat" jni_signature="(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)V" params="androidx.appcompat.view.menu.MenuBuilder p0, android.view.MenuItem p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="PopupMenu_OnDismissListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.PopupMenu+IOnDismissListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="PopupMenu_OnDismissListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.PopupMenu+IOnDismissListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.widget.PopupMenu.OnDismissListener" />
       </implemented_interfaces>
@@ -80,7 +80,7 @@
         <method name="onDismiss" method="n_onDismiss:(Landroidx/appcompat/widget/PopupMenu;)V:GetOnDismiss_Landroidx_appcompat_widget_PopupMenu_Handler:AndroidX.AppCompat.Widget.PopupMenu+IOnDismissListenerInvoker, Xamarin.AndroidX.AppCompat" jni_signature="(Landroidx/appcompat/widget/PopupMenu;)V" params="androidx.appcompat.widget.PopupMenu p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="PopupMenu_OnMenuItemClickListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.PopupMenu+IOnMenuItemClickListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="PopupMenu_OnMenuItemClickListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.PopupMenu+IOnMenuItemClickListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.widget.PopupMenu.OnMenuItemClickListener" />
       </implemented_interfaces>
@@ -91,7 +91,7 @@
         <method name="onMenuItemClick" method="n_onMenuItemClick:(Landroid/view/MenuItem;)Z:GetOnMenuItemClick_Landroid_view_MenuItem_Handler:AndroidX.AppCompat.Widget.PopupMenu+IOnMenuItemClickListenerInvoker, Xamarin.AndroidX.AppCompat" jni_signature="(Landroid/view/MenuItem;)Z" params="android.view.MenuItem p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="SearchView_OnCloseListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.SearchView+IOnCloseListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="SearchView_OnCloseListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.SearchView+IOnCloseListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.widget.SearchView.OnCloseListener" />
       </implemented_interfaces>
@@ -102,7 +102,7 @@
         <method name="onClose" method="n_onClose:()Z:GetOnCloseHandler:AndroidX.AppCompat.Widget.SearchView+IOnCloseListenerInvoker, Xamarin.AndroidX.AppCompat" jni_signature="()Z" retval="boolean" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="SearchView_OnQueryTextListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.SearchView+IOnQueryTextListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="SearchView_OnQueryTextListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.SearchView+IOnQueryTextListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.widget.SearchView.OnQueryTextListener" />
       </implemented_interfaces>
@@ -114,7 +114,7 @@
         <method name="onQueryTextSubmit" method="n_onQueryTextSubmit:(Ljava/lang/String;)Z:GetOnQueryTextSubmit_Ljava_lang_String_Handler:AndroidX.AppCompat.Widget.SearchView+IOnQueryTextListenerInvoker, Xamarin.AndroidX.AppCompat" jni_signature="(Ljava/lang/String;)Z" params="java.lang.String p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="SearchView_OnSuggestionListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.SearchView+IOnSuggestionListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="SearchView_OnSuggestionListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.SearchView+IOnSuggestionListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.widget.SearchView.OnSuggestionListener" />
       </implemented_interfaces>
@@ -126,7 +126,7 @@
         <method name="onSuggestionSelect" method="n_onSuggestionSelect:(I)Z:GetOnSuggestionSelect_IHandler:AndroidX.AppCompat.Widget.SearchView+IOnSuggestionListenerInvoker, Xamarin.AndroidX.AppCompat" jni_signature="(I)Z" params="int p0" retval="boolean" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ShareActionProvider_OnShareTargetSelectedListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.ShareActionProvider+IOnShareTargetSelectedListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="ShareActionProvider_OnShareTargetSelectedListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.ShareActionProvider+IOnShareTargetSelectedListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.widget.ShareActionProvider.OnShareTargetSelectedListener" />
       </implemented_interfaces>
@@ -137,7 +137,7 @@
         <method name="onShareTargetSelected" method="n_onShareTargetSelected:(Landroidx/appcompat/widget/ShareActionProvider;Landroid/content/Intent;)Z:GetOnShareTargetSelected_Landroidx_appcompat_widget_ShareActionProvider_Landroid_content_Intent_Handler:AndroidX.AppCompat.Widget.ShareActionProvider+IOnShareTargetSelectedListenerInvoker, Xamarin.AndroidX.AppCompat" jni_signature="(Landroidx/appcompat/widget/ShareActionProvider;Landroid/content/Intent;)Z" params="androidx.appcompat.widget.ShareActionProvider p0, android.content.Intent p1" retval="boolean" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ViewStubCompat_OnInflateListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.ViewStubCompat+IOnInflateListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="ViewStubCompat_OnInflateListenerImplementor" package="mono.androidx.appcompat.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.Widget.ViewStubCompat+IOnInflateListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.widget.ViewStubCompat.OnInflateListener" />
       </implemented_interfaces>
@@ -148,7 +148,7 @@
         <method name="onInflate" method="n_onInflate:(Landroidx/appcompat/widget/ViewStubCompat;Landroid/view/View;)V:GetOnInflate_Landroidx_appcompat_widget_ViewStubCompat_Landroid_view_View_Handler:AndroidX.AppCompat.Widget.ViewStubCompat+IOnInflateListenerInvoker, Xamarin.AndroidX.AppCompat" jni_signature="(Landroidx/appcompat/widget/ViewStubCompat;Landroid/view/View;)V" params="androidx.appcompat.widget.ViewStubCompat p0, android.view.View p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="AlertDialog_IDialogInterfaceOnClickListenerImplementor" package="androidx.appcompat.app" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.App.AlertDialog+IDialogInterfaceOnClickListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="AlertDialog_IDialogInterfaceOnClickListenerImplementor" package="androidx.appcompat.app" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.App.AlertDialog+IDialogInterfaceOnClickListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="android.content.DialogInterface.OnClickListener" />
       </implemented_interfaces>
@@ -159,7 +159,7 @@
         <method name="onClick" method="n_onClick:(Landroid/content/DialogInterface;I)V:GetOnClick_Landroid_content_DialogInterface_IHandler:Android.Content.IDialogInterfaceOnClickListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/content/DialogInterface;I)V" params="android.content.DialogInterface p0, int p1" retval="void" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="AlertDialog_IDialogInterfaceOnCancelListenerImplementor" package="androidx.appcompat.app" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.App.AlertDialog+IDialogInterfaceOnCancelListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="AlertDialog_IDialogInterfaceOnCancelListenerImplementor" package="androidx.appcompat.app" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.App.AlertDialog+IDialogInterfaceOnCancelListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="android.content.DialogInterface.OnCancelListener" />
       </implemented_interfaces>
@@ -170,7 +170,7 @@
         <method name="onCancel" method="n_onCancel:(Landroid/content/DialogInterface;)V:GetOnCancel_Landroid_content_DialogInterface_Handler:Android.Content.IDialogInterfaceOnCancelListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/content/DialogInterface;)V" params="android.content.DialogInterface p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="AlertDialog_IDialogInterfaceOnMultiChoiceClickListenerImplementor" package="androidx.appcompat.app" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.App.AlertDialog+IDialogInterfaceOnMultiChoiceClickListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="AlertDialog_IDialogInterfaceOnMultiChoiceClickListenerImplementor" package="androidx.appcompat.app" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.App.AlertDialog+IDialogInterfaceOnMultiChoiceClickListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="android.content.DialogInterface.OnMultiChoiceClickListener" />
       </implemented_interfaces>
@@ -181,7 +181,7 @@
         <method name="onClick" method="n_onClick:(Landroid/content/DialogInterface;IZ)V:GetOnClick_Landroid_content_DialogInterface_IZHandler:Android.Content.IDialogInterfaceOnMultiChoiceClickListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(Landroid/content/DialogInterface;IZ)V" params="android.content.DialogInterface p0, int p1, boolean p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="ActionBar_OnMenuVisibilityListenerImplementor" package="mono.androidx.appcompat.app" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.App.ActionBar+IOnMenuVisibilityListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="ActionBar_OnMenuVisibilityListenerImplementor" package="mono.androidx.appcompat.app" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.App.ActionBar+IOnMenuVisibilityListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.app.ActionBar.OnMenuVisibilityListener" />
       </implemented_interfaces>
@@ -192,7 +192,7 @@
         <method name="onMenuVisibilityChanged" method="n_onMenuVisibilityChanged:(Z)V:GetOnMenuVisibilityChanged_ZHandler:AndroidX.AppCompat.App.ActionBar+IOnMenuVisibilityListenerInvoker, Xamarin.AndroidX.AppCompat" jni_signature="(Z)V" params="boolean p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="ActionBar_OnNavigationListenerImplementor" package="mono.androidx.appcompat.app" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.App.ActionBar+IOnNavigationListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="ActionBar_OnNavigationListenerImplementor" package="mono.androidx.appcompat.app" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.App.ActionBar+IOnNavigationListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.app.ActionBar.OnNavigationListener" />
       </implemented_interfaces>
@@ -203,7 +203,7 @@
         <method name="onNavigationItemSelected" method="n_onNavigationItemSelected:(IJ)Z:GetOnNavigationItemSelected_IJHandler:AndroidX.AppCompat.App.ActionBar+IOnNavigationListenerInvoker, Xamarin.AndroidX.AppCompat" jni_signature="(IJ)Z" params="int p0, long p1" retval="boolean" is_dynamically_registered="True" super_call="p0, p1" activate_call="p0, p1" />
       </methods>
     </type>
-    <type name="ActionBar_TabListenerImplementor" package="mono.androidx.appcompat.app" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.App.ActionBar+ITabListenerImplementor, Xamarin.AndroidX.AppCompat">
+    <type name="ActionBar_TabListenerImplementor" package="mono.androidx.appcompat.app" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.AppCompat.App.ActionBar+ITabListenerImplementor, Xamarin.AndroidX.AppCompat">
       <implemented_interfaces>
         <interface name="androidx.appcompat.app.ActionBar.TabListener" />
       </implemented_interfaces>

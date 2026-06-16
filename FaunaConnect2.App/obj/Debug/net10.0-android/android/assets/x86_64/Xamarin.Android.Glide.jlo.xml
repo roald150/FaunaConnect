@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="ConnectivityMonitor_ConnectivityListenerImplementor" package="mono.com.bumptech.glide.manager" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Bumptech.Glide.Manager.IConnectivityMonitorConnectivityListenerImplementor, Xamarin.Android.Glide">
+    <type name="ConnectivityMonitor_ConnectivityListenerImplementor" package="mono.com.bumptech.glide.manager" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Bumptech.Glide.Manager.IConnectivityMonitorConnectivityListenerImplementor, Xamarin.Android.Glide">
       <implemented_interfaces>
         <interface name="com.bumptech.glide.manager.ConnectivityMonitor.ConnectivityListener" />
       </implemented_interfaces>
@@ -11,7 +11,7 @@
         <method name="onConnectivityChanged" method="n_onConnectivityChanged:(Z)V:GetOnConnectivityChanged_ZHandler:Bumptech.Glide.Manager.IConnectivityMonitorConnectivityListenerInvoker, Xamarin.Android.Glide" jni_signature="(Z)V" params="boolean p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
       </methods>
     </type>
-    <type name="LifecycleListenerImplementor" package="mono.com.bumptech.glide.manager" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Bumptech.Glide.Manager.ILifecycleListenerImplementor, Xamarin.Android.Glide">
+    <type name="LifecycleListenerImplementor" package="mono.com.bumptech.glide.manager" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Bumptech.Glide.Manager.ILifecycleListenerImplementor, Xamarin.Android.Glide">
       <implemented_interfaces>
         <interface name="com.bumptech.glide.manager.LifecycleListener" />
       </implemented_interfaces>
@@ -24,7 +24,7 @@
         <method name="onStop" method="n_onStop:()V:GetOnStopHandler:Bumptech.Glide.Manager.ILifecycleListenerInvoker, Xamarin.Android.Glide" jni_signature="()V" retval="void" is_dynamically_registered="True" />
       </methods>
     </type>
-    <type name="RequestListenerImplementor" package="mono.com.bumptech.glide.request" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Bumptech.Glide.Request.IRequestListenerImplementor, Xamarin.Android.Glide">
+    <type name="RequestListenerImplementor" package="mono.com.bumptech.glide.request" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Bumptech.Glide.Request.IRequestListenerImplementor, Xamarin.Android.Glide">
       <implemented_interfaces>
         <interface name="com.bumptech.glide.request.RequestListener" />
       </implemented_interfaces>
@@ -36,7 +36,7 @@
         <method name="onResourceReady" method="n_onResourceReady:(Ljava/lang/Object;Ljava/lang/Object;Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/load/DataSource;Z)Z:GetOnResourceReady_Ljava_lang_Object_Ljava_lang_Object_Lcom_bumptech_glide_request_target_Target_Lcom_bumptech_glide_load_DataSource_ZHandler:Bumptech.Glide.Request.IRequestListenerInvoker, Xamarin.Android.Glide" jni_signature="(Ljava/lang/Object;Ljava/lang/Object;Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/load/DataSource;Z)Z" params="java.lang.Object p0, java.lang.Object p1, com.bumptech.glide.request.target.Target p2, com.bumptech.glide.load.DataSource p3, boolean p4" retval="boolean" is_dynamically_registered="True" super_call="p0, p1, p2, p3, p4" activate_call="p0, p1, p2, p3, p4" />
       </methods>
     </type>
-    <type name="MemoryCache_ResourceRemovedListenerImplementor" package="mono.com.bumptech.glide.load.engine.cache" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Bumptech.Glide.Load.Engine.Cache.IMemoryCacheResourceRemovedListenerImplementor, Xamarin.Android.Glide">
+    <type name="MemoryCache_ResourceRemovedListenerImplementor" package="mono.com.bumptech.glide.load.engine.cache" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="Bumptech.Glide.Load.Engine.Cache.IMemoryCacheResourceRemovedListenerImplementor, Xamarin.Android.Glide">
       <implemented_interfaces>
         <interface name="com.bumptech.glide.load.engine.cache.MemoryCache.ResourceRemovedListener" />
       </implemented_interfaces>

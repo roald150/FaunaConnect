@@ -1,4 +1,6 @@
 ﻿using System.Net.Http.Json;
+using FaunaConnect2.App.Models;
+using FaunaConnect2.App.Services;
 
 namespace FaunaConnect2.App;
 
@@ -9,13 +11,15 @@ public partial class LoginPage : ContentPage
     public LoginPage()
     {
         InitializeComponent();
-        string baseUri = DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5282/api/" : "http://localhost:5282/api/";
-        _httpClient = new HttpClient { BaseAddress = new Uri(baseUri) };
+        _httpClient = new HttpClient { BaseAddress = new Uri(UserService.BaseUrl) };
     }
 
-    private async void OnLoginClicked(object sender, EventArgs e)
+    private async void OnLoginClicked(object? sender, EventArgs e)
     {
-        var loginData = new { Email = EmailEntry.Text, Password = PasswordEntry.Text };
+        var email = EmailEntry.Text?.Trim();
+        var password = PasswordEntry.Text;
+
+        var loginData = new { Email = email, Password = password };
 
         try
         {
@@ -23,22 +27,28 @@ public partial class LoginPage : ContentPage
 
             if (response.IsSuccessStatusCode)
             {
-                // Schakel de hoofdpagina van de app om naar de MainPage (Dashboard)
-                // Door dit zo te doen, kan de gebruiker niet met de 'back'-knop terug naar het inlogscherm!
-                Application.Current.MainPage = new NavigationPage(new MainPage());
+                var user = await response.Content.ReadFromJsonAsync<User>();
+                UserService.CurrentUser = user;
+                
+                // Schakel over naar de volledige app navigatie (AppShell)
+                if (Application.Current?.Windows.Count > 0)
+                {
+                    Application.Current.Windows[0].Page = new AppShell();
+                }
             }
             else
             {
-                await DisplayAlert("Fout", "Onjuist e-mailadres of wachtwoord.", "OK");
+                var errorMsg = await response.Content.ReadAsStringAsync();
+                await DisplayAlertAsync("Fout", string.IsNullOrEmpty(errorMsg) ? "Inloggen mislukt." : errorMsg, "OK");
             }
         }
         catch (Exception ex)
         {
-            await DisplayAlert("Fout", $"Kan geen verbinding maken met de API: {ex.Message}", "OK");
+            await DisplayAlertAsync("Fout", $"Kan geen verbinding maken met de API: {ex.Message}", "OK");
         }
     }
 
-    private async void OnGoToRegisterClicked(object sender, EventArgs e)
+    private async void OnGoToRegisterClicked(object? sender, EventArgs e)
     {
         // Navigeer naar de registratiepagina
         await Navigation.PushAsync(new RegisterPage());

@@ -28,5 +28,11 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Deze app heeft toegang tot de camera nodig om foto's van wildwaarnemingen en schade te maken.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Deze app heeft toegang tot je locatie nodig om de exacte plek van de waarneming vast te leggen.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Deze app heeft toegang tot je fotobibliotheek nodig om foto's op te slaan.</string>
 </dict>
 </plist>

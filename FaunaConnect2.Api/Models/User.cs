@@ -10,6 +10,16 @@ public class User
     // De rol: "Jager", "Boer" of "Admin"
     public string Role { get; set; } = "Jager"; 
 
-    // Relatie: Een jager kan veel waarnemingen registreren
+    // Relaties
     public List<Registration> Registrations { get; set; } = new();
+    public List<HuntingGround> HuntingGrounds { get; set; } = new();
+    public List<DamageReport> DamageReports { get; set; } = new();
+    
+    // De jager-boer koppeling:
+    // Als de rol 'Boer' is, kan hij gekoppeld zijn aan een Jager
+    public int? LinkedJagerId { get; set; }
+    public User? LinkedJager { get; set; }
+    
+    // Een jager kan meerdere boeren hebben
+    public List<User> LinkedFarmers { get; set; } = new();
 }

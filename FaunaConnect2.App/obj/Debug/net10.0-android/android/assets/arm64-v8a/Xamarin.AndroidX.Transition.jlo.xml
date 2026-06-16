@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="FloatArrayEvaluator" package="crc64a25b61d9f8ee364f" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Transitions.FloatArrayEvaluator, Xamarin.AndroidX.Transition">
+    <type name="FloatArrayEvaluator" package="crc64a25b61d9f8ee364f" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Transitions.FloatArrayEvaluator, Xamarin.AndroidX.Transition">
       <implemented_interfaces>
         <interface name="android.animation.TypeEvaluator" />
       </implemented_interfaces>
@@ -11,12 +11,12 @@
         <method name="evaluate" method="n_evaluate:(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;:GetEvaluate_FLjava_lang_Object_Ljava_lang_Object_Handler:Android.Animation.ITypeEvaluatorInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" params="float p0, java.lang.Object p1, java.lang.Object p2" retval="java.lang.Object" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="TransitionUtils" package="crc64a25b61d9f8ee364f" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Transitions.TransitionUtils, Xamarin.AndroidX.Transition">
+    <type name="TransitionUtils" package="crc64a25b61d9f8ee364f" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Transitions.TransitionUtils, Xamarin.AndroidX.Transition">
       <constructors>
         <constructor name="TransitionUtils" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
       </constructors>
     </type>
-    <type name="TransitionUtils_MatrixEvaluator" package="crc64a25b61d9f8ee364f" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Transitions.TransitionUtils+MatrixEvaluator, Xamarin.AndroidX.Transition">
+    <type name="TransitionUtils_MatrixEvaluator" package="crc64a25b61d9f8ee364f" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Transitions.TransitionUtils+MatrixEvaluator, Xamarin.AndroidX.Transition">
       <implemented_interfaces>
         <interface name="android.animation.TypeEvaluator" />
       </implemented_interfaces>
@@ -27,7 +27,7 @@
         <method name="evaluate" method="n_evaluate:(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;:GetEvaluate_FLjava_lang_Object_Ljava_lang_Object_Handler:Android.Animation.ITypeEvaluatorInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" params="float p0, java.lang.Object p1, java.lang.Object p2" retval="java.lang.Object" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="RectEvaluator" package="crc64a25b61d9f8ee364f" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Transitions.RectEvaluator, Xamarin.AndroidX.Transition">
+    <type name="RectEvaluator" package="crc64a25b61d9f8ee364f" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Transitions.RectEvaluator, Xamarin.AndroidX.Transition">
       <implemented_interfaces>
         <interface name="android.animation.TypeEvaluator" />
       </implemented_interfaces>
@@ -38,7 +38,7 @@
         <method name="evaluate" method="n_evaluate:(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;:GetEvaluate_FLjava_lang_Object_Ljava_lang_Object_Handler:Android.Animation.ITypeEvaluatorInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" jni_signature="(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" params="float p0, java.lang.Object p1, java.lang.Object p2" retval="java.lang.Object" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="Transition_TransitionListenerImplementor" package="mono.androidx.transition" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Transitions.Transition+ITransitionListenerImplementor, Xamarin.AndroidX.Transition">
+    <type name="Transition_TransitionListenerImplementor" package="mono.androidx.transition" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.Transitions.Transition+ITransitionListenerImplementor, Xamarin.AndroidX.Transition">
       <implemented_interfaces>
         <interface name="androidx.transition.Transition.TransitionListener" />
       </implemented_interfaces>

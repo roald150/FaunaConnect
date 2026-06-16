@@ -1,60 +1,80 @@
 ﻿using System.Net.Http.Json;
 using FaunaConnect2.App.Models;
+using FaunaConnect2.App.Services;
+using FaunaConnect2.Api.Helpers;
 
 namespace FaunaConnect2.App;
 
 public partial class MainPage : ContentPage
 {
-    // De HttpClient die de netwerkoproepen doet
     private readonly HttpClient _httpClient;
 
     public MainPage()
     {
         InitializeComponent();
-        
-        _httpClient = new HttpClient();
-        
-        // Schakel over naar het juiste IP-adres op basis van het platform waar de app op draait!
-        if (DeviceInfo.Platform == DevicePlatform.Android)
-        {
-            // 10.0.2.2 is het 'loopback' adres voor de Android emulator naar jouw PC
-            _httpClient.BaseAddress = new Uri("http://10.0.2.2:5282/api/"); // Pas de poort aan naar jouw HTTP poort!
-        }
-        else
-        {
-            // Windows of Mac kan gewoon localhost gebruiken
-            _httpClient.BaseAddress = new Uri("http://localhost:5282/api/"); // Pas de poort aan naar jouw HTTP poort!
-        }
+        _httpClient = new HttpClient { BaseAddress = new Uri(UserService.BaseUrl) };
     }
 
-    // Dit gebeurt er als het scherm opent
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        await LoadRegistrationsAsync();
+        
+        if (UserService.CurrentUser != null)
+        {
+            WelcomeLabel.Text = $"Welkom, {UserService.CurrentUser.Name}";
+            
+            // Beide rollen mogen nu beide acties doen
+            bool isJagerOfBoer = UserService.CurrentUser.Role == "Jager" || UserService.CurrentUser.Role == "Boer";
+            NewRegistrationButton.IsVisible = isJagerOfBoer;
+            ReportDamageButton.IsVisible = isJagerOfBoer;
+        }
+
+        await LoadDashboardData();
     }
 
-    // Dit gebeurt er als je op de 'Ververs' knop klikt
-    private async void OnRefreshClicked(object sender, EventArgs e)
+    private async void OnLogoutClicked(object? sender, EventArgs e)
     {
-        await LoadRegistrationsAsync();
+        UserService.CurrentUser = null;
+        if (Application.Current?.Windows.Count > 0)
+        {
+            Application.Current.Windows[0].Page = new NavigationPage(new LoginPage());
+        }
     }
 
-    // De methode die écht met de API praat
-    private async Task LoadRegistrationsAsync()
+    private async void OnReportDamageClicked(object? sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new DamageReportPage());
+    }
+
+    private async Task LoadDashboardData()
     {
         try
         {
-            // Haal de data op en zet het direct om naar een lijst met onze Models
-            var registrations = await _httpClient.GetFromJsonAsync<List<Registration>>("registrations");
+            var weather = await _httpClient.GetFromJsonAsync<WeatherInfo>("weather?lat=51.65&lng=5.05");
+            if (weather != null)
+            {
+                WindLabel.Text = $"{weather.WindSpeed} km/h";
+                WindDirLabel.Text = WeatherHelper.GetWindDirection(weather.WindDirection);
+            }
 
-            // Koppel de lijst aan de UI (de CollectionView in de XAML)
-            RegistrationsListView.ItemsSource = registrations;
+            var sun = await _httpClient.GetFromJsonAsync<SunInfo>("sun?lat=51.65&lng=5.05");
+            if (sun != null)
+            {
+                SunriseLabel.Text = $"↑ {sun.Sunrise:HH:mm}";
+                SunsetLabel.Text = $"↓ {sun.Sunset:HH:mm}";
+            }
+
+            var regs = await _httpClient.GetFromJsonAsync<List<Registration>>("registrations");
+            RegistrationsListView.ItemsSource = regs;
         }
-        catch (Exception ex)
-        {
-            // Als de API offline is, crash de app dan niet, maar laat een nette foutmelding zien!
-            await DisplayAlert("Fout", $"Kan geen gegevens ophalen van de backend: {ex.Message}", "OK");
-        }
+        catch (Exception) { /* Foutloos doorgaan voor demo */ }
     }
+
+    private async void OnNewRegistrationClicked(object? sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new NewRegistrationPage());
+    }
+
+    public class WeatherInfo { public double WindSpeed { get; set; } public double WindDirection { get; set; } }
+    public class SunInfo { public DateTime Sunrise { get; set; } public DateTime Sunset { get; set; } }
 }

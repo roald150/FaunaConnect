@@ -15,14 +15,14 @@ public partial class RegisterPage : ContentPage
         RolePicker.SelectedIndex = 0; // Zet standaard op 'Jager'
     }
 
-    private async void OnRegisterClicked(object sender, EventArgs e)
+    private async void OnRegisterClicked(object? sender, EventArgs e)
     {
         var signUpData = new
         {
-            Name = NameEntry.Text,
-            Email = EmailEntry.Text,
+            Name = NameEntry.Text?.Trim(),
+            Email = EmailEntry.Text?.Trim(),
             PasswordHash = PasswordEntry.Text,
-            Role = RolePicker.SelectedItem.ToString()
+            Role = RolePicker.SelectedItem?.ToString()
         };
 
         try
@@ -31,18 +31,18 @@ public partial class RegisterPage : ContentPage
 
             if (response.IsSuccessStatusCode)
             {
-                await DisplayAlert("Succes", "Account aangemaakt! Je kunt nu inloggen.", "OK");
+                await DisplayAlertAsync("Succes", "Account aangemaakt! Je kunt nu inloggen.", "OK");
                 await Navigation.PopAsync(); // Ga terug naar het inlogscherm
             }
             else
             {
                 string error = await response.Content.ReadAsStringAsync();
-                await DisplayAlert("Fout", error, "OK");
+                await DisplayAlertAsync("Fout", error, "OK");
             }
         }
         catch (Exception ex)
         {
-            await DisplayAlert("Fout", $"Verbindingsfout: {ex.Message}", "OK");
+            await DisplayAlertAsync("Fout", $"Verbindingsfout: {ex.Message}", "OK");
         }
     }
 }

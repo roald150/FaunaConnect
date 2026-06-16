@@ -29,8 +29,11 @@ if (app.Environment.IsDevelopment())
     // Dit zorgt ervoor dat je de API-documentatie kunt bekijken in de browser tijdens het ontwerpen
     app.MapOpenApi();
 }
-
-app.UseHttpsRedirection();
+else
+{
+    // Gebruik alleen HTTPS redirection in productie
+    app.UseHttpsRedirection();
+}
 
 // 5. Database automatisch aanmaken en vullen met testgegevens (Seed Data)
 using (var scope = app.Services.CreateScope())
@@ -43,11 +46,30 @@ using (var scope = app.Services.CreateScope())
     // Als de database helemaal leeg is, maken we alvast accounts aan voor je demo
     if (!context.Users.Any())
     {
-        var jager = new User { Name = "Roald de Jager", Email = "roald@jacht.nl", Role = "Jager" }; //
-        var boer = new User { Name = "Boer Harms", Email = "harms@boerderij.nl", Role = "Boer" };   //
+        var jager = new User { Name = "Roald de Jager", Email = "roald@jacht.nl", PasswordHash = "welkom", Role = "Jager" };
+        var admin = new User { Name = "Admin", Email = "admin@jachtveld.nl", PasswordHash = "admin", Role = "Admin" };
         
-        context.Users.AddRange(jager, boer);
+        context.Users.AddRange(jager, admin);
         context.SaveChanges(); 
+
+        var boer = new User 
+        { 
+            Name = "Boer Harms", 
+            Email = "harms@boerderij.nl", 
+            PasswordHash = "welkom", 
+            Role = "Boer",
+            LinkedJagerId = jager.Id
+        };
+        context.Users.Add(boer);
+        context.SaveChanges();
+
+        // Diersoorten toevoegen
+        context.AnimalSpecies.AddRange(
+            new AnimalSpecies { Name = "Ree" },
+            new AnimalSpecies { Name = "Wild zwijn" },
+            new AnimalSpecies { Name = "Haas" },
+            new AnimalSpecies { Name = "Fazant" }
+        );
 
         // Voeg direct een eerste waarneming toe gekoppeld aan de jager
         context.Registrations.Add(new Registration 

@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="SharedValues_SharedValuesListenerImplementor" package="mono.androidx.constraintlayout.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.ConstraintLayout.Widget.SharedValues+ISharedValuesListenerImplementor, Xamarin.AndroidX.ConstraintLayout">
+    <type name="SharedValues_SharedValuesListenerImplementor" package="mono.androidx.constraintlayout.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.ConstraintLayout.Widget.SharedValues+ISharedValuesListenerImplementor, Xamarin.AndroidX.ConstraintLayout">
       <implemented_interfaces>
         <interface name="androidx.constraintlayout.widget.SharedValues.SharedValuesListener" />
       </implemented_interfaces>
@@ -11,7 +11,7 @@
         <method name="onNewValue" method="n_onNewValue:(III)V:GetOnNewValue_IIIHandler:AndroidX.ConstraintLayout.Widget.SharedValues+ISharedValuesListenerInvoker, Xamarin.AndroidX.ConstraintLayout" jni_signature="(III)V" params="int p0, int p1, int p2" retval="void" is_dynamically_registered="True" super_call="p0, p1, p2" activate_call="p0, p1, p2" />
       </methods>
     </type>
-    <type name="MotionLayout_TransitionListenerImplementor" package="mono.androidx.constraintlayout.motion.widget" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.ConstraintLayout.Motion.Widget.MotionLayout+ITransitionListenerImplementor, Xamarin.AndroidX.ConstraintLayout">
+    <type name="MotionLayout_TransitionListenerImplementor" package="mono.androidx.constraintlayout.motion.widget" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.ConstraintLayout.Motion.Widget.MotionLayout+ITransitionListenerImplementor, Xamarin.AndroidX.ConstraintLayout">
       <implemented_interfaces>
         <interface name="androidx.constraintlayout.motion.widget.MotionLayout.TransitionListener" />
       </implemented_interfaces>

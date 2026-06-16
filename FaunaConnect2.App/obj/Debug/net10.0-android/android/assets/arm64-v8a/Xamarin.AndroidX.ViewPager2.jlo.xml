@@ -1,6 +1,6 @@
 <api>
   <jcw-types>
-    <type name="FragmentStateAdapter_FragmentTransactionCallback_OnPostEventListenerImplementor" package="mono.androidx.viewpager2.adapter" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.ViewPager2.Adapter.FragmentStateAdapter+FragmentTransactionCallback+IOnPostEventListenerImplementor, Xamarin.AndroidX.ViewPager2">
+    <type name="FragmentStateAdapter_FragmentTransactionCallback_OnPostEventListenerImplementor" package="mono.androidx.viewpager2.adapter" application_java_class="android.support.multidex.MultiDexApplication" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="java.lang.Object" partial_assembly_qualified_name="AndroidX.ViewPager2.Adapter.FragmentStateAdapter+FragmentTransactionCallback+IOnPostEventListenerImplementor, Xamarin.AndroidX.ViewPager2">
       <implemented_interfaces>
         <interface name="androidx.viewpager2.adapter.FragmentStateAdapter.FragmentTransactionCallback.OnPostEventListener" />
       </implemented_interfaces>
