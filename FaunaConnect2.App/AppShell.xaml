@@ -13,13 +13,13 @@
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
         </Tab>
-        <Tab x:Name="MapTab" Title="Kaart">
+        <Tab x:Name="MapTab" Title="Map">
             <Tab.Icon>
                 <FontImageSource Glyph="📍" Color="#D32F2F" Size="24" />
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate local:MapPage}" />
         </Tab>
-        <Tab Title="Meldingen">
+        <Tab Title="Reports">
             <Tab.Icon>
                 <FontImageSource Glyph="🔔" Color="#B22222" Size="24" />
             </Tab.Icon>
@@ -31,7 +31,7 @@
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate local:ChatPage}" />
         </Tab>
-        <Tab x:Name="AdminTab" Title="Beheer" IsVisible="False">
+        <Tab x:Name="AdminTab" Title="Admin" IsVisible="False">
             <Tab.Icon>
                 <FontImageSource Glyph="⚙️" Color="#666666" Size="24" />
             </Tab.Icon>

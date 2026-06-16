@@ -2,20 +2,23 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:maps="http://schemas.microsoft.com/dotnet/2021/maui/maps"
+             xmlns:viewmodels="clr-namespace:FaunaConnect2.App.ViewModels"
              x:Class="FaunaConnect2.App.MapPage"
-             Title="Jachtveld Kaart"
+             x:DataType="viewmodels:MapViewModel"
+             Title="Hunting Ground Map"
              BackgroundColor="White">
 
     <Grid RowDefinitions="Auto, *">
         <SearchBar x:Name="MapSearchBar" 
-                   Placeholder="Zoek op adres of locatie..." 
-                   SearchButtonPressed="OnSearchButtonPressed"
+                   Placeholder="Search by address or location..." 
+                   Text="{Binding SearchText}"
+                   SearchCommand="{Binding SearchCommand}"
                    Grid.Row="0"
                    Margin="10,10,60,10"
                    BackgroundColor="White"/>
 
         <Button Text="🔄" 
-                Clicked="OnRefreshClicked"
+                Command="{Binding RefreshCommand}"
                 Grid.Row="0"
                 HorizontalOptions="End"
                 Margin="10"
@@ -31,9 +34,8 @@
                  Navigating="OnWebViewNavigating"
                  Grid.Row="1"/>
 
-        <ActivityIndicator x:Name="MapLoadingIndicator"
-                           IsRunning="False"
-                           IsVisible="False"
+        <ActivityIndicator IsRunning="{Binding IsLoading}"
+                           IsVisible="{Binding IsLoading}"
                            VerticalOptions="Center"
                            HorizontalOptions="Center"
                            Color="#2B5B2B"
@@ -42,7 +44,7 @@
                            Grid.Row="1"/>
 
         <Button x:Name="ShowPanelButton"
-                Text="📋 Opties"
+                Text="📋 Options"
                 Clicked="OnShowPanelClicked"
                 IsVisible="False"
                 Grid.Row="1"
@@ -77,10 +79,10 @@
             
             <VerticalStackLayout Spacing="10">
                 <Grid ColumnDefinitions="*, Auto, Auto">
-                    <Label Text="Geselecteerd Perceel" FontAttributes="Bold" FontSize="18" TextColor="#333333" Grid.Column="0"/>
+                    <Label Text="Selected Parcel" FontAttributes="Bold" FontSize="18" TextColor="#333333" Grid.Column="0"/>
                     
-                    <Button Text="❌ Wis" 
-                            Clicked="OnDeselectClicked" 
+                    <Button Text="❌ Clear" 
+                            Command="{Binding DeselectCommand}" 
                             BackgroundColor="Transparent" 
                             TextColor="#666" 
                             FontSize="12"
@@ -89,7 +91,7 @@
                             Grid.Column="1"
                             Margin="0,0,10,0"/>
 
-                    <Button Text="✖️ Sluit" 
+                    <Button Text="✖️ Close" 
                             Clicked="OnHidePanelClicked" 
                             BackgroundColor="#F5F5F5" 
                             TextColor="#333" 
@@ -100,24 +102,23 @@
                             Grid.Column="2"/>
                 </Grid>
                 
-                <Label x:Name="ParcelIdLabel" Text="Klik op de kaart om een perceel te selecteren" TextColor="#666666" FontSize="14"/>
-                <Label x:Name="ParcelSizeLabel" Text="Grootte: --" TextColor="#2B5B2B" FontSize="14" FontAttributes="Bold"/>
+                <Label Text="{Binding ParcelIdText}" TextColor="#666666" FontSize="14"/>
+                <Label Text="{Binding ParcelSizeText}" TextColor="#2B5B2B" FontSize="14" FontAttributes="Bold"/>
                 
                 <BoxView HeightRequest="1" BackgroundColor="#EEEEEE" Margin="0,5"/>
                 
                 <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
-                    <Label Text="Veiligheidscirkel Tonen" VerticalOptions="Center" FontSize="14"/>
-                    <Switch x:Name="CircleToggle" Toggled="OnCircleToggleToggled" IsToggled="False"/>
+                    <Label Text="Show Safety Circle" VerticalOptions="Center" FontSize="14"/>
+                    <Switch IsToggled="{Binding IsCircleVisible}" Toggled="OnCircleToggleToggled"/>
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
-                    <Label Text="Wildschade Tonen" VerticalOptions="Center" FontSize="14"/>
-                    <Switch x:Name="DamageToggle" Toggled="OnDamageToggleToggled" IsToggled="True"/>
+                    <Label Text="Show Wildlife Damage" VerticalOptions="Center" FontSize="14"/>
+                    <Switch IsToggled="{Binding IsDamageVisible}" Toggled="OnDamageToggleToggled"/>
                 </HorizontalStackLayout>
 
-                <Button x:Name="ReportDamageButton"
-                        Text="⚠️ Meld Wildschade Hier" 
-                        Clicked="OnReportDamageClicked"
+                <Button Text="⚠️ Report Wildlife Damage Here" 
+                        Command="{Binding ReportDamageCommand}"
                         BackgroundColor="#B22222"
                         TextColor="White"
                         CornerRadius="4"
@@ -125,17 +126,16 @@
                         FontSize="16"
                         Margin="0,5,0,0"/>
 
-                <Button x:Name="SaveGroundButton" 
-                        Text="Opslaan als Jachtveld" 
-                        Clicked="OnSaveHuntingGroundClicked"
-                        IsVisible="False"
+                <Button Text="Save as Hunting Ground" 
+                        Command="{Binding SaveHuntingGroundCommand}"
+                        IsVisible="{Binding IsSaveGroundVisible}"
                         BackgroundColor="#2B5B2B"
                         TextColor="White"
                         CornerRadius="4"
                         HeightRequest="44"
                         FontSize="16"/>
 
-                <Label Text="Radius: 300m schietcirkel" FontSize="11" TextColor="#D32F2F" HorizontalOptions="Start"/>
+                <Label Text="Radius: 300m safety circle" FontSize="11" TextColor="#D32F2F" HorizontalOptions="Start"/>
             </VerticalStackLayout>
         </Border>
     </Grid>

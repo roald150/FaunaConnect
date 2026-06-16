@@ -1,44 +1,39 @@
-﻿namespace FaunaConnect2.Api.Controllers;
+namespace FaunaConnect2.Api.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FaunaConnect2.Api.Data;
 using FaunaConnect2.Api.Models;
+using Microsoft.AspNetCore.Authorization;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
-public class RegistrationsController : ControllerBase
+public class RegistrationsController(FaunaDbContext context) : ControllerBase
 {
-    private readonly FaunaDbContext _context;
-
-    // EF Core wordt hier automatisch geïnjecteerd via de constructor
-    public RegistrationsController(FaunaDbContext context)
-    {
-        _context = context;
-    }
-
-    // GET: api/registrations (Haal alles op uit de SQL database)
+    // GET: api/registrations (Retrieve everything from the SQL database)
+    [Authorize(Roles = "Hunter,Admin")]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Registration>>> GetAll()
     {
-        var data = await _context.Registrations
-            .Include(r => r.User) // Voeg de jagergegevens direct toe (SQL JOIN)
+        var data = await context.Registrations
+            .Include(r => r.User) // Add hunter details directly (SQL JOIN)
             .ToListAsync();
             
         return Ok(data);
     }
 
-    // POST: api/registrations (Sla écht op in de database)
+    // POST: api/registrations (Save to the database)
     [HttpPost]
     public async Task<ActionResult<Registration>> Create([FromBody] Registration newReg)
     {
-        // We zetten de tijd op nu
+        // Set the time to now
         newReg.DateTime = DateTime.Now;
 
-        // Voeg toe aan de EF Core verzameling
-        _context.Registrations.Add(newReg);
+        // Add to the EF Core collection
+        context.Registrations.Add(newReg);
         
-        // Schrijf de wijzigingen definitief weg naar SQL Server
-        await _context.SaveChangesAsync();
+        // Persist changes to SQL Server
+        await context.SaveChangesAsync();
 
         return CreatedAtAction(nameof(GetAll), new { id = newReg.Id }, newReg);
     }

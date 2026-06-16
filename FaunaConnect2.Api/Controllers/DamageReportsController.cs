@@ -2,35 +2,32 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FaunaConnect2.Api.Data;
 using FaunaConnect2.Api.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FaunaConnect2.Api.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
-public class DamageReportsController : ControllerBase
+public class DamageReportsController(FaunaDbContext context) : ControllerBase
 {
-    private readonly FaunaDbContext _context;
-
-    public DamageReportsController(FaunaDbContext context)
-    {
-        _context = context;
-    }
-
+    [Authorize(Roles = "Hunter,Admin")]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<DamageReport>>> Get()
     {
-        return await _context.DamageReports
+        return await context.DamageReports
             .Include(d => d.User)
             .OrderByDescending(d => d.Timestamp)
             .ToListAsync();
     }
 
+    [Authorize(Roles = "Farmer,Admin")]
     [HttpPost]
     public async Task<ActionResult<DamageReport>> Create(DamageReport report)
     {
         report.Timestamp = DateTime.Now;
-        _context.DamageReports.Add(report);
-        await _context.SaveChangesAsync();
+        context.DamageReports.Add(report);
+        await context.SaveChangesAsync();
         return Ok(report);
     }
 }

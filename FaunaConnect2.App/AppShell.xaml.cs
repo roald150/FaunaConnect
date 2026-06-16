@@ -8,17 +8,25 @@ public partial class AppShell : Shell
     {
         InitializeComponent();
         
+        RegisterRoutes();
         ConfigureTabs();
+    }
+
+    private void RegisterRoutes()
+    {
+        Routing.RegisterRoute(nameof(NewRegistrationPage), typeof(NewRegistrationPage));
+        Routing.RegisterRoute(nameof(DamageReportPage), typeof(DamageReportPage));
+        Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
     }
 
     private void ConfigureTabs()
     {
         var role = UserService.CurrentUser?.Role;
 
-        // Iedereen mag de kaart zien
+        // Everyone can see the map
         MapTab.IsVisible = true;
 
-        // Alleen admin mag beheer zien
+        // Only admin can see admin tab
         AdminTab.IsVisible = role == "Admin";
     }
 }

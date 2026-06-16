@@ -4,11 +4,33 @@
         <name>FaunaConnect2.App</name>
     </assembly>
     <members>
+        <member name="T:FaunaConnect2.App.ViewModels.BaseViewModel">
+            <summary>
+            Base class for all ViewModels, implementing INotifyPropertyChanged for data binding.
+            </summary>
+        </member>
+        <member name="M:FaunaConnect2.App.ViewModels.BaseViewModel.SetProperty``1(``0@,``0,System.String)">
+            <summary>
+            Updates a property and notifies the UI of the change.
+            </summary>
+        </member>
+        <member name="M:FaunaConnect2.App.ViewModels.BaseViewModel.OnPropertyChanged(System.String)">
+            <summary>
+            Raises the PropertyChanged event.
+            </summary>
+        </member>
         <member name="T:FaunaConnect2.App.Resource">
             <summary>
             Android Resource Designer class.
             Exposes the Android Resource designer assembly into the project Namespace.
             </summary>
+        </member>
+        <member name="M:FaunaConnect2.Api.Helpers.WeatherHelper.GetWindDirection(System.Double)">
+            <summary>
+            Converts meteorological degrees to cardinal wind direction.
+            </summary>
+            <param name="degrees">Wind direction in degrees.</param>
+            <returns>Cardinal direction string (e.g., "N", "NE", "E").</returns>
         </member>
     </members>
 </doc>

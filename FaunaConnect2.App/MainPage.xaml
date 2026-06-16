@@ -1,22 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:FaunaConnect2.App.ViewModels"
+             xmlns:models="clr-namespace:FaunaConnect2.App.Models"
              x:Class="FaunaConnect2.App.MainPage"
+             x:DataType="viewmodels:MainViewModel"
              Title="FaunaConnect2 - Dashboard">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Uitloggen" Clicked="OnLogoutClicked" Order="Primary"/>
+        <ToolbarItem Text="Logout" Command="{Binding LogoutCommand}" Order="Primary"/>
     </ContentPage.ToolbarItems>
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20" BackgroundColor="#F5F5F5">
             
-            <Label x:Name="WelcomeLabel" Text="Welkom" 
+            <Label Text="{Binding WelcomeMessage}" 
                    FontSize="26" 
                    FontAttributes="Bold" 
                    TextColor="#2B5B2B"/>
 
-            <!-- Weer & Zon sectie -->
+            <!-- Weather & Sun section -->
             <Grid ColumnDefinitions="*,*" ColumnSpacing="15">
                 <Border Grid.Column="0" Padding="15" BackgroundColor="White" Stroke="Transparent">
                     <Border.StrokeShape>
@@ -27,8 +30,8 @@
                     </Border.Shadow>
                     <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
                         <Label Text="🌬️ Wind" FontSize="14" TextColor="Gray" HorizontalOptions="Center"/>
-                        <Label x:Name="WindLabel" Text="-- km/h" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
-                        <Label x:Name="WindDirLabel" Text="--" FontSize="12" TextColor="Gray" HorizontalOptions="Center"/>
+                        <Label Text="{Binding WindText}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label Text="{Binding WindDirection}" FontSize="12" TextColor="Gray" HorizontalOptions="Center"/>
                     </VerticalStackLayout>
                 </Border>
                 <Border Grid.Column="1" Padding="15" BackgroundColor="White" Stroke="Transparent">
@@ -39,18 +42,17 @@
                         <Shadow Brush="Black" Offset="2,2" Radius="5" Opacity="0.2"/>
                     </Border.Shadow>
                     <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
-                        <Label Text="☀️ Zon" FontSize="14" TextColor="Gray" HorizontalOptions="Center"/>
-                        <Label x:Name="SunriseLabel" Text="↑ --:--" FontSize="14" HorizontalOptions="Center"/>
-                        <Label x:Name="SunsetLabel" Text="↓ --:--" FontSize="14" HorizontalOptions="Center"/>
+                        <Label Text="☀️ Sun" FontSize="14" TextColor="Gray" HorizontalOptions="Center"/>
+                        <Label Text="{Binding SunriseText}" FontSize="14" HorizontalOptions="Center"/>
+                        <Label Text="{Binding SunsetText}" FontSize="14" HorizontalOptions="Center"/>
                     </VerticalStackLayout>
                 </Border>
             </Grid>
 
-            <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
-                <Button x:Name="NewRegistrationButton"
-                        Grid.Column="0"
-                        Text="Nieuwe Waarneming" 
-                        Clicked="OnNewRegistrationClicked" 
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10" IsVisible="{Binding IsActionButtonsVisible}">
+                <Button Grid.Column="0"
+                        Text="New Sighting" 
+                        Command="{Binding NewRegistrationCommand}" 
                         BackgroundColor="#2B5B2B" 
                         TextColor="White"
                         CornerRadius="12"
@@ -58,10 +60,9 @@
                         FontAttributes="Bold"
                         FontSize="14"/>
 
-                <Button x:Name="ReportDamageButton"
-                        Grid.Column="1"
-                        Text="Wildschade Melden" 
-                        Clicked="OnReportDamageClicked" 
+                <Button Grid.Column="1"
+                        Text="Report Damage" 
+                        Command="{Binding ReportDamageCommand}" 
                         BackgroundColor="#B22222" 
                         TextColor="White"
                         CornerRadius="12"
@@ -70,15 +71,15 @@
                         FontSize="14"/>
             </Grid>
 
-            <Label Text="Laatste waarnemingen" 
+            <Label Text="Recent Sightings" 
                    FontSize="18" 
                    FontAttributes="Bold" 
                    TextColor="#444"
                    Margin="0,10,0,0"/>
 
-            <CollectionView x:Name="RegistrationsListView" HeightRequest="400">
+            <CollectionView ItemsSource="{Binding RecentRegistrations}" HeightRequest="400">
                 <CollectionView.ItemTemplate>
-                    <DataTemplate>
+                    <DataTemplate x:DataType="models:Registration">
                         <Border Margin="0,5" Padding="15" BackgroundColor="White" Stroke="Transparent">
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="12"/>

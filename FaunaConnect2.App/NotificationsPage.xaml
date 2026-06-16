@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:FaunaConnect2.App.ViewModels"
              x:Class="FaunaConnect2.App.NotificationsPage"
-             Title="Meldingen">
+             x:DataType="viewmodels:NotificationsViewModel"
+             Title="Notifications">
     <Grid RowDefinitions="Auto, *">
         <HorizontalStackLayout Grid.Row="0" Padding="15" Spacing="10" BackgroundColor="#F5F5F5">
-            <Button Text="Alles" Clicked="OnFilterAllClicked" BackgroundColor="#2B5B2B" TextColor="White" CornerRadius="15" HeightRequest="35" Padding="15,0"/>
-            <Button Text="Schade" Clicked="OnFilterDamageClicked" BackgroundColor="White" TextColor="#B22222" BorderColor="#B22222" BorderWidth="1" CornerRadius="15" HeightRequest="35" Padding="15,0"/>
-            <Button Text="Wild" Clicked="OnFilterWildlifeClicked" BackgroundColor="White" TextColor="#2B5B2B" BorderColor="#2B5B2B" BorderWidth="1" CornerRadius="15" HeightRequest="35" Padding="15,0"/>
+            <Button Text="All" Command="{Binding ShowAllCommand}" BackgroundColor="#2B5B2B" TextColor="White" CornerRadius="15" HeightRequest="35" Padding="15,0"/>
+            <Button Text="Damage" Command="{Binding ShowDamageCommand}" BackgroundColor="White" TextColor="#B22222" BorderColor="#B22222" BorderWidth="1" CornerRadius="15" HeightRequest="35" Padding="15,0"/>
+            <Button Text="Wildlife" Command="{Binding ShowWildlifeCommand}" BackgroundColor="White" TextColor="#2B5B2B" BorderColor="#2B5B2B" BorderWidth="1" CornerRadius="15" HeightRequest="35" Padding="15,0"/>
         </HorizontalStackLayout>
 
-        <RefreshView Grid.Row="1" x:Name="NotificationsRefresh" Refreshing="OnRefreshRequested">
-            <CollectionView x:Name="NotificationsListView">
+        <RefreshView Grid.Row="1" IsRefreshing="{Binding IsBusy}" Command="{Binding LoadNotificationsCommand}">
+            <CollectionView ItemsSource="{Binding FilteredItems}">
                 <CollectionView.ItemTemplate>
-                    <DataTemplate>
+                    <DataTemplate x:DataType="viewmodels:NotificationsViewModel+NotificationItem">
                         <Border Margin="10,5" Padding="15" BackgroundColor="White" Stroke="Transparent">
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="12"/>

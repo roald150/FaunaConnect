@@ -1,104 +1,131 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FaunaConnect2.Api.Data;
 using FaunaConnect2.Api.Models;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.AspNetCore.Authorization;
 
-namespace FaunaConnect2.Api.Controllers
+namespace FaunaConnect2.Api.Controllers;
+
+// This object is used specifically for logging in
+public class LoginRequest { public string Email { get; set; } = ""; public string Password { get; set; } = ""; }
+public class LoginResponse { public string Token { get; set; } = ""; public User User { get; set; } = null!; }
+
+[ApiController]
+[Route("api/[controller]")]
+public class UsersController(FaunaDbContext context, IConfiguration configuration) : ControllerBase
 {
-    // Dit object gebruiken we specifiek voor het inloggen
-    public class LoginRequest { public string Email { get; set; } = ""; public string Password { get; set; } = ""; }
-
-    [ApiController]
-    [Route("api/[controller]")]
-    public class UsersController : ControllerBase
+    // 1. POST: api/users/register (Create account)
+    [HttpPost("register")]
+    public async Task<IActionResult> Register([FromBody] User newUser)
     {
-        private readonly FaunaDbContext _context;
-
-        public UsersController(FaunaDbContext context)
+        // Check if email address already exists
+        if (await context.Users.AnyAsync(u => u.Email == newUser.Email))
         {
-            _context = context;
+            return BadRequest("This email address is already in use.");
         }
 
-        // 1. POST: api/users/register (Account aanmaken)
-        [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] User newUser)
+        // Securely hash the password
+        newUser.PasswordHash = BCrypt.Net.BCrypt.HashPassword(newUser.PasswordHash);
+        
+        context.Users.Add(newUser);
+        await context.SaveChangesAsync();
+
+        return Ok(newUser);
+    }
+
+    // 2. POST: api/users/login (Login)
+    [HttpPost("login")]
+    public async Task<IActionResult> Login([FromBody] LoginRequest request)
+    {
+        var user = await context.Users
+            .FirstOrDefaultAsync(u => u.Email == request.Email);
+
+        if (user == null || !BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
         {
-            // Controleer of het e-mailadres al bestaat
-            if (await _context.Users.AnyAsync(u => u.Email == newUser.Email))
-            {
-                return BadRequest("Dit e-mailadres is al in gebruik.");
-            }
-
-            // In een productie-app zou je het wachtwoord hier hashen, 
-            // maar voor dit assessment houden we het simpel en slaan we het direct op.
-            _context.Users.Add(newUser);
-            await _context.SaveChangesAsync();
-
-            return Ok(newUser);
+            return Unauthorized("Incorrect email address or password.");
         }
 
-        // 2. POST: api/users/login (Inloggen)
-        [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginRequest request)
+        // Generate JWT Token
+        var token = GenerateJwtToken(user);
+
+        // Return the token and user info
+        return Ok(new LoginResponse { Token = token, User = user });
+    }
+
+    private string GenerateJwtToken(User user)
+    {
+        var jwtSettings = configuration.GetSection("Jwt");
+        var key = Encoding.ASCII.GetBytes(jwtSettings["Key"]!);
+
+        var tokenDescriptor = new SecurityTokenDescriptor
         {
-            var user = await _context.Users
-                .FirstOrDefaultAsync(u => u.Email == request.Email && u.PasswordHash == request.Password);
+            Subject = new ClaimsIdentity([
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Role, user.Role)
+            ]),
+            Expires = DateTime.UtcNow.AddDays(7),
+            Issuer = jwtSettings["Issuer"],
+            Audience = jwtSettings["Audience"],
+            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+        };
 
-            if (user == null)
-            {
-                return Unauthorized("Onjuist e-mailadres of wachtwoord.");
-            }
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var token = tokenHandler.CreateToken(tokenDescriptor);
+        return tokenHandler.WriteToken(token);
+    }
 
-            // Geef de gebruiker (inclusief zijn Rol!) terug naar de MAUI app
-            return Ok(user);
-        }
+    // 3. GET: api/users (Retrieve all users for admin)
+    [Authorize(Roles = "Admin")]
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+    {
+        return await context.Users.ToListAsync();
+    }
 
-        // 3. GET: api/users (Alle gebruikers ophalen voor admin)
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
-        {
-            return await _context.Users.ToListAsync();
-        }
+    // 4. GET: api/users/{id}
+    [Authorize]
+    [HttpGet("{id}")]
+    public async Task<ActionResult<User>> GetUser(int id)
+    {
+        var user = await context.Users.FindAsync(id);
+        if (user == null) return NotFound();
+        return user;
+    }
 
-        // 4. GET: api/users/{id}
-        [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
-        {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null) return NotFound();
-            return user;
-        }
+    // 5. PUT: api/users/{id} (Edit user)
+    [Authorize(Roles = "Admin")]
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateUser(int id, User updatedUser)
+    {
+        if (id != updatedUser.Id) return BadRequest();
 
-        // 5. PUT: api/users/{id} (Gebruiker bewerken)
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateUser(int id, User updatedUser)
-        {
-            if (id != updatedUser.Id) return BadRequest();
+        var user = await context.Users.FindAsync(id);
+        if (user == null) return NotFound();
 
-            var user = await _context.Users.FindAsync(id);
-            if (user == null) return NotFound();
+        user.Name = updatedUser.Name;
+        user.Email = updatedUser.Email;
+        user.Role = updatedUser.Role;
+        user.LinkedHunterId = updatedUser.LinkedHunterId;
 
-            user.Name = updatedUser.Name;
-            user.Email = updatedUser.Email;
-            user.Role = updatedUser.Role;
-            user.LinkedJagerId = updatedUser.LinkedJagerId;
+        await context.SaveChangesAsync();
+        return NoContent();
+    }
 
-            // We raken het wachtwoord niet aan zoals gevraagd
-            
-            await _context.SaveChangesAsync();
-            return NoContent();
-        }
+    // 6. DELETE: api/users/{id} (Delete user)
+    [Authorize(Roles = "Admin")]
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteUser(int id)
+    {
+        var user = await context.Users.FindAsync(id);
+        if (user == null) return NotFound();
 
-        // 6. DELETE: api/users/{id} (Gebruiker verwijderen)
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(int id)
-        {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null) return NotFound();
-
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
-            return NoContent();
-        }
+        context.Users.Remove(user);
+        await context.SaveChangesAsync();
+        return NoContent();
     }
 }

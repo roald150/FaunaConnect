@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Json;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FaunaConnect2.Api.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api")]
 public class WeatherController : ControllerBase
@@ -19,14 +21,14 @@ public class WeatherController : ControllerBase
     [HttpGet("weather")]
     public async Task<IActionResult> GetWeather(double lat, double lng)
     {
-        // Voor het assessment geven we even simpele mock-data terug 
-        // zodat de app altijd werkt zonder API key gedoe.
+        // For the assessment, we return simple mock data 
+        // so the app always works without API key hassle.
         var mockWeather = new 
         {
             Temp = 18.5,
             WindSpeed = 3.2,
-            WindDirection = 240, // graden (ZW)
-            Condition = "Onbewolkt"
+            WindDirection = 240, // degrees (SW)
+            Condition = "Clear"
         };
         return Ok(mockWeather);
     }
@@ -34,7 +36,7 @@ public class WeatherController : ControllerBase
     [HttpGet("sun")]
     public async Task<IActionResult> GetSun(double lat, double lng)
     {
-        // Proxy naar de gratis Sunrise-Sunset API
+        // Proxy to the free Sunrise-Sunset API
         string url = $"https://api.sunrise-sunset.org/json?lat={lat}&lng={lng}&formatted=0";
         var response = await _httpClient.GetFromJsonAsync<SunResponse>(url);
         

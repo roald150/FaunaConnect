@@ -1,32 +1,20 @@
-using System.Net.Http.Json;
-using FaunaConnect2.App.Models;
-using FaunaConnect2.App.Services;
+using FaunaConnect2.App.ViewModels;
 
 namespace FaunaConnect2.App;
 
 public partial class RegistrationsPage : ContentPage
 {
-    private readonly HttpClient _httpClient;
+    private readonly RegistrationsViewModel _viewModel;
 
-    public RegistrationsPage()
+    public RegistrationsPage(RegistrationsViewModel viewModel)
     {
         InitializeComponent();
-        _httpClient = new HttpClient { BaseAddress = new Uri(UserService.BaseUrl) };
+        BindingContext = _viewModel = viewModel;
     }
 
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        await LoadRegistrations();
-    }
-
-    private async Task LoadRegistrations()
-    {
-        try
-        {
-            var regs = await _httpClient.GetFromJsonAsync<List<Registration>>("registrations");
-            RegistrationsListView.ItemsSource = regs;
-        }
-        catch { }
+        await _viewModel.Initialize();
     }
 }

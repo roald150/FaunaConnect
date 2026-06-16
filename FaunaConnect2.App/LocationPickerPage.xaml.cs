@@ -11,7 +11,7 @@ public partial class LocationPickerPage : ContentPage
         if (initialLocation != null)
         {
             SelectedLocation = initialLocation;
-            // We wachten tot de WebView geladen is om de locatie in te stellen
+            // Wait for WebView to load before setting location
             PickerWebView.Navigated += (s, e) => {
                 SetLocationInWebView(initialLocation.Latitude, initialLocation.Longitude);
             };
@@ -47,7 +47,7 @@ public partial class LocationPickerPage : ContentPage
             if (double.TryParse(query["lat"], out double lat) && double.TryParse(query["lng"], out double lng))
             {
                 SelectedLocation = new Location(lat, lng);
-                LocationLabel.Text = $"Geselecteerd: {lat:F5}, {lng:F5}";
+                LocationLabel.Text = $"Selected: {lat:F5}, {lng:F5}";
                 ConfirmButton.IsEnabled = true;
             }
         }

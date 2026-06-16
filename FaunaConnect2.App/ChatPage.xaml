@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:FaunaConnect2.App.ViewModels"
              x:Class="FaunaConnect2.App.ChatPage"
+             x:DataType="viewmodels:ChatViewModel"
              Title="Chat">
     <Grid RowDefinitions="*,Auto" Padding="10">
         
-        <CollectionView x:Name="MessagesListView" Grid.Row="0">
+        <CollectionView ItemsSource="{Binding Messages}" Grid.Row="0">
             <CollectionView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate x:DataType="viewmodels:ChatViewModel+ChatMessageDisplay">
                     <VerticalStackLayout Padding="5" Margin="0,2">
                         <Border Padding="10" 
                                 HorizontalOptions="{Binding Alignment}"
@@ -27,8 +29,8 @@
         </CollectionView>
 
         <HorizontalStackLayout Grid.Row="1" Spacing="10" Padding="5">
-            <Entry x:Name="MessageEntry" Placeholder="Typ een bericht..." WidthRequest="300"/>
-            <Button Text="Verstuur" Clicked="OnSendClicked" BackgroundColor="#2B5B2B" TextColor="White"/>
+            <Entry Text="{Binding NewMessageText}" Placeholder="Type a message..." WidthRequest="300"/>
+            <Button Text="Send" Command="{Binding SendCommand}" BackgroundColor="#2B5B2B" TextColor="White"/>
         </HorizontalStackLayout>
     </Grid>
 </ContentPage>

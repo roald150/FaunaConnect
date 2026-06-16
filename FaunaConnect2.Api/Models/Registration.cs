@@ -3,13 +3,13 @@
 public class Registration
 {
     public int Id { get; set; }
-    public string AnimalName { get; set; } = string.Empty; // Bijv. "Ree" 
+    public string AnimalName { get; set; } = string.Empty; // e.g. "Roe Deer" 
     public double Latitude { get; set; }
     public double Longitude { get; set; }
     public DateTime DateTime { get; set; } = DateTime.Now;
-    public string? PhotoUrl { get; set; } // Locatie van de foto 
+    public string? PhotoUrl { get; set; } // Photo location 
 
-    // Foreign Key: Koppeling naar de Jager (User) die de registratie deed
+    // Foreign Key: Link to the Hunter (User) who made the registration
     public int UserId { get; set; }
     public User? User { get; set; }
 }

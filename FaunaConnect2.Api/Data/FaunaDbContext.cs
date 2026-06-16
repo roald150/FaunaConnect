@@ -32,9 +32,9 @@ namespace FaunaConnect2.Api.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<User>()
-                .HasOne(u => u.LinkedJager)
+                .HasOne(u => u.LinkedHunter)
                 .WithMany(u => u.LinkedFarmers)
-                .HasForeignKey(u => u.LinkedJagerId)
+                .HasForeignKey(u => u.LinkedHunterId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

@@ -7,19 +7,19 @@ public class User
     public string Email { get; set; } = string.Empty;
     public string PasswordHash { get; set; } = string.Empty;
         
-    // De rol: "Jager", "Boer" of "Admin"
-    public string Role { get; set; } = "Jager"; 
+    // Role: "Hunter", "Farmer" or "Admin"
+    public string Role { get; set; } = "Hunter"; 
 
-    // Relaties
+    // Relationships
     public List<Registration> Registrations { get; set; } = new();
     public List<HuntingGround> HuntingGrounds { get; set; } = new();
     public List<DamageReport> DamageReports { get; set; } = new();
     
-    // De jager-boer koppeling:
-    // Als de rol 'Boer' is, kan hij gekoppeld zijn aan een Jager
-    public int? LinkedJagerId { get; set; }
-    public User? LinkedJager { get; set; }
+    // Hunter-Farmer link:
+    // If the role is 'Farmer', they can be linked to a Hunter
+    public int? LinkedHunterId { get; set; }
+    public User? LinkedHunter { get; set; }
     
-    // Een jager kan meerdere boeren hebben
+    // A hunter can have multiple farmers
     public List<User> LinkedFarmers { get; set; } = new();
 }

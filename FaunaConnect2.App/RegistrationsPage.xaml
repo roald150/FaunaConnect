@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:FaunaConnect2.App.ViewModels"
+             xmlns:models="clr-namespace:FaunaConnect2.App.Models"
              x:Class="FaunaConnect2.App.RegistrationsPage"
-             Title="Registraties">
-    <Grid Padding="20">
-        <CollectionView x:Name="RegistrationsListView">
+             x:DataType="viewmodels:RegistrationsViewModel"
+             Title="Registrations">
+    
+    <RefreshView IsRefreshing="{Binding IsBusy}" Command="{Binding LoadRegistrationsCommand}">
+        <CollectionView ItemsSource="{Binding Registrations}" x:Name="RegistrationsListView">
             <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Border Stroke="LightGray" StrokeThickness="1" Margin="0,5" Padding="15">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="10"/>
-                        </Border.StrokeShape>
-                        <HorizontalStackLayout Spacing="15">
-                            <Label Text="🦌" FontSize="30" VerticalOptions="Center"/>
-                            <VerticalStackLayout VerticalOptions="Center">
-                                <Label Text="{Binding AnimalName}" FontAttributes="Bold" FontSize="18"/>
-                                <Label Text="{Binding DateTime, StringFormat='{0:dd-MM-yyyy HH:mm}'}" TextColor="DimGray"/>
-                                <Label Text="{Binding Latitude, StringFormat='Lat: {0:F3}'}" FontSize="11" TextColor="Gray"/>
-                                <Label Text="{Binding Longitude, StringFormat='Lng: {0:F3}'}" FontSize="11" TextColor="Gray"/>
-                            </VerticalStackLayout>
-                        </HorizontalStackLayout>
-                    </Border>
+                <DataTemplate x:DataType="models:Registration">
+                    <VerticalStackLayout Padding="10">
+                        <Label Text="{Binding AnimalName}" FontAttributes="Bold" FontSize="18"/>
+                        <Label Text="{Binding DateTime, StringFormat='{0:MMMM dd, yyyy HH:mm}'}" FontSize="12" TextColor="Gray"/>
+                        <Label Text="{Binding Latitude, StringFormat='Lat: {0:F4}'}" FontSize="12"/>
+                        <Label Text="{Binding Longitude, StringFormat='Lng: {0:F4}'}" FontSize="12"/>
+                        <BoxView HeightRequest="1" Color="LightGray" Margin="0,5,0,0"/>
+                    </VerticalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </Grid>
+    </RefreshView>
 </ContentPage>
