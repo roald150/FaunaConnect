@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaunaConnect2.App.DamageReportPage"
+             Title="Wildschade Melden">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <Label Text="Meld wildschade" FontSize="22" FontAttributes="Bold" TextColor="#B22222"/>
+            
+            <Editor x:Name="DescriptionEditor" Placeholder="Omschrijf de schade..." HeightRequest="100"/>
+            
+            <Button Text="📷 Foto van schade" Clicked="OnTakePhotoClicked" BackgroundColor="Gray" TextColor="White"/>
+            <Image x:Name="CapturedImage" HeightRequest="200" Aspect="AspectFill" IsVisible="False"/>
+
+            <BoxView HeightRequest="1" BackgroundColor="#EEEEEE"/>
+            <Label x:Name="LocationLabel" Text="Locatie: nog niet bepaald" FontSize="14" HorizontalOptions="Center"/>
+            <Button Text="📍 Locatie aanpassen op kaart" Clicked="OnPickLocationClicked" BackgroundColor="Transparent" TextColor="#B22222" BorderColor="#B22222" BorderWidth="1" CornerRadius="10"/>
+
+            <Button Text="Melding Versturen" Clicked="OnSendClicked" BackgroundColor="#B22222" TextColor="White" HeightRequest="50" CornerRadius="25"/>
+
+            <BoxView HeightRequest="1" Color="Gray" Margin="0,10"/>
+            <Label Text="Bestaande Meldingen" FontSize="20" FontAttributes="Bold" TextColor="#B22222"/>
+            
+            <CollectionView x:Name="ReportsListView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="0,5" Padding="10" Stroke="#B22222">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="5"/>
+                            </Border.StrokeShape>
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Description}" FontAttributes="Bold"/>
+                                <Label Text="{Binding Timestamp, StringFormat='{0:dd-MM-yyyy HH:mm}'}" FontSize="12" TextColor="Gray"/>
+                                <Label Text="{Binding User.Name, StringFormat='Gemeld door: {0}'}" FontSize="12"/>
+                                <Label Text="{Binding Latitude, StringFormat='Lat: {0:F4}, Lng: {1:F4}'}" FontSize="10" TextColor="Gray"/>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

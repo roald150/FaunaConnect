@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaunaConnect2.App.NotificationsPage"
+             Title="Meldingen">
+    <Grid RowDefinitions="Auto, *">
+        <HorizontalStackLayout Grid.Row="0" Padding="15" Spacing="10" BackgroundColor="#F5F5F5">
+            <Button Text="Alles" Clicked="OnFilterAllClicked" BackgroundColor="#2B5B2B" TextColor="White" CornerRadius="15" HeightRequest="35" Padding="15,0"/>
+            <Button Text="Schade" Clicked="OnFilterDamageClicked" BackgroundColor="White" TextColor="#B22222" BorderColor="#B22222" BorderWidth="1" CornerRadius="15" HeightRequest="35" Padding="15,0"/>
+            <Button Text="Wild" Clicked="OnFilterWildlifeClicked" BackgroundColor="White" TextColor="#2B5B2B" BorderColor="#2B5B2B" BorderWidth="1" CornerRadius="15" HeightRequest="35" Padding="15,0"/>
+        </HorizontalStackLayout>
+
+        <RefreshView Grid.Row="1" x:Name="NotificationsRefresh" Refreshing="OnRefreshRequested">
+            <CollectionView x:Name="NotificationsListView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="10,5" Padding="15" BackgroundColor="White" Stroke="Transparent">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="12"/>
+                            </Border.StrokeShape>
+                            <Border.Shadow>
+                                <Shadow Brush="Black" Offset="0,2" Radius="5" Opacity="0.1"/>
+                            </Border.Shadow>
+                            <HorizontalStackLayout Spacing="15">
+                                <Label Text="{Binding Icon}" FontSize="32" VerticalOptions="Center"/>
+                                <VerticalStackLayout VerticalOptions="Center">
+                                    <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="16" TextColor="{Binding Color}"/>
+                                    <Label Text="{Binding Description}" FontSize="14" TextColor="#444"/>
+                                    <Label Text="{Binding DateTime, StringFormat='{0:dd-MM HH:mm}'}" FontSize="12" TextColor="Gray"/>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </Grid>
+</ContentPage>

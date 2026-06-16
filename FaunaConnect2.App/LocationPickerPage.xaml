@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="http://schemas.microsoft.com/dotnet/2021/maui/maps"
+             x:Class="FaunaConnect2.App.LocationPickerPage"
+             Title="Locatie Kiezen">
+    <Grid RowDefinitions="*, Auto">
+        <WebView x:Name="PickerWebView" 
+                 Source="location_picker.html"
+                 Navigating="OnWebViewNavigating"
+                 Grid.Row="0"/>
+        
+        <VerticalStackLayout Grid.Row="1" Padding="20" Spacing="10" BackgroundColor="White">
+            <Label x:Name="LocationLabel" Text="Klik op de kaart om een locatie te kiezen" HorizontalOptions="Center"/>
+            <Button Text="Locatie Bevestigen" Clicked="OnConfirmClicked" BackgroundColor="#2B5B2B" TextColor="White" IsEnabled="False" x:Name="ConfirmButton"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

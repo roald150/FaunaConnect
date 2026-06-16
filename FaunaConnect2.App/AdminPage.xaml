@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaunaConnect2.App.AdminPage"
+             Title="Beheer">
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Beheerderspaneel" FontSize="22" FontAttributes="Bold"/>
+        
+        <Label Text="Nieuwe diersoort toevoegen:" FontSize="16"/>
+        <HorizontalStackLayout Spacing="10">
+            <Entry x:Name="NewSpeciesEntry" Placeholder="Naam..." WidthRequest="250"/>
+            <Button Text="Voeg toe" Clicked="OnAddClicked" BackgroundColor="#2B5B2B" TextColor="White"/>
+        </HorizontalStackLayout>
+
+        <Label Text="Huidige diersoorten:" FontSize="16" Margin="0,10,0,0"/>
+        <CollectionView x:Name="SpeciesListView" HeightRequest="150">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Name}" Padding="5" FontSize="16"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <BoxView HeightRequest="1" Color="Gray" Margin="0,10"/>
+
+        <Label Text="Gebruikers beheren" FontSize="20" FontAttributes="Bold"/>
+        
+        <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto" ColumnSpacing="5">
+            <Entry x:Name="UserNameEntry" Placeholder="Naam" Grid.Column="0"/>
+            <Entry x:Name="UserEmailEntry" Placeholder="Email" Grid.Column="1"/>
+            <Picker x:Name="UserRolePicker" Title="Rol" Grid.Column="2">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Jager</x:String>
+                        <x:String>Boer</x:String>
+                        <x:String>Admin</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Grid>
+        <Button Text="Nieuwe Gebruiker" Clicked="OnAddUserClicked" BackgroundColor="#2B5B2B" TextColor="White"/>
+
+        <CollectionView x:Name="UsersListView" Margin="0,10,0,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="0,5" Padding="10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="5"/>
+                        </Border.StrokeShape>
+                        <HorizontalStackLayout Spacing="10">
+                            <VerticalStackLayout WidthRequest="200">
+                                <Label Text="{Binding Name}" FontAttributes="Bold"/>
+                                <Label Text="{Binding Email}" FontSize="12"/>
+                                <Label Text="{Binding Role}" FontSize="12" TextColor="Gray"/>
+                            </VerticalStackLayout>
+                            <Button Text="Bewerk" Clicked="OnEditUserClicked" CommandParameter="{Binding .}" HeightRequest="40" BackgroundColor="Orange"/>
+                            <Button Text="X" Clicked="OnDeleteUserClicked" CommandParameter="{Binding .}" HeightRequest="40" BackgroundColor="Red" TextColor="White"/>
+                        </HorizontalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

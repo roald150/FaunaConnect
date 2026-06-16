@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaunaConnect2.App.RegistrationsPage"
+             Title="Registraties">
+    <Grid Padding="20">
+        <CollectionView x:Name="RegistrationsListView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Stroke="LightGray" StrokeThickness="1" Margin="0,5" Padding="15">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <HorizontalStackLayout Spacing="15">
+                            <Label Text="🦌" FontSize="30" VerticalOptions="Center"/>
+                            <VerticalStackLayout VerticalOptions="Center">
+                                <Label Text="{Binding AnimalName}" FontAttributes="Bold" FontSize="18"/>
+                                <Label Text="{Binding DateTime, StringFormat='{0:dd-MM-yyyy HH:mm}'}" TextColor="DimGray"/>
+                                <Label Text="{Binding Latitude, StringFormat='Lat: {0:F3}'}" FontSize="11" TextColor="Gray"/>
+                                <Label Text="{Binding Longitude, StringFormat='Lng: {0:F3}'}" FontSize="11" TextColor="Gray"/>
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
