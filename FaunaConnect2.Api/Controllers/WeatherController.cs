@@ -10,8 +10,8 @@ namespace FaunaConnect2.Api.Controllers;
 public class WeatherController : ControllerBase
 {
     private readonly HttpClient _httpClient;
-    // In een echte app zou deze key in appsettings.json staan
-    private const string ApiKey = "GEEN_KEY_NODIG_VOOR_DEMO_OF_MOCK"; 
+    
+    private const string ApiKey = ""; 
 
     public WeatherController()
     {
@@ -21,8 +21,7 @@ public class WeatherController : ControllerBase
     [HttpGet("weather")]
     public async Task<IActionResult> GetWeather(double lat, double lng)
     {
-        // For the assessment, we return simple mock data 
-        // so the app always works without API key hassle.
+        // testdata for weather, since the OpenWeatherMap API requires an API key and is not free
         var mockWeather = new 
         {
             Temp = 18.5,
@@ -36,7 +35,6 @@ public class WeatherController : ControllerBase
     [HttpGet("sun")]
     public async Task<IActionResult> GetSun(double lat, double lng)
     {
-        // Proxy to the free Sunrise-Sunset API
         string url = $"https://api.sunrise-sunset.org/json?lat={lat}&lng={lng}&formatted=0";
         var response = await _httpClient.GetFromJsonAsync<SunResponse>(url);
         

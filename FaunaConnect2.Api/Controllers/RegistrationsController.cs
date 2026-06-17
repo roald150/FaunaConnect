@@ -10,7 +10,13 @@ using Microsoft.AspNetCore.Authorization;
 [Route("api/[controller]")]
 public class RegistrationsController(FaunaDbContext context) : ControllerBase
 {
-    // GET: api/registrations (Retrieve everything from the SQL database)
+    /// <summary>
+    /// Retrieves all wildlife registrations.
+    /// </summary>
+    /// <remarks>
+    /// Requires Hunter or Admin role.
+    /// </remarks>
+    /// <returns>A list of registrations including user details.</returns>
     [Authorize(Roles = "Hunter,Admin")]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Registration>>> GetAll()
@@ -22,7 +28,11 @@ public class RegistrationsController(FaunaDbContext context) : ControllerBase
         return Ok(data);
     }
 
-    // POST: api/registrations (Save to the database)
+    /// <summary>
+    /// Creates a new wildlife registration.
+    /// </summary>
+    /// <param name="newReg">The registration data.</param>
+    /// <returns>The created registration.</returns>
     [HttpPost]
     public async Task<ActionResult<Registration>> Create([FromBody] Registration newReg)
     {

@@ -6,7 +6,6 @@ C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\bin\Debug\net10.0\F
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\bin\Debug\net10.0\FaunaConnect2.Api.runtimeconfig.json
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\bin\Debug\net10.0\FaunaConnect2.Api.dll
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\bin\Debug\net10.0\FaunaConnect2.Api.pdb
-C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\bin\Debug\net10.0\Microsoft.OpenApi.dll
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\obj\Debug\net10.0\FaunaConnect2.Api.csproj.AssemblyReference.cache
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\obj\Debug\net10.0\rpswa.dswa.cache.json
@@ -272,3 +271,8 @@ C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\bin\Debug\net10.0\r
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\bin\Debug\net10.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\bin\Debug\net10.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\bin\Debug\net10.0\FaunaConnect2.Api.xml
+C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.Api\obj\Debug\net10.0\FaunaConnect2.Api.xml

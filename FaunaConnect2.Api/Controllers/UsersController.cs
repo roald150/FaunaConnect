@@ -18,7 +18,11 @@ public class LoginResponse { public string Token { get; set; } = ""; public User
 [Route("api/[controller]")]
 public class UsersController(FaunaDbContext context, IConfiguration configuration) : ControllerBase
 {
-    // 1. POST: api/users/register (Create account)
+    /// <summary>
+    /// Registers a new user.
+    /// </summary>
+    /// <param name="newUser">The user data to register.</param>
+    /// <returns>The registered user data.</returns>
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] User newUser)
     {
@@ -37,7 +41,11 @@ public class UsersController(FaunaDbContext context, IConfiguration configuratio
         return Ok(newUser);
     }
 
-    // 2. POST: api/users/login (Login)
+    /// <summary>
+    /// Authenticates a user and returns a JWT token.
+    /// </summary>
+    /// <param name="request">The login credentials.</param>
+    /// <returns>A JWT token and user information.</returns>
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginRequest request)
     {
@@ -79,7 +87,13 @@ public class UsersController(FaunaDbContext context, IConfiguration configuratio
         return tokenHandler.WriteToken(token);
     }
 
-    // 3. GET: api/users (Retrieve all users for admin)
+    /// <summary>
+    /// Retrieves all users.
+    /// </summary>
+    /// <remarks>
+    /// Requires Admin role.
+    /// </remarks>
+    /// <returns>A list of all users.</returns>
     [Authorize(Roles = "Admin")]
     [HttpGet]
     public async Task<ActionResult<IEnumerable<User>>> GetUsers()
@@ -87,7 +101,11 @@ public class UsersController(FaunaDbContext context, IConfiguration configuratio
         return await context.Users.ToListAsync();
     }
 
-    // 4. GET: api/users/{id}
+    /// <summary>
+    /// Retrieves a specific user by ID.
+    /// </summary>
+    /// <param name="id">The user ID.</param>
+    /// <returns>The user data.</returns>
     [Authorize]
     [HttpGet("{id}")]
     public async Task<ActionResult<User>> GetUser(int id)
@@ -97,7 +115,15 @@ public class UsersController(FaunaDbContext context, IConfiguration configuratio
         return user;
     }
 
-    // 5. PUT: api/users/{id} (Edit user)
+    /// <summary>
+    /// Updates a user's information.
+    /// </summary>
+    /// <remarks>
+    /// Requires Admin role.
+    /// </remarks>
+    /// <param name="id">The user ID.</param>
+    /// <param name="updatedUser">The updated user data.</param>
+    /// <returns>No content.</returns>
     [Authorize(Roles = "Admin")]
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateUser(int id, User updatedUser)
@@ -116,7 +142,14 @@ public class UsersController(FaunaDbContext context, IConfiguration configuratio
         return NoContent();
     }
 
-    // 6. DELETE: api/users/{id} (Delete user)
+    /// <summary>
+    /// Deletes a user.
+    /// </summary>
+    /// <remarks>
+    /// Requires Admin role.
+    /// </remarks>
+    /// <param name="id">The user ID.</param>
+    /// <returns>No content.</returns>
     [Authorize(Roles = "Admin")]
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteUser(int id)

@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FaunaConnect2.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+2a409a974d1e83985672c1aed7a5b4d86534d830")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+217a6e521be331a2412e758c8b8660e094274e2c")]
 [assembly: System.Reflection.AssemblyProductAttribute("FaunaConnect2.App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FaunaConnect2.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
