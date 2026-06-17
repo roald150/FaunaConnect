@@ -1,4 +1,6 @@
 using System.Text.Json;
+using System.Globalization;
+using System.Linq;
 using FaunaConnect2.App.ViewModels;
 
 namespace FaunaConnect2.App;
@@ -13,20 +15,29 @@ public partial class MapPage : ContentPage
         BindingContext = _viewModel = viewModel;
 
         // Subscribe to ViewModel events for JS interop
-        _viewModel.OnHuntingGroundsLoaded += async (s, grounds) => await UpdateMap("drawHuntingGrounds", grounds);
-        _viewModel.OnRegistrationsLoaded += async (s, regs) => await UpdateMap("drawRegistrations", regs);
-        _viewModel.OnDamageReportsLoaded += async (s, reports) => await UpdateMap("drawDamageReports", reports);
+        _viewModel.OnHuntingGroundsLoaded += async (s, grounds) => await MainThread.InvokeOnMainThreadAsync(async () => await UpdateMap("drawHuntingGrounds", grounds));
+        _viewModel.OnRegistrationsLoaded += async (s, regs) => await MainThread.InvokeOnMainThreadAsync(async () => await UpdateMap("drawRegistrations", regs));
+        _viewModel.OnDamageReportsLoaded += async (s, reports) => await MainThread.InvokeOnMainThreadAsync(async () => await UpdateMap("drawDamageReports", reports));
         _viewModel.OnParcelsLoaded += async (s, data) => {
-            string json = JsonSerializer.Serialize(data.Parcels);
-            await MapWebView.EvaluateJavaScriptAsync($"drawParcels({json}, '{data.SelectedId}')");
-            if (_viewModel.IsCircleVisible)
-            {
-                await MapWebView.EvaluateJavaScriptAsync($"drawCircle({data.Lat.ToString(System.Globalization.CultureInfo.InvariantCulture)}, {data.Lng.ToString(System.Globalization.CultureInfo.InvariantCulture)}, 300)");
-            }
+            await MainThread.InvokeOnMainThreadAsync(async () => {
+                try 
+                {
+                    string json = JsonSerializer.Serialize(data.Parcels);
+                    await MapWebView.EvaluateJavaScriptAsync($"drawParcels({json}, '{data.SelectedId}')");
+                    if (_viewModel.IsCircleVisible)
+                    {
+                        await MapWebView.EvaluateJavaScriptAsync($"drawCircle({data.Lat.ToString(System.Globalization.CultureInfo.InvariantCulture)}, {data.Lng.ToString(System.Globalization.CultureInfo.InvariantCulture)}, 300)");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Error updating parcels: {ex.Message}");
+                }
+            });
         };
-        _viewModel.OnParcelsInBoundsLoaded += async (s, parcels) => await UpdateMap("drawParcels", parcels, ", null, true");
-        _viewModel.OnParcelDeselected += async (s, e) => await MapWebView.EvaluateJavaScriptAsync("deselectParcel()");
-        _viewModel.OnSearchRequested += async (s, text) => await MapWebView.EvaluateJavaScriptAsync($"searchLocation('{text.Replace("'", "\\'")}')");
+        _viewModel.OnParcelsInBoundsLoaded += async (s, parcels) => await MainThread.InvokeOnMainThreadAsync(async () => await UpdateMap("drawParcels", parcels, ", null, true"));
+        _viewModel.OnParcelDeselected += async (s, e) => await MainThread.InvokeOnMainThreadAsync(async () => await MapWebView.EvaluateJavaScriptAsync("deselectParcel()"));
+        _viewModel.OnSearchRequested += async (s, text) => await MainThread.InvokeOnMainThreadAsync(async () => await MapWebView.EvaluateJavaScriptAsync($"searchLocation('{text?.Replace("'", "\\'")}')"));
     }
 
     protected override async void OnAppearing()
@@ -37,35 +48,54 @@ public partial class MapPage : ContentPage
 
     private async Task UpdateMap(string functionName, object data, string extraArgs = "")
     {
-        string json = JsonSerializer.Serialize(data);
-        await MapWebView.EvaluateJavaScriptAsync($"{functionName}({json}{extraArgs})");
+        try 
+        {
+            string json = JsonSerializer.Serialize(data);
+            await MapWebView.EvaluateJavaScriptAsync($"{functionName}({json}{extraArgs})");
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine($"Error calling JS function {functionName}: {ex.Message}");
+        }
     }
 
     private async void OnWebViewNavigating(object? sender, WebNavigatingEventArgs e)
     {
-        if (e.Url.StartsWith("invoke://mapclick"))
+        if (e.Url.Contains("invoke://"))
         {
             e.Cancel = true;
-            var uri = new Uri(e.Url);
-            var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
-            if (double.TryParse(query["lat"], out double lat) && double.TryParse(query["lng"], out double lng))
+            try 
             {
-                InfoPanel.IsVisible = true;
-                ShowPanelButton.IsVisible = false;
-                await _viewModel.HandleMapClick(lat, lng);
+                var uri = new Uri(e.Url);
+                var queryParams = uri.Query.TrimStart('?')
+                    .Split('&', StringSplitOptions.RemoveEmptyEntries)
+                    .Select(p => p.Split('='))
+                    .ToDictionary(p => p[0], p => p.Length > 1 ? Uri.UnescapeDataString(p[1]) : "");
+
+                if (e.Url.Contains("mapclick"))
+                {
+                    if (queryParams.TryGetValue("lat", out var latStr) && double.TryParse(latStr, System.Globalization.CultureInfo.InvariantCulture, out double lat) &&
+                        queryParams.TryGetValue("lng", out var lngStr) && double.TryParse(lngStr, System.Globalization.CultureInfo.InvariantCulture, out double lng))
+                    {
+                        InfoPanel.IsVisible = true;
+                        ShowPanelButton.IsVisible = false;
+                        await _viewModel.HandleMapClick(lat, lng);
+                    }
+                }
+                else if (e.Url.Contains("mapbounds"))
+                {
+                    if (double.TryParse(queryParams.GetValueOrDefault("swLat"), System.Globalization.CultureInfo.InvariantCulture, out double swLat) && 
+                        double.TryParse(queryParams.GetValueOrDefault("swLng"), System.Globalization.CultureInfo.InvariantCulture, out double swLng) &&
+                        double.TryParse(queryParams.GetValueOrDefault("neLat"), System.Globalization.CultureInfo.InvariantCulture, out double neLat) &&
+                        double.TryParse(queryParams.GetValueOrDefault("neLng"), System.Globalization.CultureInfo.InvariantCulture, out double neLng))
+                    {
+                        await _viewModel.LoadParcelsInBounds(swLat, swLng, neLat, neLng);
+                    }
+                }
             }
-        }
-        else if (e.Url.StartsWith("invoke://mapbounds"))
-        {
-            e.Cancel = true;
-            var uri = new Uri(e.Url);
-            var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
-            if (double.TryParse(query["swLat"], out double swLat) && 
-                double.TryParse(query["swLng"], out double swLng) &&
-                double.TryParse(query["neLat"], out double neLat) &&
-                double.TryParse(query["neLng"], out double neLng))
+            catch (Exception ex)
             {
-                await _viewModel.LoadParcelsInBounds(swLat, swLng, neLat, neLng);
+                System.Diagnostics.Debug.WriteLine($"Navigation interop error: {ex.Message}");
             }
         }
     }

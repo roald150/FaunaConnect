@@ -23,6 +23,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<SpatialService>();
         builder.Services.AddSingleton<LocalDatabaseService>();
         builder.Services.AddSingleton<IUserService, UserService>();
+        builder.Services.AddTransient<AppShell>();
 
         // ViewModels
         builder.Services.AddTransient<RegistrationViewModel>();

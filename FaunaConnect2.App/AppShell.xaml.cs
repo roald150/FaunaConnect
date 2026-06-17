@@ -4,9 +4,12 @@ namespace FaunaConnect2.App;
 
 public partial class AppShell : Shell
 {
-    public AppShell()
+    private readonly IUserService _userService;
+
+    public AppShell(IUserService userService)
     {
         InitializeComponent();
+        _userService = userService;
         
         RegisterRoutes();
         ConfigureTabs();
@@ -21,7 +24,7 @@ public partial class AppShell : Shell
 
     private void ConfigureTabs()
     {
-        var role = UserService.CurrentUser?.Role;
+        var role = _userService.CurrentUser?.Role;
 
         // Everyone can see the map
         MapTab.IsVisible = true;

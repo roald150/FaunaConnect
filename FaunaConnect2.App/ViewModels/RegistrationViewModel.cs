@@ -7,9 +7,10 @@ using FaunaConnect2.App.Services;
 
 namespace FaunaConnect2.App.ViewModels;
 
-public partial class RegistrationViewModel(IDeviceService deviceService) : BaseViewModel
+public partial class RegistrationViewModel(IDeviceService deviceService, IUserService userService) : BaseViewModel
 {
     private readonly IDeviceService _deviceService = deviceService;
+    private readonly IUserService _userService = userService;
 
     [ObservableProperty]
     private string _selectedSpecies = string.Empty;
@@ -54,7 +55,7 @@ public partial class RegistrationViewModel(IDeviceService deviceService) : BaseV
     {
         try
         {
-            var client = await UserService.GetAuthenticatedClient();
+            var client = await _userService.GetAuthenticatedClient();
             var species = await client.GetFromJsonAsync<List<AnimalSpeciesDto>>("animalspecies");
             if (species is { Count: > 0 })
             {
@@ -124,13 +125,13 @@ public partial class RegistrationViewModel(IDeviceService deviceService) : BaseV
                 AnimalName = SelectedSpecies,
                 Latitude = CurrentLocation?.Latitude ?? 0,
                 Longitude = CurrentLocation?.Longitude ?? 0,
-                UserId = UserService.CurrentUser?.Id ?? 0,
+                UserId = _userService.CurrentUser?.Id ?? 0,
                 IsSynced = false
             };
 
             try
             {
-                var client = await UserService.GetAuthenticatedClient();
+                var client = await _userService.GetAuthenticatedClient();
                 var response = await client.PostAsJsonAsync("registrations", reg);
                 if (response.IsSuccessStatusCode)
                 {

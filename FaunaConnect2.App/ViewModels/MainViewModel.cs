@@ -87,9 +87,9 @@ public partial class MainViewModel(IUserService userService, IDeviceService devi
     private void Logout()
     {
         _userService.Logout();
-        if (Application.Current != null)
+        if (Application.Current?.Windows.Count > 0)
         {
-            Application.Current.MainPage = new NavigationPage(_serviceProvider.GetRequiredService<LoginPage>());
+            Application.Current.Windows[0].Page = new NavigationPage(_serviceProvider.GetRequiredService<LoginPage>());
         }
     }
 

@@ -34,8 +34,8 @@
                  Navigating="OnWebViewNavigating"
                  Grid.Row="1"/>
 
-        <ActivityIndicator IsRunning="{Binding IsLoading}"
-                           IsVisible="{Binding IsLoading}"
+        <ActivityIndicator IsRunning="{Binding IsBusy}"
+                           IsVisible="{Binding IsBusy}"
                            VerticalOptions="Center"
                            HorizontalOptions="Center"
                            Color="#2B5B2B"

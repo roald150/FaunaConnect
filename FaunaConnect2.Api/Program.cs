@@ -8,12 +8,12 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. Define the connection string for SQL Server
+// 1. Define the connection string for SQLite
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
-                          ?? "Server=(localdb)\\mssqllocaldb;Database=FaunaConnect2Db;Trusted_Connection=True;";
+                          ?? "Data Source=FaunaConnect2.db";
 
 // 2. Register EF Core in the application (so controllers can use the database)
-builder.Services.AddDbContext<FaunaDbContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<FaunaDbContext>(options => options.UseSqlite(connectionString));
 
 // JWT Authentication Configuration
 var jwtSettings = builder.Configuration.GetSection("Jwt");

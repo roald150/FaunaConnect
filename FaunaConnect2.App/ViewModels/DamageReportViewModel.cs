@@ -7,9 +7,10 @@ using FaunaConnect2.App.Services;
 
 namespace FaunaConnect2.App.ViewModels;
 
-public partial class DamageReportViewModel(IDeviceService deviceService) : BaseViewModel
+public partial class DamageReportViewModel(IDeviceService deviceService, IUserService userService) : BaseViewModel
 {
     private readonly IDeviceService _deviceService = deviceService;
+    private readonly IUserService _userService = userService;
 
     [ObservableProperty]
     private string _description = string.Empty;
@@ -49,7 +50,7 @@ public partial class DamageReportViewModel(IDeviceService deviceService) : BaseV
     {
         try
         {
-            var client = await UserService.GetAuthenticatedClient();
+            var client = await _userService.GetAuthenticatedClient();
             var reports = await client.GetFromJsonAsync<List<DamageReportDto>>("damagereports");
             if (reports != null)
             {
@@ -112,14 +113,14 @@ public partial class DamageReportViewModel(IDeviceService deviceService) : BaseV
                 Description = Description,
                 Latitude = CurrentLocation?.Latitude ?? 0,
                 Longitude = CurrentLocation?.Longitude ?? 0,
-                UserId = UserService.CurrentUser?.Id ?? 0,
+                UserId = _userService.CurrentUser?.Id ?? 0,
                 Timestamp = DateTime.Now,
                 IsSynced = false
             };
 
             try
             {
-                var client = await UserService.GetAuthenticatedClient();
+                var client = await _userService.GetAuthenticatedClient();
                 var response = await client.PostAsJsonAsync("damagereports", report);
                 if (response.IsSuccessStatusCode)
                 {

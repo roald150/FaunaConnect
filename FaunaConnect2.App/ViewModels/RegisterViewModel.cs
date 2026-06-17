@@ -51,7 +51,10 @@ public partial class RegisterViewModel(IUserService userService, IDeviceService 
             if (response.IsSuccessStatusCode)
             {
                 await _deviceService.DisplayAlertAsync("Success", "Account created! You can now log in.", "OK");
-                await Shell.Current.GoToAsync("..");
+                if (Application.Current?.MainPage != null)
+                {
+                    await Application.Current.MainPage.Navigation.PopAsync();
+                }
             }
             else
             {

@@ -309,3 +309,9 @@ C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\obj\Debug\net10.0-m
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\obj\Debug\net10.0-maccatalyst\maccatalyst-x64\FaunaConnect2.App.pdb
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\obj\Debug\net10.0-maccatalyst\maccatalyst-x64\FaunaConnect2.App.genruntimeconfig.cache
 C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\obj\Debug\net10.0-maccatalyst\maccatalyst-x64\ref\FaunaConnect2.App.dll
+C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Mvvm.dll
+C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-maccatalyst\maccatalyst-x64\SQLite-net.dll
+C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-maccatalyst\maccatalyst-x64\SQLitePCLRaw.batteries_v2.dll
+C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-maccatalyst\maccatalyst-x64\SQLitePCLRaw.core.dll
+C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-maccatalyst\maccatalyst-x64\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\roald\RiderProjects\FaunaConnect2\FaunaConnect2.App\bin\Debug\net10.0-maccatalyst\maccatalyst-x64\libe_sqlite3.dylib

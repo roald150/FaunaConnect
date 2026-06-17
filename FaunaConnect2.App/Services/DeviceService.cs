@@ -76,9 +76,13 @@ public class DeviceService : IDeviceService
 
     public async Task DisplayAlertAsync(string title, string message, string cancel)
     {
-        if (Application.Current?.MainPage != null)
+        if (Shell.Current != null)
         {
-            await Application.Current.MainPage.DisplayAlert(title, message, cancel);
+            await Shell.Current.DisplayAlertAsync(title, message, cancel);
+        }
+        else if (Application.Current?.MainPage != null)
+        {
+            await Application.Current.MainPage.DisplayAlertAsync(title, message, cancel);
         }
     }
 }

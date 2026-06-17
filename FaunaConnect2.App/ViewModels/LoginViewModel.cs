@@ -6,10 +6,11 @@ using FaunaConnect2.App.Services;
 
 namespace FaunaConnect2.App.ViewModels;
 
-public partial class LoginViewModel(IUserService userService, IDeviceService deviceService) : BaseViewModel
+public partial class LoginViewModel(IUserService userService, IDeviceService deviceService, IServiceProvider serviceProvider) : BaseViewModel
 {
     private readonly IUserService _userService = userService;
     private readonly IDeviceService _deviceService = deviceService;
+    private readonly IServiceProvider _serviceProvider = serviceProvider;
 
     [ObservableProperty]
     private string _email = string.Empty;
@@ -43,8 +44,12 @@ public partial class LoginViewModel(IUserService userService, IDeviceService dev
                     
                     if (Application.Current != null)
                     {
-                        Application.Current.MainPage = new AppShell();
+                        Application.Current.MainPage = _serviceProvider.GetRequiredService<AppShell>();
                     }
+                }
+                else
+                {
+                    await _deviceService.DisplayAlertAsync("Error", "Invalid response from server.", "OK");
                 }
             }
             else
@@ -66,6 +71,10 @@ public partial class LoginViewModel(IUserService userService, IDeviceService dev
     [RelayCommand]
     private async Task GoToRegister()
     {
-        await Shell.Current.GoToAsync(nameof(RegisterPage));
+        if (Application.Current?.MainPage != null)
+        {
+            var registerPage = _serviceProvider.GetRequiredService<RegisterPage>();
+            await Application.Current.MainPage.Navigation.PushAsync(registerPage);
+        }
     }
 }
