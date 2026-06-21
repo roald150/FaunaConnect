@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using FaunaConnect2.Api.Controllers;
 using FaunaConnect2.Api.Data;
 using FaunaConnect2.Api.Models;
+using FaunaConnect2.Api.Resources;
+using FaunaConnect2.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 using Xunit;
 
@@ -26,14 +28,15 @@ public class AnimalSpeciesControllerTest
 
         using (var context = new FaunaDbContext(options))
         {
-            var controller = new AnimalSpeciesController(context);
+            IAnimalSpeciesService service = new AnimalSpeciesService(context);
+            var controller = new AnimalSpeciesController(service);
 
             // Act
             var result = await controller.Get();
 
             // Assert
-            var actionResult = Assert.IsType<ActionResult<IEnumerable<AnimalSpecies>>>(result);
-            var list = Assert.IsAssignableFrom<IEnumerable<AnimalSpecies>>(actionResult.Value);
+            var actionResult = Assert.IsType<ActionResult<IEnumerable<AnimalSpeciesResource>>>(result);
+            var list = Assert.IsAssignableFrom<IEnumerable<AnimalSpeciesResource>>(actionResult.Value);
             Assert.Equal(2, list.Count());
         }
     }

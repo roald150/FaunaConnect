@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using FaunaConnect2.Api.Data;
+
 using FaunaConnect2.Api.Models;
+using FaunaConnect2.Api.Services;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -13,8 +15,16 @@ var builder = WebApplication.CreateBuilder(args);
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
                           ?? "Data Source=FaunaConnect2.db";
 
-// 2. Register EF Core in the application (so controllers can use the database)
+// 2. Register EF Core in the application (so services can use the database)
 builder.Services.AddDbContext<FaunaDbContext>(options => options.UseSqlite(connectionString));
+
+// 3. Register the service layer
+builder.Services.AddScoped<IRegistrationService, RegistrationService>();
+builder.Services.AddScoped<IAnimalSpeciesService, AnimalSpeciesService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IHuntingGroundService, HuntingGroundService>();
+builder.Services.AddScoped<IDamageReportService, DamageReportService>();
+builder.Services.AddScoped<IChatService, ChatService>();
 
 // JWT Authentication Configuration
 var jwtSettings = builder.Configuration.GetSection("Jwt");
@@ -42,13 +52,13 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddAuthorization();
 builder.Services.AddHttpClient();
 
-// 3. Ensure .NET understands we are using Controllers (like RegistrationsController)
+// 4. Ensure .NET understands we are using Controllers (like RegistrationsController)
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
 });
 
-// 4. Enable OpenAPI and Swagger UI
+// 5. Enable OpenAPI and Swagger UI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -111,13 +121,11 @@ else
 app.UseAuthentication();
 app.UseAuthorization();
 
-// 5. Automatically create database and seed with test data
+// 6. Automatically create database and seed with test data
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<FaunaDbContext>();
-    
-    // Ensure SQL Server creates the database and tables if they don't exist
-    context.Database.EnsureCreated(); 
+    context.Database.Migrate();
 
     // If the database is empty, create initial accounts for the demo
     if (!context.Users.Any())
@@ -159,7 +167,7 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-// 6. Map routes to controllers (e.g., /api/registrations)
+// 7. Map routes to controllers (e.g., /api/registrations)
 app.MapControllers();
 
 app.Run();

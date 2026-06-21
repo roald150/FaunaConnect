@@ -1,45 +1,31 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using FaunaConnect2.Api.Data;
-using FaunaConnect2.Api.Models;
 using Microsoft.AspNetCore.Authorization;
+using FaunaConnect2.Api.Models;
+using FaunaConnect2.Api.Resources;
+using FaunaConnect2.Api.Services;
 
 namespace FaunaConnect2.Api.Controllers;
 
 [Authorize]
 [ApiController]
 [Route("api/[controller]")]
-public class ChatController(FaunaDbContext context) : ControllerBase
+public class ChatController(IChatService chatService) : ControllerBase
 {
     [HttpGet("group")]
-    public async Task<ActionResult<IEnumerable<ChatMessage>>> GetGroupChat()
+    public async Task<ActionResult<IEnumerable<ChatMessageResource>>> GetGroupChat()
     {
-        return await context.ChatMessages
-            .Where(m => m.IsGroupChat)
-            .Include(m => m.Sender)
-            .OrderBy(m => m.Timestamp)
-            .Take(50)
-            .ToListAsync();
+        return Ok(await chatService.GetGroupChatAsync());
     }
 
     [HttpGet("private/{otherUserId}")]
-    public async Task<ActionResult<IEnumerable<ChatMessage>>> GetPrivateChat(int currentUserId, int otherUserId)
+    public async Task<ActionResult<IEnumerable<ChatMessageResource>>> GetPrivateChat(int currentUserId, int otherUserId)
     {
-        return await context.ChatMessages
-            .Where(m => !m.IsGroupChat && 
-                       ((m.SenderId == currentUserId && m.ReceiverId == otherUserId) ||
-                        (m.SenderId == otherUserId && m.ReceiverId == currentUserId)))
-            .Include(m => m.Sender)
-            .OrderBy(m => m.Timestamp)
-            .ToListAsync();
+        return Ok(await chatService.GetPrivateChatAsync(currentUserId, otherUserId));
     }
 
     [HttpPost]
-    public async Task<ActionResult<ChatMessage>> SendMessage(ChatMessage message)
+    public async Task<ActionResult<ChatMessageResource>> SendMessage(ChatMessage message)
     {
-        message.Timestamp = DateTime.Now;
-        context.ChatMessages.Add(message);
-        await context.SaveChangesAsync();
-        return Ok(message);
+        return Ok(await chatService.SendMessageAsync(message));
     }
 }
