@@ -1,0 +1,75 @@
+@startuml "FaunaConnect2 - App Class Diagram"
+!theme plain
+skinparam defaultFontName Consolas
+skinparam backgroundColor #FEFEFE
+skinparam classFontSize 10
+skinparam classAttributeFontSize 9
+skinparam classBorderColor #333333
+skinparam classHeaderBackgroundColor #FFF3CD
+hide empty members
+
+title <size:18>FaunaConnect2 - Mobile App (Frontend)</size>
+
+namespace FaunaConnect2.App.Models {
+  class User {
+    + Id : int
+    + Name : string
+    + Role : string
+  }
+
+  class Registration {
+    + Id : int
+    + AnimalName : string
+    + IsSynced : bool
+  }
+
+  class DamageReportDto {
+    + Id : int
+    + Description : string
+    + IsSynced : bool
+  }
+}
+
+namespace FaunaConnect2.App.ViewModels {
+  abstract class BaseViewModel {
+    # IsBusy : bool
+    # Title : string
+  }
+
+  class LoginViewModel {
+    + Email : string
+    + Password : string
+    + Login() : void
+  }
+
+  class MainViewModel {
+    + WelcomeMessage : string
+    + RecentRegistrations : ObservableCollection<Registration>
+    + Initialize() : void
+  }
+
+  class RegistrationViewModel {
+    + SelectedSpecies : string
+    + Save() : void
+  }
+
+  class MapViewModel {
+    + SearchText : string
+    + HandleMapClick(double, double) : void
+    + SaveHuntingGround() : void
+  }
+
+  class DamageReportViewModel {
+    + Description : string
+    + Send() : void
+  }
+}
+
+' Relaties binnen de App (Overerving)
+FaunaConnect2.App.ViewModels.LoginViewModel -|> FaunaConnect2.App.ViewModels.BaseViewModel
+FaunaConnect2.App.ViewModels.MainViewModel -|> FaunaConnect2.App.ViewModels.BaseViewModel
+FaunaConnect2.App.ViewModels.RegistrationViewModel -|> FaunaConnect2.App.ViewModels.BaseViewModel
+FaunaConnect2.App.ViewModels.MapViewModel -|> FaunaConnect2.App.ViewModels.BaseViewModel
+FaunaConnect2.App.ViewModels.DamageReportViewModel -|> FaunaConnect2.App.ViewModels.BaseViewModel
+
+@enduml

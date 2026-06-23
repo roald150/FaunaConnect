@@ -15,11 +15,10 @@ public class User
     public List<HuntingGround> HuntingGrounds { get; set; } = new();
     public List<DamageReport> DamageReports { get; set; } = new();
     
-    // Hunter-Farmer link:
-    // If the role is 'Farmer', they can be linked to a Hunter
+
     public int? LinkedHunterId { get; set; }
     public User? LinkedHunter { get; set; }
     
-    // A hunter can have multiple farmers
+
     public List<User> LinkedFarmers { get; set; } = new();
 }

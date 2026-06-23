@@ -5,9 +5,7 @@ using Microsoft.Maui.Devices.Sensors;
 
 public class SpatialService
 {
-    /// <summary>
     /// Checks if a point is inside a polygon using the Ray Casting algorithm.
-    /// </summary>
     public bool IsPointInPolygon(double lat, double lng, List<CoordinateDto> polygon)
     {
         if (polygon == null || polygon.Count < 3) return false;
@@ -24,17 +22,13 @@ public class SpatialService
         return isInside;
     }
 
-    /// <summary>
     /// Calculates the distance between two points in meters using the Haversine formula.
-    /// </summary>
     public double CalculateDistance(double lat1, double lon1, double lat2, double lon2)
     {
         return Location.CalculateDistance(lat1, lon1, lat2, lon2, DistanceUnits.Kilometers) * 1000;
     }
 
-    /// <summary>
     /// Checks if a point is within a certain radius of another point.
-    /// </summary>
     public bool IsWithinRadius(double lat1, double lon1, double lat2, double lon2, double radiusMeters)
     {
         return CalculateDistance(lat1, lon1, lat2, lon2) <= radiusMeters;

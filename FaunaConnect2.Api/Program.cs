@@ -10,15 +10,13 @@ using System.Text;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// 1. Define the connection string for SQLite
+// SQLite
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
                           ?? "Data Source=FaunaConnect2.db";
-
-// 2. Register EF Core in the application (so services can use the database)
+// EF Core
 builder.Services.AddDbContext<FaunaDbContext>(options => options.UseSqlite(connectionString));
 
-// 3. Register the service layer
+//services
 builder.Services.AddScoped<IRegistrationService, RegistrationService>();
 builder.Services.AddScoped<IAnimalSpeciesService, AnimalSpeciesService>();
 builder.Services.AddScoped<IUserService, UserService>();
@@ -52,13 +50,12 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddAuthorization();
 builder.Services.AddHttpClient();
 
-// 4. Ensure .NET understands we are using Controllers (like RegistrationsController)
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
 });
 
-// 5. Enable OpenAPI and Swagger UI
+//Swagger UI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -69,7 +66,6 @@ builder.Services.AddSwaggerGen(options =>
         Description = "API for FaunaConnect2 - Hunting and Damage Registration System"
     });
 
-    // Add JWT Authentication support to Swagger
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -95,7 +91,6 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 
-    // Include XML comments for documentation
     var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     options.IncludeXmlComments(xmlPath);
@@ -103,7 +98,6 @@ builder.Services.AddSwaggerGen(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -114,14 +108,13 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-    // Use HTTPS redirection in production only
     app.UseHttpsRedirection();
 }
 
 app.UseAuthentication();
 app.UseAuthorization();
 
-// 6. Automatically create database and seed with test data
+// create and seed db
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<FaunaDbContext>();
@@ -167,7 +160,7 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-// 7. Map routes to controllers (e.g., /api/registrations)
+// routes
 app.MapControllers();
 
 app.Run();

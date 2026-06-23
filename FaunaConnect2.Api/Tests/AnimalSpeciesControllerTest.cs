@@ -14,7 +14,6 @@ public class AnimalSpeciesControllerTest
     [Fact]
     public async Task Get_ShouldReturnAllSpecies()
     {
-        // Arrange
         var options = new DbContextOptionsBuilder<FaunaDbContext>()
             .UseInMemoryDatabase(databaseName: "AnimalSpeciesList")
             .Options;

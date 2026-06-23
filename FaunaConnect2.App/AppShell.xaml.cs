@@ -26,10 +26,8 @@ public partial class AppShell : Shell
     {
         var role = _userService.CurrentUser?.Role;
 
-        // Everyone can see the map
         MapTab.IsVisible = true;
 
-        // Only admin can see admin tab
         AdminTab.IsVisible = role == "Admin";
     }
 }

@@ -75,7 +75,7 @@ public partial class MainViewModel(IUserService userService, IDeviceService devi
         }
         catch (Exception) 
         {
-            // Fallback or silent fail for dashboard
+            // Fallback
         }
         finally
         {

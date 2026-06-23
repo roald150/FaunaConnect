@@ -1,0 +1,85 @@
+@startuml
+autonumber
+
+actor "Gebruiker\n(Jager/Boer)" as user
+
+box "MAUI App (.NET)" #LightBlue
+    participant "ChatPage\n(View)" as view
+    participant "ChatViewModel" as vm
+    participant "UserService" as auth
+    participant "HttpClient" as http
+end box
+
+box "ASP.NET Core API" #LightGreen
+    participant "ChatController" as controller
+    participant "ChatService" as service
+    participant "FaunaDbContext\n(EF Core)" as db
+end box
+
+database "SQLite\n(Database)" as database
+
+== Bericht Verzenden ==
+
+user -> view: Typt bericht, klikt 'Verzend'
+view -> vm: SendCommand()
+activate vm
+
+vm -> auth: GetAuthenticatedClient()
+activate auth
+auth -> auth: Haal JWT token\nuit SecureStorage
+auth -> http: Nieuwe HttpClient\nmet Bearer token
+auth --> vm: HttpClient
+deactivate auth
+
+vm -> http: POST api/chat\n{ Content, SenderId, IsGroupChat }
+activate http
+
+http -> controller: HTTP POST
+activate controller
+controller -> service: SendMessageAsync(message)
+activate service
+service -> db: context.ChatMessages.Add(message)
+activate db
+db -> database: INSERT INTO ChatMessages
+database --> db: OK
+db -> service: await context.SaveChangesAsync()
+deactivate db
+service --> controller: ChatMessageResource
+deactivate service
+controller --> http: 200 OK + JSON
+deactivate controller
+http --> vm: HttpResponseMessage (Success)
+deactivate http
+
+vm -> vm: NewMessageText leegmaken\nRoep LoadMessages() aan
+
+== Groepschat Herladen ==
+
+vm -> http: GET api/chat/group
+activate http
+
+http -> controller: HTTP GET
+activate controller
+controller -> service: GetGroupChatAsync()
+activate service
+service -> db: Query ChatMessages\n.Where(IsGroupChat)\n.OrderBy(Timestamp)\n.Take(50)
+activate db
+db -> database: SELECT ... FROM ChatMessages\nWHERE IsGroupChat = 1
+database --> db: Result set
+db --> service: List<ChatMessage>
+deactivate db
+service --> controller: List<ChatMessageResource>
+deactivate service
+controller --> http: 200 OK + JSON[]
+deactivate controller
+http --> vm: List<ChatMessageDto>
+deactivate http
+
+vm -> vm: Map naar ChatMessageDisplay\n(IsFromMe, Alignment, BgColor)
+vm -> vm: Update Messages\n(ObservableCollection)
+vm --> view: UI werkt bij (CollectionView)
+deactivate vm
+
+view -> user: Berichten getoond\nmet juiste uitlijning
+
+@enduml

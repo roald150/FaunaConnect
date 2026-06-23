@@ -1,0 +1,115 @@
+@startuml
+autonumber
+
+actor "Boer\n(Farmer)" as farmer
+
+box "MAUI App (.NET)" #LightBlue
+    participant "DamageReportPage\n(View)" as view
+    participant "DamageReportViewModel" as vm
+    participant "DeviceService" as device
+    participant "UserService" as auth
+    participant "HttpClient" as http
+    participant "LocalDatabaseService" as localDb
+end box
+
+box "ASP.NET Core API" #LightGreen
+    participant "DamageReportsController" as controller
+    participant "DamageReportService" as service
+    participant "FaunaDbContext\n(EF Core)" as db
+end box
+
+database "SQLite\n(Database)" as database
+database "Lokale SQLite\n(Offline)" as offlineDb
+
+== Stap 1: Pagina Openen & Initialisatie ==
+
+farmer -> view: Opent Schade Melden pagina
+view -> vm: Initialize()
+activate vm
+
+vm -> device: GetCurrentLocationAsync()
+activate device
+device --> vm: Location (lat/lng)
+deactivate device
+vm -> vm: Update CurrentLocation en LocationText
+
+vm -> auth: GetAuthenticatedClient()
+vm -> http: GET api/damagereports
+http -> controller: HTTP GET (Hunter,Admin)
+controller --> http: 200 OK + DamageReport[]
+http --> vm: Lijst bestaande meldingen
+vm -> vm: Update Reports (ObservableCollection)
+vm --> view: Locatie + bestaande meldingen
+deactivate vm
+
+== Stap 2: Foto Maken ==
+
+farmer -> view: Klikt 'Foto nemen'
+view -> vm: TakePhotoCommand()
+activate vm
+vm -> device: TakePhotoAsync()
+activate device
+device --> vm: FileResult (foto)
+deactivate device
+vm -> device: GetCurrentLocationAsync() (vernieuw)
+vm -> vm: Toon foto in UI (ImageSource)
+deactivate vm
+
+== Stap 3: Beschrijving Invoeren ==
+
+farmer -> view: Typt beschrijving
+view -> vm: Data binding\nDescription property
+
+== Stap 4: Verzenden ==
+
+farmer -> view: Klikt 'Verzend'
+view -> vm: SendCommand()
+activate vm
+
+group Online (API beschikbaar)
+    vm -> auth: GetAuthenticatedClient()
+    activate auth
+    auth --> vm: HttpClient met JWT
+    deactivate auth
+
+    vm -> http: POST api/damagereports\n{ Description, Lat, Lng, UserId }
+    activate http
+
+    http -> controller: HTTP POST (Farmer,Admin)
+    activate controller
+    controller -> service: CreateAsync(report)
+    activate service
+    service -> db: context.DamageReports.Add(report)
+    activate db
+    db -> database: INSERT INTO DamageReports
+    database --> db: OK
+    db -> service: await context.SaveChangesAsync()
+    deactivate db
+    service --> controller: DamageReportResource
+    deactivate service
+    controller --> http: 201 Created + JSON
+    deactivate controller
+    http --> vm: Success
+    deactivate http
+
+    vm -> vm: report.IsSynced = true
+    vm -> view: Toon "Success" alert
+    note right: Damage report has been\nsent to the hunter.
+end
+
+group Offline (geen internet / API error)
+    vm -> localDb: SaveDamageReportAsync(report)
+    activate localDb
+    localDb -> offlineDb: INSERT INTO DamageReportDto\n(IsSynced = false)
+    offlineDb --> localDb: OK
+    localDb --> vm: Saved
+    deactivate localDb
+
+    vm -> view: Toon "Offline" alert
+    note right: No internet.\nSaved locally for later sync.
+end
+
+vm -> view: Navigeer terug\nShell.Current.GoToAsync("..")
+deactivate vm
+
+@enduml

@@ -14,7 +14,6 @@ public partial class MapPage : ContentPage
         InitializeComponent();
         BindingContext = _viewModel = viewModel;
 
-        // Subscribe to ViewModel events for JS interop
         _viewModel.OnHuntingGroundsLoaded += async (s, grounds) => await MainThread.InvokeOnMainThreadAsync(async () => await UpdateMap("drawHuntingGrounds", grounds));
         _viewModel.OnRegistrationsLoaded += async (s, regs) => await MainThread.InvokeOnMainThreadAsync(async () => await UpdateMap("drawRegistrations", regs));
         _viewModel.OnDamageReportsLoaded += async (s, reports) => await MainThread.InvokeOnMainThreadAsync(async () => await UpdateMap("drawDamageReports", reports));

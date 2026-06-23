@@ -71,7 +71,6 @@ public partial class DamageReportViewModel(IDeviceService deviceService, IUserSe
         _photo = await _deviceService.TakePhotoAsync();
         if (_photo != null)
         {
-            // Refresh location when photo is taken
             var loc = await _deviceService.GetCurrentLocationAsync();
             if (loc != null)
             {

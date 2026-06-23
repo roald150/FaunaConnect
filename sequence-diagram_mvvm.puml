@@ -1,0 +1,59 @@
+@startuml
+autonumber
+
+actor "Gebruiker" as user
+
+box "MVVM Architectuur" #LightGray
+    participant "View\n(XAML Page)" as view
+    participant "ViewModel\n(CommunityToolkit.Mvvm)" as vm
+    participant "Model / DTO" as model
+end box
+
+box "Service Laag" #LightBlue
+    participant "Service\n(HttpClient / DI)" as service
+end box
+
+box "Backend" #LightGreen
+    participant "ASP.NET Core\nWeb API" as api
+    participant "Database\n(SQLite / EF Core)" as db
+end box
+
+== Data Binding (View - ViewModel) ==
+
+user -> view: Interactie (klik, typ, etc.)
+view -> vm: Data Binding (x:DataType, {Binding})
+note right: Compiled bindings via\nx:DataType in XAML
+
+== Command Execution (ViewModel) ==
+
+vm -> vm: [RelayCommand] of property setter
+note right: CommunityToolkit.Mvvm\nsource generators
+vm -> service: Aanroep service (await Get/Post)
+
+== Service - Backend ==
+
+service -> api: HTTP request (GET/POST/DELETE)\nmet JWT Bearer token
+api -> db: EF Core query (Entity Framework)
+db --> api: Resultaat
+api --> service: JSON response (Resource DTO)
+
+== Data Flow Terug (ObservableProperty) ==
+
+service --> vm: Gedeserialiseerde data
+vm -> vm: Update [ObservableProperty]
+note right: Roept PropertyChanged\nevent aan
+vm -> view: Automatische UI-update\nd.m.v. data binding
+view -> user: Weergave nieuwe data
+
+== Offline / Lokale Opslag ==
+
+alt Offline modus (geen internet)
+    service --> vm: Exception (geen verbinding)
+    vm -> vm: Val terug op lokale opslag
+    note right: LocalDatabaseService\n(SQLite via sqlite-net-pcl)
+    vm -> model: Lokaal opslaan\nmet IsSynced = false
+    model --> vm: Opgeslagen
+    vm -> view: Toon lokale data in UI
+end
+
+@enduml

@@ -118,12 +118,6 @@ public partial class AdminViewModel(IUserService userService, IDeviceService dev
     [RelayCommand]
     private async Task DeleteUser(User user)
     {
-        // This needs a confirmation which is UI dependent, 
-        // but we can handle the logic here if we use IDeviceService for alerts.
-        // Wait, I should probably handle the confirmation in the page or pass it.
-        // I'll use IDeviceService to ask but MAUI DisplayAlert has no Yes/No in my interface yet.
-        // I'll assume confirmed for simplicity or update IDeviceService.
-        
         try
         {
             var client = await _userService.GetAuthenticatedClient();

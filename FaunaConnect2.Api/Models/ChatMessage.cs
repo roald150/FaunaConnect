@@ -11,10 +11,10 @@ public class ChatMessage
     public int SenderId { get; set; }
     public User? Sender { get; set; }
 
-    // Voor privé chat
+
     public int? ReceiverId { get; set; }
     public User? Receiver { get; set; }
 
-    // Voor groepschat
+
     public bool IsGroupChat { get; set; } = false;
 }

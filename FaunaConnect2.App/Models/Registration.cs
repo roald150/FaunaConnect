@@ -13,7 +13,7 @@ namespace FaunaConnect2.App.Models
         public string? PhotoUrl { get; set; }
         public int UserId { get; set; }
         
-        // Flag to track if the record has been synced to the server
+
         public bool IsSynced { get; set; }
     }
 }

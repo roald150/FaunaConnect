@@ -1,0 +1,44 @@
+@startuml
+autonumber
+
+actor "Jager A" as jagerA
+box "App Jager A" #LightBlue
+    participant "ChatPage (A)" as viewA
+    participant "ChatViewModel (A)" as vmA
+    participant "SignalRService (A)" as signalRA
+end box
+
+box "Backend Server" #LightGreen
+    participant "ChatHub (SignalR)" as hub
+end box
+
+box "App Ontvanger" #LightYellow
+    participant "SignalRService (B)" as signalRB
+    participant "ChatViewModel (B)" as vmB
+    participant "ChatPage (B)" as viewB
+end box
+actor "Ontvanger\n(Jager B / Boer)" as userB
+
+jagerA -> viewA : Typt bericht & klikt 'Verzend'
+viewA -> vmA : SendMessageCommand()
+vmA -> signalRA : SendMessageAsync(chatMessage)
+
+signalRA -> hub : InvokeAsync("SendMessage", message)
+activate hub
+
+hub -> hub : Sla bericht op in SQL DB
+
+' Realtime broadcast via WebSockets
+hub -> signalRB : ReceiveMessage(message)
+deactivate hub
+activate signalRB
+
+signalRB -> vmB : Event: MessageReceived(message)
+activate vmB
+
+vmB -> vmB : Voeg toe aan ObservableCollection
+viewB -> userB : Update UI (Bericht verschijnt direct!)
+deactivate vmB
+deactivate signalRB
+
+@endum

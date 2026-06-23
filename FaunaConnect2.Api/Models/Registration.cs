@@ -7,9 +7,9 @@ public class Registration
     public double Latitude { get; set; }
     public double Longitude { get; set; }
     public DateTime DateTime { get; set; } = DateTime.Now;
-    public string? PhotoUrl { get; set; } // Photo location 
+    public string? PhotoUrl { get; set; }
 
-    // Foreign Key: Link to the Hunter (User) who made the registration
+
     public int UserId { get; set; }
     public User? User { get; set; }
 }

@@ -1,0 +1,22 @@
+@startuml FaunaConnect2 - Deployment Diagram
+title FaunaConnect2 Deployment Diagram
+
+package "FaunaConnect2" {
+
+  package "Frontend" {
+    component "MAUI App\n(Android)" as ANDROID
+    component "MAUI App\n(Windows)" as WINDOWS
+  }
+
+  package "Backend" {
+    component "Web API\n(ASP.NET Core)" as API
+    component "SQLite Database" as DB
+  }
+
+}
+
+ANDROID --> API : Consumes
+WINDOWS --> API : Consumes
+API --> DB : Connects to
+
+@enduml

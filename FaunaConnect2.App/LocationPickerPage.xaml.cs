@@ -11,7 +11,6 @@ public partial class LocationPickerPage : ContentPage
         if (initialLocation != null)
         {
             SelectedLocation = initialLocation;
-            // Wait for WebView to load before setting location
             PickerWebView.Navigated += (s, e) => {
                 SetLocationInWebView(initialLocation.Latitude, initialLocation.Longitude);
             };

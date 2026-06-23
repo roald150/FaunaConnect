@@ -1,0 +1,86 @@
+@startuml "FaunaConnect2 - API Class Diagram"
+!theme plain
+skinparam defaultFontName Consolas
+skinparam backgroundColor #FEFEFE
+skinparam classFontSize 10
+skinparam classAttributeFontSize 9
+skinparam classBorderColor #333333
+skinparam classHeaderBackgroundColor #E8F0FE
+hide empty members
+
+title <size:18>FaunaConnect2 - API (Backend)</size>
+
+namespace FaunaConnect2.Api.Models {
+  class User {
+    + Id : int
+    + Name : string
+    + Email : string
+    + Role : string
+    + LinkedHunterId : int?
+    + Registrations : List<Registration>
+    + HuntingGrounds : List<HuntingGround>
+    + DamageReports : List<DamageReport>
+  }
+
+  class Registration {
+    + Id : int
+    + AnimalName : string
+    + Latitude : double
+    + Longitude : double
+    + DateTime : DateTime
+    + UserId : int
+  }
+
+  class HuntingGround {
+    + Id : int
+    + Name : string
+    + TotalAreaInHectares : double
+    + PolygonCoordinatesJson : string
+    + UserId : int
+  }
+
+  class DamageReport {
+    + Id : int
+    + Description : string
+    + Latitude : double
+    + Longitude : double
+    + UserId : int
+    + HuntingGroundId : int?
+  }
+
+  class ChatMessage {
+    + Id : int
+    + Content : string
+    + Timestamp : DateTime
+    + SenderId : int
+    + ReceiverId : int?
+  }
+}
+
+namespace FaunaConnect2.Api.Controllers {
+  class UsersController {
+    + Register(User) : IActionResult
+    + Login(LoginRequest) : IActionResult
+  }
+  class RegistrationsController {
+    + GetAll() : IEnumerable<RegistrationResource>
+  }
+  class HuntingGroundsController {
+    + GetHuntingGrounds(int?) : IEnumerable<HuntingGroundResource>
+  }
+  class DamageReportsController {
+    + Get() : IEnumerable<DamageReportResource>
+  }
+  class ChatController {
+    + SendMessage(ChatMessage) : ChatMessageResource
+  }
+}
+
+' Relaties binnen de API
+FaunaConnect2.Api.Models.User "1" -- "0..*" FaunaConnect2.Api.Models.Registration
+FaunaConnect2.Api.Models.User "1" -- "0..*" FaunaConnect2.Api.Models.HuntingGround
+FaunaConnect2.Api.Models.User "1" -- "0..*" FaunaConnect2.Api.Models.DamageReport
+FaunaConnect2.Api.Models.HuntingGround "1" -- "0..*" FaunaConnect2.Api.Models.DamageReport
+FaunaConnect2.Api.Models.User "1" -- "0..*" FaunaConnect2.Api.Models.ChatMessage
+
+@enduml
